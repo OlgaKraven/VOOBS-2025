@@ -20,7 +20,7 @@
     
     
       
-        <title>Предметная область - Разработка web-приложений на языке JavaScript</title>
+        <title>Предметная область - Основы разработки Веб-сервисов</title>
       
     
     
@@ -89,7 +89,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
-    <a href="index.html" title="Разработка web-приложений на языке JavaScript" class="md-header__button md-logo" aria-label="Разработка web-приложений на языке JavaScript" data-md-component="logo">
+    <a href="index.html" title="Основы разработки Веб-сервисов" class="md-header__button md-logo" aria-label="Основы разработки Веб-сервисов" data-md-component="logo">
       
   <img src="assets/icons/logo.png" alt="logo">
 
@@ -102,7 +102,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Разработка web-приложений на языке JavaScript
+            Основы разработки Веб-сервисов
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -186,12 +186,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="Разработка web-приложений на языке JavaScript" class="md-nav__button md-logo" aria-label="Разработка web-приложений на языке JavaScript" data-md-component="logo">
+    <a href="index.html" title="Основы разработки Веб-сервисов" class="md-nav__button md-logo" aria-label="Основы разработки Веб-сервисов" data-md-component="logo">
       
   <img src="assets/icons/logo.png" alt="logo">
 
     </a>
-    Разработка web-приложений на языке JavaScript
+    Основы разработки Веб-сервисов
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -433,33 +433,6 @@
   
   
     <li class="md-nav__item">
-      <a href="passport.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Пример паспорта дисциплины
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="requirements.html" class="md-nav__link">
         
   
@@ -543,283 +516,198 @@
 
 
 <h1 id="_1">Описание предметных областей</h1>
-<h1 id="no1-">Лабораторная работа №1 - Введение в современную веб-разработку. Проектирование веб-сайта.</h1>
-<h3 id="-281-122">Группа ДБИ-281рсобф (1–22)</h3>
 <table>
 <thead>
 <tr>
-<th>№</th>
+<th style="text-align: right;">№</th>
 <th>Предметная область</th>
+<th>Основные сущности (пример массива объектов)</th>
+<th>Типовые операции в ЛР</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td>Учёт заявок пользователей</td>
+<td style="text-align: right;">1</td>
+<td>Интернет-магазин косметики</td>
+<td><code>products</code> (id, title, price, category, stock, status)</td>
+<td>фильтр по категории, расчёт суммы, CRUD</td>
 </tr>
 <tr>
-<td>2</td>
-<td>Список задач (To-Do)</td>
+<td style="text-align: right;">2</td>
+<td>Каталог онлайн-курсов (LMS)</td>
+<td><code>courses</code> (id, title, duration, level, status)</td>
+<td>фильтр по уровню, поиск, статистика</td>
 </tr>
 <tr>
-<td>3</td>
-<td>Каталог услуг</td>
+<td style="text-align: right;">3</td>
+<td>ServiceDesk (заявки)</td>
+<td><code>tickets</code> (id, title, priority, status, createdAt)</td>
+<td>смена статуса, фильтр, подсчёт open</td>
 </tr>
 <tr>
-<td>4</td>
-<td>Электронная анкета</td>
+<td style="text-align: right;">4</td>
+<td>Учёт сотрудников</td>
+<td><code>employees</code> (id, name, position, salary, active)</td>
+<td>фильтр, расчёт фонда оплаты труда</td>
 </tr>
 <tr>
-<td>5</td>
-<td>Учёт обращений граждан</td>
+<td style="text-align: right;">5</td>
+<td>Каталог фильмов</td>
+<td><code>movies</code> (id, title, year, rating, genre)</td>
+<td>сортировка по рейтингу, фильтр по жанру</td>
 </tr>
 <tr>
-<td>6</td>
-<td>Регистрация участников мероприятий</td>
+<td style="text-align: right;">6</td>
+<td>Библиотечный каталог</td>
+<td><code>books</code> (id, title, author, year, available)</td>
+<td>фильтр по наличию, подсчёт по автору</td>
 </tr>
 <tr>
-<td>7</td>
-<td>Каталог учебных дисциплин</td>
+<td style="text-align: right;">7</td>
+<td>Бронирование переговорных</td>
+<td><code>rooms</code> (id, name, capacity, status, date)</td>
+<td>фильтр по дате, подсчёт занятых</td>
 </tr>
 <tr>
-<td>8</td>
-<td>Учёт клиентов организации</td>
+<td style="text-align: right;">8</td>
+<td>CRM-клиенты</td>
+<td><code>clients</code> (id, name, email, totalOrders, status)</td>
+<td>поиск, сортировка по обороту</td>
 </tr>
 <tr>
-<td>9</td>
-<td>Список сотрудников</td>
+<td style="text-align: right;">9</td>
+<td>Портал вакансий</td>
+<td><code>vacancies</code> (id, title, salary, location, active)</td>
+<td>фильтр по городу, средняя зарплата</td>
 </tr>
 <tr>
-<td>10</td>
-<td>Расписание занятий</td>
+<td style="text-align: right;">10</td>
+<td>Task Manager</td>
+<td><code>tasks</code> (id, title, priority, status, deadline)</td>
+<td>фильтр, сортировка по сроку</td>
 </tr>
 <tr>
-<td>11</td>
-<td>Каталог товаров</td>
+<td style="text-align: right;">11</td>
+<td>Аренда автомобилей</td>
+<td><code>cars</code> (id, model, pricePerDay, available)</td>
+<td>фильтр, расчёт стоимости</td>
 </tr>
 <tr>
-<td>12</td>
-<td>Учёт заказов</td>
+<td style="text-align: right;">12</td>
+<td>Онлайн-дневник оценок</td>
+<td><code>grades</code> (id, subject, score, date)</td>
+<td>средний балл, фильтр по предмету</td>
 </tr>
 <tr>
-<td>13</td>
-<td>Обращения в техническую поддержку</td>
+<td style="text-align: right;">13</td>
+<td>Складской учёт</td>
+<td><code>inventory</code> (id, title, quantity, minLevel)</td>
+<td>дефицитные позиции, суммарное количество</td>
 </tr>
 <tr>
-<td>14</td>
-<td>Учёт бронирований</td>
+<td style="text-align: right;">14</td>
+<td>Каталог музыкальных треков</td>
+<td><code>tracks</code> (id, artist, title, duration, genre)</td>
+<td>суммарная длительность, фильтр</td>
 </tr>
 <tr>
-<td>15</td>
-<td>Лента новостей</td>
+<td style="text-align: right;">15</td>
+<td>Онлайн-запись к врачу</td>
+<td><code>appointments</code> (id, patient, doctor, date, status)</td>
+<td>фильтр по врачу, подсчёт записей</td>
 </tr>
 <tr>
-<td>16</td>
-<td>Справочник организаций</td>
+<td style="text-align: right;">16</td>
+<td>Туристические туры</td>
+<td><code>tours</code> (id, country, price, duration, available)</td>
+<td>средняя цена, фильтр по стране</td>
 </tr>
 <tr>
-<td>17</td>
-<td>Учёт заявок на ремонт</td>
+<td style="text-align: right;">17</td>
+<td>Платформа вебинаров</td>
+<td><code>webinars</code> (id, title, speaker, date, status)</td>
+<td>фильтр по дате, подсчёт upcoming</td>
 </tr>
 <tr>
-<td>18</td>
-<td>Список пользователей системы</td>
+<td style="text-align: right;">18</td>
+<td>Доставка еды</td>
+<td><code>orders</code> (id, client, total, status)</td>
+<td>фильтр по статусу, сумма заказов</td>
 </tr>
 <tr>
-<td>19</td>
-<td>Каталог проектов</td>
+<td style="text-align: right;">19</td>
+<td>Каталог гаджетов</td>
+<td><code>devices</code> (id, brand, model, price, stock)</td>
+<td>сортировка по цене, поиск</td>
 </tr>
 <tr>
-<td>20</td>
-<td>Учёт запросов клиентов</td>
+<td style="text-align: right;">20</td>
+<td>SaaS-подписки</td>
+<td><code>subscriptions</code> (id, user, plan, price, active)</td>
+<td>активные подписки, выручка</td>
 </tr>
 <tr>
-<td>21</td>
-<td>Регистрация посетителей</td>
+<td style="text-align: right;">21</td>
+<td>Онлайн-экзамены</td>
+<td><code>tests</code> (id, subject, attempts, passed)</td>
+<td>процент успешных, фильтр</td>
 </tr>
 <tr>
-<td>22</td>
-<td>Учёт отзывов</td>
-</tr>
-</tbody>
-</table>
-<h3 id="-111-1">Группа ДБИс-111рсобф (1)</h3>
-<table>
-<thead>
-<tr>
-<th>№</th>
-<th>Предметная область</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Учёт учебных обращений</td>
-</tr>
-</tbody>
-</table>
-<h3 id="-203-118">Группа ДБИ-203рсобф (1–18)</h3>
-<table>
-<thead>
-<tr>
-<th>№</th>
-<th>Предметная область</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Учёт заявлений</td>
+<td style="text-align: right;">22</td>
+<td>Фитнес-трекер</td>
+<td><code>workouts</code> (id, type, duration, calories, date)</td>
+<td>суммарные калории, фильтр</td>
 </tr>
 <tr>
-<td>2</td>
+<td style="text-align: right;">23</td>
+<td>Учёт проектов</td>
+<td><code>projects</code> (id, name, budget, status)</td>
+<td>бюджет активных проектов</td>
+</tr>
+<tr>
+<td style="text-align: right;">24</td>
+<td>Аренда жилья</td>
+<td><code>apartments</code> (id, city, price, rooms, available)</td>
+<td>фильтр по городу, сортировка</td>
+</tr>
+<tr>
+<td style="text-align: right;">25</td>
+<td>Магазин книг</td>
+<td><code>products</code> (id, title, genre, price, stock)</td>
+<td>фильтр по жанру, поиск</td>
+</tr>
+<tr>
+<td style="text-align: right;">26</td>
+<td>Платформа стартапов</td>
+<td><code>startups</code> (id, name, investment, stage, active)</td>
+<td>фильтр по стадии, сумма инвестиций</td>
+</tr>
+<tr>
+<td style="text-align: right;">27</td>
+<td>Производственные заказы</td>
+<td><code>manufacturingOrders</code> (id, product, quantity, status)</td>
+<td>объём производства, фильтр</td>
+</tr>
+<tr>
+<td style="text-align: right;">28</td>
+<td>Сервис отзывов</td>
+<td><code>reviews</code> (id, user, rating, comment, date)</td>
+<td>средний рейтинг, фильтр</td>
+</tr>
+<tr>
+<td style="text-align: right;">29</td>
 <td>Каталог мероприятий</td>
+<td><code>events</code> (id, title, date, location, ticketsLeft)</td>
+<td>фильтр по дате, доступные билеты</td>
 </tr>
 <tr>
-<td>3</td>
-<td>Список вакансий</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Учёт консультаций</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Каталог курсов</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Учёт обращений студентов</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Заявки на обучение</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Реестр заявок</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Каталог данных</td>
-</tr>
-<tr>
-<td>10</td>
-<td>Учёт регистраций</td>
-</tr>
-<tr>
-<td>11</td>
-<td>Список заявок</td>
-</tr>
-<tr>
-<td>12</td>
-<td>Учёт клиентов сервиса</td>
-</tr>
-<tr>
-<td>13</td>
-<td>Каталог сервисов</td>
-</tr>
-<tr>
-<td>14</td>
-<td>Учёт обращений</td>
-</tr>
-<tr>
-<td>15</td>
-<td>Учёт входящих запросов</td>
-</tr>
-<tr>
-<td>16</td>
-<td>Список операций</td>
-</tr>
-<tr>
-<td>17</td>
-<td>Учёт обращений клиентов</td>
-</tr>
-<tr>
-<td>18</td>
-<td>Мини-ИС «Обращения»</td>
+<td style="text-align: right;">30</td>
+<td>Учёт расходов</td>
+<td><code>expenses</code> (id, category, amount, date)</td>
+<td>сумма расходов, фильтр по категории</td>
 </tr>
 </tbody>
 </table>
-<hr>
-<h2 id="no2">Лабораторная работа №2</h2>
-<p><strong>Основы синтаксиса JavaScript. Операторы языка</strong></p>
-<p><em>(переменные, типы данных, арифметические и логические операторы, условия, циклы)</em></p>
-<blockquote>
-<p>⚠️ Предметные области сохраняются из ЛР-1.
-Изменяется характер деятельности: реализуется программная логика обработки данных средствами базового синтаксиса JavaScript.</p>
-</blockquote>
-<h3 id="-281-122_1">ДБИ-281рсобф (1–22)</h3>
-<p>Темы ЛР-1, акцент:
-<strong>переменные и типы данных, условные конструкции, логические проверки, циклическая обработка данных, вычисление показателей предметной области</strong>.</p>
-<h3 id="-111-1_1">ДБИс-111рсобф (1)</h3>
-<table>
-<thead>
-<tr>
-<th>№</th>
-<th>Предметная область</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Алгоритмическая обработка учебных обращений (условия и циклы)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="-203-118_1">ДБИ-203рсобф (1–18)</h3>
-<p>Темы ЛР-1, акцент:
-<strong>реализация базовых алгоритмов обработки данных предметной области с использованием операторов языка JavaScript</strong>.</p>
-<hr>
-<h2 id="no3">Лабораторная работа №3</h2>
-<p><strong>Объектная модель документа. Использование DOM для доступа к элементам веб-страницы</strong></p>
-<p><em>(доступ к элементам страницы, изменение содержимого, события, динамическое обновление интерфейса)</em></p>
-<h3 id="-281-122_2">ДБИ-281рсобф (1–22)</h3>
-<p>Темы ЛР-1, акцент:
-<strong>работа с DOM, обработка событий, динамическое изменение структуры страницы, реализация интерфейсной логики приложения</strong>.</p>
-<h3 id="-111-1_2">ДБИс-111рсобф (1)</h3>
-<table>
-<thead>
-<tr>
-<th>№</th>
-<th>Предметная область</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Управление учебными данными через DOM-интерфейс</td>
-</tr>
-</tbody>
-</table>
-<h3 id="-203-118_2">ДБИ-203рсобф (1–18)</h3>
-<p>Темы ЛР-1, акцент:
-<strong>отображение реестров и каталогов, динамическое обновление интерфейса, управление элементами страницы средствами DOM</strong>.</p>
-<hr>
-<h2 id="no4">Лабораторная работа №4</h2>
-<p><strong>Регулярные выражения. Разные функции</strong></p>
-<p><em>(валидация данных, функции обработки, асинхронные операции, получение данных)</em></p>
-<h3 id="-281-122_3">ДБИ-281рсобф (1–22)</h3>
-<p>Темы ЛР-1, акцент:
-<strong>регулярные выражения для проверки данных, создание пользовательских функций, асинхронное получение данных (<code>fetch</code>, <code>async/await</code>), обработка ошибок</strong>.</p>
-<h3 id="-111-1_3">ДБИс-111рсобф (1)</h3>
-<table>
-<thead>
-<tr>
-<th>№</th>
-<th>Предметная область</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Асинхронная загрузка и проверка учебных данных</td>
-</tr>
-</tbody>
-</table>
-<h3 id="-203-118_3">ДБИ-203рсобф (1–18)</h3>
-<p>Темы ЛР-1, акцент:
-<strong>валидация данных, интеграция с внешними источниками, асинхронная обработка информации предметной области</strong>.</p>
 
 
 

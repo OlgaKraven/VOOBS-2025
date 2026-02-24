@@ -20,7 +20,7 @@
     
     
       
-        <title>Лабораторная работа 2 - Разработка web-приложений на языке JavaScript</title>
+        <title>Лабораторная работа 2 - Основы разработки Веб-сервисов</title>
       
     
     
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#no2" class="md-skip">
+        <a href="#no2-web-html" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -89,7 +89,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
-    <a href="index.html" title="Разработка web-приложений на языке JavaScript" class="md-header__button md-logo" aria-label="Разработка web-приложений на языке JavaScript" data-md-component="logo">
+    <a href="index.html" title="Основы разработки Веб-сервисов" class="md-header__button md-logo" aria-label="Основы разработки Веб-сервисов" data-md-component="logo">
       
   <img src="assets/icons/logo.png" alt="logo">
 
@@ -102,7 +102,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Разработка web-приложений на языке JavaScript
+            Основы разработки Веб-сервисов
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -186,12 +186,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="Разработка web-приложений на языке JavaScript" class="md-nav__button md-logo" aria-label="Разработка web-приложений на языке JavaScript" data-md-component="logo">
+    <a href="index.html" title="Основы разработки Веб-сервисов" class="md-nav__button md-logo" aria-label="Основы разработки Веб-сервисов" data-md-component="logo">
       
   <img src="assets/icons/logo.png" alt="logo">
 
     </a>
-    Разработка web-приложений на языке JavaScript
+    Основы разработки Веб-сервисов
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -394,17 +394,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#javascript" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Основы синтаксиса JavaScript. Операторы языка.
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -428,56 +417,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#11-no2" class="md-nav__link">
+  <a href="#11-html-dom" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1. Место лабораторной работы №2 в проекте семестра
+        1.1. Ключевые понятия: HTML, DOM, браузер, стандарты
       
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-javascript" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.2. Исполнение JavaScript: как работает код
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13-let-const" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.3. Переменные и константы: let, const
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.3. Переменные и константы: let, const">
+    <nav class="md-nav" aria-label="1.1. Ключевые понятия: HTML, DOM, браузер, стандарты">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#131" class="md-nav__link">
+  <a href="#html-hypertext-markup-language" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.3.1. Основные правила (подробно)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.3.1. Основные правила (подробно)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-const" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1) const — константа (ссылку переназначать нельзя)
+        HTML (HyperText Markup Language)
       
     </span>
   </a>
@@ -485,10 +440,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-let" class="md-nav__link">
+  <a href="#dom-document-object-model" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2) let — переменная (значение можно изменять)
+        DOM (Document Object Model)
       
     </span>
   </a>
@@ -496,43 +451,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-var" class="md-nav__link">
+  <a href="#html" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3) Почему var не используется (и чем он опасен)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4) Правило выбора (простая памятка)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-1-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5) Пример из проекта (логика ЛР1 → ЛР2)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6) Типичные ошибки студентов (и как исправить)
+        Браузер как интерпретатор HTML
       
     </span>
   </a>
@@ -545,22 +467,72 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#132" class="md-nav__link">
+  <a href="#12-html" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.3.2. Типичная ошибка (и как исправить)
+        1.2. История и стандарты HTML
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.3.2. Типичная ошибка (и как исправить)">
+    <nav class="md-nav" aria-label="1.2. История и стандарты HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html-html-20-html5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Эволюция HTML (HTML 2.0 → HTML5)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#w3c-whatwg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Роль W3C и WHATWG
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html-xml-xhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отличие HTML от XML, XHTML
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-html-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Структура HTML-документа
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3. Структура HTML-документа">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Описание ошибки
+        Базовые элементы документа
       
     </span>
   </a>
@@ -571,7 +543,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Почему это логическая ошибка проектирования
+        Кодировка и метатеги
       
     </span>
   </a>
@@ -582,7 +554,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Корректное решение
+        Подключение ресурсов
       
     </span>
   </a>
@@ -593,323 +565,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Краткое правило для самопроверки
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#14" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.4. Типы данных (примитивы и объекты)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.4. Типы данных (примитивы и объекты)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#141" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.4.1. Примитивы (основные)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.4.1. Примитивы (основные)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1) number — числовой тип
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2) string — строковый тип
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-boolean" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3) boolean — логический тип
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-null" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4) null — осознанное отсутствие значения
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-undefined" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5) undefined — значение не задано
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-bigint-symbol" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6) bigint и symbol (обзорно)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-null-undefined" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7) Ключевые различия null и undefined
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#142" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.4.2. Объекты (обзорно)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#15" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5. Приведение типов и ввод данных: почему возникают ошибки
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.5. Приведение типов и ввод данных: почему возникают ошибки">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#151" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5.1. Пример типичной проблемы
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#152" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5.2. Правильное решение: явное приведение типов
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#153-nan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5.3. Проверка корректности числа (NaN)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#154" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5.4. Практический пример с вводом
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#16" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.6. Операторы: арифметика, сравнение, логика
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.6. Операторы: арифметика, сравнение, логика">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#161" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.6.1. Арифметические операторы
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#162" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.6.2. Операторы сравнения: почему важно ===
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#163" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.6.3. Логические операторы
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#17" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.7. Условия: ветвление логики
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.7. Условия: ветвление логики">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#171-if-else" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.7.1. if / else
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#172-switch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.7.2. switch
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#18" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.8. Циклы: повторение действий
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.8. Циклы: повторение действий">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#181-for" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.8.1. for
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#182-while" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.8.2. while
+        Пример базового документа с комментариями
       
     </span>
   </a>
@@ -930,19 +586,19 @@
   <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Практические задания по блоку (по одной задаче на каждую тему)
+        2. Задание
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Практические задания по блоку (по одной задаче на каждую тему)">
+    <nav class="md-nav" aria-label="2. Задание">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Смысл лабораторной работы
+        Цель
       
     </span>
   </a>
@@ -950,10 +606,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#21" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ключевой результат
+        2.1. Выбор объекта проектирования
       
     </span>
   </a>
@@ -961,10 +617,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#21-13-let-const" class="md-nav__link">
+  <a href="#22-ui-" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1. Задание к теме 1.3. Переменные и константы: let, const
+        2.2. Аналитический разбор интерфейса (UI-структура)
       
     </span>
   </a>
@@ -972,10 +628,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-14" class="md-nav__link">
+  <a href="#23-ui-api-db" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2. Задание к теме 1.4. Типы данных: примитивы, объекты
+        2.3. Архитектурная схема “UI → API → DB”
       
     </span>
   </a>
@@ -983,10 +639,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#23-15" class="md-nav__link">
+  <a href="#24-html" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.3. Задание к теме 1.5. Приведение типов и ввод данных
+        2.4. Структура HTML (каркас будущего интерфейса)
       
     </span>
   </a>
@@ -994,10 +650,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#24-16" class="md-nav__link">
+  <a href="#25-void" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.4. Задание к теме 1.6. Операторы: арифметика, сравнение, логика
+        2.5. Таблица сравнения: блочные / строчные / void / семантические
       
     </span>
   </a>
@@ -1005,10 +661,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#25-17-ifelse-switch" class="md-nav__link">
+  <a href="#26-1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.5. Задание к теме 1.7. Условия: ветвление логики (if/else, switch)
+        2.6. Проектирование формы (минимум 1 форма)
       
     </span>
   </a>
@@ -1016,10 +672,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#26-18-for-while" class="md-nav__link">
+  <a href="#27-api" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.6. Задание к теме 1.8. Циклы: for, while
+        2.7. Передача данных на API (демонстрационный сценарий)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8. Краткий аналитический вывод
       
     </span>
   </a>
@@ -1032,22 +699,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-1-2" class="md-nav__link">
+  <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Итоговая задача: “Интерактивный вывод на экран по кнопкам” (ЛР1 → ЛР2)
+        3. Итоговая задача
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. Итоговая задача: “Интерактивный вывод на экран по кнопкам” (ЛР1 → ЛР2)">
+    <nav class="md-nav" aria-label="3. Итоговая задача">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-indexhtml" class="md-nav__link">
+  <a href="#html-web-" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1. Модификация верстки index.html (кнопки + зона вывода)
+        «Проектирование HTML-структуры клиентской части Web-приложения»
       
     </span>
   </a>
@@ -1055,10 +722,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#32" class="md-nav__link">
+  <a href="#31-ui-" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2. Требования к логике
+        3.1. Мини-каталог UI-компонентов (структурный)
       
     </span>
   </a>
@@ -1066,10 +733,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#33-2" class="md-nav__link">
+  <a href="#32-ui-api-db" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3. Что считается “сложной задачей” в рамках ЛР2
+        3.2. Схема “UI → API → DB” на одном сценарии
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-ui-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Два сценария ошибок (UI-уровень)
       
     </span>
   </a>
@@ -1080,17 +758,6 @@
   <a href="#34" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.4. Требования к сдаче
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
         3.4. Для выполнения требуется
       
     </span>
@@ -1099,10 +766,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#36" class="md-nav__link">
+  <a href="#35" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.6. Запрет
+        3.5. Запрет
       
     </span>
   </a>
@@ -1115,7 +782,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4_1" class="md-nav__link">
+  <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
       
         4. Контрольные вопросы
@@ -1137,7 +804,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6_1" class="md-nav__link">
+  <a href="#6" class="md-nav__link">
     <span class="md-ellipsis">
       
         6. Шаблон отчёта
@@ -1226,33 +893,6 @@
   
   
     <li class="md-nav__item">
-      <a href="passport.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Пример паспорта дисциплины
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="requirements.html" class="md-nav__link">
         
   
@@ -1327,17 +967,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#javascript" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Основы синтаксиса JavaScript. Операторы языка.
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1361,56 +990,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#11-no2" class="md-nav__link">
+  <a href="#11-html-dom" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1. Место лабораторной работы №2 в проекте семестра
+        1.1. Ключевые понятия: HTML, DOM, браузер, стандарты
       
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-javascript" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.2. Исполнение JavaScript: как работает код
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13-let-const" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.3. Переменные и константы: let, const
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.3. Переменные и константы: let, const">
+    <nav class="md-nav" aria-label="1.1. Ключевые понятия: HTML, DOM, браузер, стандарты">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#131" class="md-nav__link">
+  <a href="#html-hypertext-markup-language" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.3.1. Основные правила (подробно)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.3.1. Основные правила (подробно)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-const" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1) const — константа (ссылку переназначать нельзя)
+        HTML (HyperText Markup Language)
       
     </span>
   </a>
@@ -1418,10 +1013,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-let" class="md-nav__link">
+  <a href="#dom-document-object-model" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2) let — переменная (значение можно изменять)
+        DOM (Document Object Model)
       
     </span>
   </a>
@@ -1429,43 +1024,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-var" class="md-nav__link">
+  <a href="#html" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3) Почему var не используется (и чем он опасен)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4) Правило выбора (простая памятка)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-1-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5) Пример из проекта (логика ЛР1 → ЛР2)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6) Типичные ошибки студентов (и как исправить)
+        Браузер как интерпретатор HTML
       
     </span>
   </a>
@@ -1478,22 +1040,72 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#132" class="md-nav__link">
+  <a href="#12-html" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.3.2. Типичная ошибка (и как исправить)
+        1.2. История и стандарты HTML
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.3.2. Типичная ошибка (и как исправить)">
+    <nav class="md-nav" aria-label="1.2. История и стандарты HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html-html-20-html5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Эволюция HTML (HTML 2.0 → HTML5)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#w3c-whatwg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Роль W3C и WHATWG
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html-xml-xhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отличие HTML от XML, XHTML
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-html-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Структура HTML-документа
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3. Структура HTML-документа">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Описание ошибки
+        Базовые элементы документа
       
     </span>
   </a>
@@ -1504,7 +1116,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Почему это логическая ошибка проектирования
+        Кодировка и метатеги
       
     </span>
   </a>
@@ -1515,7 +1127,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Корректное решение
+        Подключение ресурсов
       
     </span>
   </a>
@@ -1526,323 +1138,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Краткое правило для самопроверки
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#14" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.4. Типы данных (примитивы и объекты)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.4. Типы данных (примитивы и объекты)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#141" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.4.1. Примитивы (основные)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.4.1. Примитивы (основные)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1) number — числовой тип
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2) string — строковый тип
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-boolean" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3) boolean — логический тип
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-null" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4) null — осознанное отсутствие значения
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-undefined" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5) undefined — значение не задано
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-bigint-symbol" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6) bigint и symbol (обзорно)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-null-undefined" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7) Ключевые различия null и undefined
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#142" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.4.2. Объекты (обзорно)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#15" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5. Приведение типов и ввод данных: почему возникают ошибки
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.5. Приведение типов и ввод данных: почему возникают ошибки">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#151" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5.1. Пример типичной проблемы
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#152" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5.2. Правильное решение: явное приведение типов
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#153-nan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5.3. Проверка корректности числа (NaN)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#154" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5.4. Практический пример с вводом
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#16" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.6. Операторы: арифметика, сравнение, логика
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.6. Операторы: арифметика, сравнение, логика">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#161" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.6.1. Арифметические операторы
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#162" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.6.2. Операторы сравнения: почему важно ===
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#163" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.6.3. Логические операторы
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#17" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.7. Условия: ветвление логики
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.7. Условия: ветвление логики">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#171-if-else" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.7.1. if / else
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#172-switch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.7.2. switch
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#18" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.8. Циклы: повторение действий
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.8. Циклы: повторение действий">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#181-for" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.8.1. for
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#182-while" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.8.2. while
+        Пример базового документа с комментариями
       
     </span>
   </a>
@@ -1863,19 +1159,19 @@
   <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Практические задания по блоку (по одной задаче на каждую тему)
+        2. Задание
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Практические задания по блоку (по одной задаче на каждую тему)">
+    <nav class="md-nav" aria-label="2. Задание">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Смысл лабораторной работы
+        Цель
       
     </span>
   </a>
@@ -1883,10 +1179,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#21" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ключевой результат
+        2.1. Выбор объекта проектирования
       
     </span>
   </a>
@@ -1894,10 +1190,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#21-13-let-const" class="md-nav__link">
+  <a href="#22-ui-" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1. Задание к теме 1.3. Переменные и константы: let, const
+        2.2. Аналитический разбор интерфейса (UI-структура)
       
     </span>
   </a>
@@ -1905,10 +1201,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-14" class="md-nav__link">
+  <a href="#23-ui-api-db" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2. Задание к теме 1.4. Типы данных: примитивы, объекты
+        2.3. Архитектурная схема “UI → API → DB”
       
     </span>
   </a>
@@ -1916,10 +1212,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#23-15" class="md-nav__link">
+  <a href="#24-html" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.3. Задание к теме 1.5. Приведение типов и ввод данных
+        2.4. Структура HTML (каркас будущего интерфейса)
       
     </span>
   </a>
@@ -1927,10 +1223,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#24-16" class="md-nav__link">
+  <a href="#25-void" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.4. Задание к теме 1.6. Операторы: арифметика, сравнение, логика
+        2.5. Таблица сравнения: блочные / строчные / void / семантические
       
     </span>
   </a>
@@ -1938,10 +1234,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#25-17-ifelse-switch" class="md-nav__link">
+  <a href="#26-1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.5. Задание к теме 1.7. Условия: ветвление логики (if/else, switch)
+        2.6. Проектирование формы (минимум 1 форма)
       
     </span>
   </a>
@@ -1949,10 +1245,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#26-18-for-while" class="md-nav__link">
+  <a href="#27-api" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.6. Задание к теме 1.8. Циклы: for, while
+        2.7. Передача данных на API (демонстрационный сценарий)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8. Краткий аналитический вывод
       
     </span>
   </a>
@@ -1965,22 +1272,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-1-2" class="md-nav__link">
+  <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Итоговая задача: “Интерактивный вывод на экран по кнопкам” (ЛР1 → ЛР2)
+        3. Итоговая задача
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. Итоговая задача: “Интерактивный вывод на экран по кнопкам” (ЛР1 → ЛР2)">
+    <nav class="md-nav" aria-label="3. Итоговая задача">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-indexhtml" class="md-nav__link">
+  <a href="#html-web-" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1. Модификация верстки index.html (кнопки + зона вывода)
+        «Проектирование HTML-структуры клиентской части Web-приложения»
       
     </span>
   </a>
@@ -1988,10 +1295,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#32" class="md-nav__link">
+  <a href="#31-ui-" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2. Требования к логике
+        3.1. Мини-каталог UI-компонентов (структурный)
       
     </span>
   </a>
@@ -1999,10 +1306,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#33-2" class="md-nav__link">
+  <a href="#32-ui-api-db" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3. Что считается “сложной задачей” в рамках ЛР2
+        3.2. Схема “UI → API → DB” на одном сценарии
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-ui-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Два сценария ошибок (UI-уровень)
       
     </span>
   </a>
@@ -2013,17 +1331,6 @@
   <a href="#34" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.4. Требования к сдаче
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
         3.4. Для выполнения требуется
       
     </span>
@@ -2032,10 +1339,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#36" class="md-nav__link">
+  <a href="#35" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.6. Запрет
+        3.5. Запрет
       
     </span>
   </a>
@@ -2048,7 +1355,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4_1" class="md-nav__link">
+  <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
       
         4. Контрольные вопросы
@@ -2070,7 +1377,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6_1" class="md-nav__link">
+  <a href="#6" class="md-nav__link">
     <span class="md-ellipsis">
       
         6. Шаблон отчёта
@@ -2097,716 +1404,422 @@
 
 
 
-<h1 id="no2">Лабораторная работа №2</h1>
-<h2 id="javascript">Основы синтаксиса JavaScript. Операторы языка.</h2>
+<h1 id="no2-web-html">Лабораторная работа №2. Проектирование структуры клиентской части Web-приложения (HTML + архитектурное мышление)</h1>
 <hr>
 <h2 id="1">1. Теория</h2>
 <h3 id="10">1.0. Цель работы</h3>
-<p>Сформировать у обучающегося устойчивое понимание базового синтаксиса JavaScript и алгоритмической логики управления программой, научить строить простые алгоритмы обработки данных.</p>
+<p>Сформировать у обучающегося системное понимание HTML как языка разметки клиентской части Web-приложения:</p>
+<ul>
+<li>что такое HTML и зачем он нужен в Web-архитектуре;</li>
+<li>как устроен HTML-документ и почему структура важнее “красоты”;</li>
+<li>как элементы HTML образуют DOM-дерево;</li>
+<li>как проектировать структуру интерфейса под сценарии и будущую интеграцию с API;</li>
+<li>как писать валидную, семантическую, доступную разметку.</li>
+</ul>
+<p>Закрепить навык архитектурного описания UI через схему:</p>
+<div class="highlight"><pre><span></span><code>UI (HTML) → DOM → JS (events) → API (HTTP) → DB
+</code></pre></div>
+<p>и понимание того, что клиентская разметка не существует отдельно, а проектируется под данные и сценарии взаимодействия.</p>
 <hr>
-<h3 id="11-no2">1.1. Место лабораторной работы №2 в проекте семестра</h3>
-<p>Лабораторная работа №1 создала основу:</p>
+<h3 id="11-html-dom">1.1. Ключевые понятия: HTML, DOM, браузер, стандарты</h3>
+<h4 id="html-hypertext-markup-language">HTML (HyperText Markup Language)</h4>
+<p>HTML — язык разметки гипертекста, используемый для описания структуры документа и интерфейса в браузере.
+В архитектуре Web-приложения HTML выполняет роль структурного слоя:</p>
 <ul>
-<li>репозиторий GitHub;</li>
-<li>структура проекта (<code>index.html</code>, <code>style.css</code>, <code>script.js</code>, <code>README.md</code>, <code>passport.md</code>);</li>
-<li>простая верстка под предметную область;</li>
-<li>проверка подключения JavaScript.</li>
+<li>задаёт “скелет” интерфейса (разделы, блоки, формы, таблицы, навигацию);</li>
+<li>формирует DOM-дерево, с которым далее работает JavaScript;</li>
+<li>создаёт смысловую структуру (семантику), важную для доступности и SEO.</li>
 </ul>
-<p>Лабораторная работа №2 развивает проект:</p>
+<p>Важно: HTML не отвечает за логику (это JS) и не отвечает за внешний вид (это CSS), но определяет основу, на которой строится всё остальное.</p>
+<hr>
+<h4 id="dom-document-object-model">DOM (Document Object Model)</h4>
+<p>DOM — объектная модель документа: браузер превращает HTML-код в дерево узлов, где каждый элемент становится объектом.</p>
+<p>Упрощённо:</p>
+<div class="highlight"><pre><span></span><code>HTML-текст → парсер → DOM-дерево → рендер (layout/paint)
+</code></pre></div>
+<p>DOM нужен для того, чтобы:</p>
 <ul>
-<li>добавляет <strong>алгоритмическое ядро</strong>;</li>
-<li>вводит <strong>набор данных предметной области</strong>;</li>
-<li>добавляет механизм демонстрации (консоль + блок вывода на странице);</li>
-<li>закладывает основу для дальнейших работ (DOM, формы, fetch).</li>
+<li>находить элементы (<code>querySelector</code>);</li>
+<li>менять содержимое (<code>textContent</code>, <code>innerHTML</code>);</li>
+<li>добавлять/удалять узлы (<code>createElement</code>, <code>append</code>);</li>
+<li>реагировать на события пользователя (<code>click</code>, <code>submit</code>, <code>input</code>).</li>
 </ul>
 <hr>
-<h3 id="12-javascript">1.2. Исполнение JavaScript: как работает код</h3>
-<p>JavaScript в браузере выполняется движком (JS Engine). Код выполняется:</p>
+<h4 id="html">Браузер как интерпретатор HTML</h4>
+<p>Браузер выполняет технологическую цепочку:</p>
+<ol>
+<li>парсит HTML → строит DOM</li>
+<li>загружает CSS → строит CSSOM</li>
+<li>объединяет DOM + CSSOM → render tree</li>
+<li>layout → paint → compositing</li>
+</ol>
+<p>Вывод для практики: структура HTML напрямую влияет на:</p>
 <ul>
-<li><strong>последовательно</strong> сверху вниз;</li>
-<li>управляется конструкциями ветвления и повторения;</li>
-<li>взаимодействует с окружением браузера через <code>document</code>, <code>console</code>, события.</li>
-</ul>
-<p>В лабораторной №2 мы работаем с базовой логикой:</p>
-<ul>
-<li>переменные, типы, операторы;</li>
-<li>условия (<code>if/else</code>, <code>switch</code>);</li>
-<li>циклы (<code>for</code>, <code>while</code>);</li>
-<li>обработка данных.</li>
+<li>поддерживаемость (легко ли читать и развивать проект);</li>
+<li>доступность (может ли интерфейс читать скрин-ридер);</li>
+<li>SEO (понимают ли роботы структуру страницы);</li>
+<li>производительность (например, избыточные вложенности усложняют рендер).</li>
 </ul>
 <hr>
-<h3 id="13-let-const">1.3. Переменные и константы: <code>let</code>, <code>const</code></h3>
-<h4 id="131">1.3.1. Основные правила (подробно)</h4>
-<p>В JavaScript переменные объявляются тремя ключевыми словами: <code>const</code>, <code>let</code>, <code>var</code>.
-В рамках курса используются <strong>только <code>const</code> и <code>let</code></strong>, потому что они дают предсказуемое поведение и корректную область видимости.</p>
-<hr>
-<h5 id="1-const">1) <code>const</code> — константа (ссылку переназначать нельзя)</h5>
-<p><code>const</code> используется, когда <strong>переменная должна всегда ссылаться на одно и то же значение</strong> (или один и тот же объект).</p>
-<p><strong>Ключевое правило:</strong></p>
+<h3 id="12-html">1.2. История и стандарты HTML</h3>
+<h4 id="html-html-20-html5">Эволюция HTML (HTML 2.0 → HTML5)</h4>
+<p>HTML развивался от простого языка разметки документов до стандарта, поддерживающего полноценные web-приложения.</p>
 <ul>
-<li>нельзя <strong>переназначить</strong> значение переменной (нельзя сделать <code>=</code> на другое значение);</li>
-<li>но если это объект — можно <strong>изменять содержимое</strong> (поля), потому что меняется не ссылка, а содержимое по ссылке.</li>
+<li>HTML 2.0 (1995) — базовые теги: текст, ссылки, формы (примитивно).</li>
+<li>HTML 3.2 / 4.01 — таблицы, скрипты, стили, но часто без семантики (много “разметки ради внешнего вида”).</li>
+<li>XHTML (2000-е) — попытка сделать HTML “строгим как XML”.</li>
+<li>HTML5 (с 2014+) — семантические теги, медиа, новые формы, стандартизация API браузера.</li>
 </ul>
-<p>Пример с примитивом (строка):</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">appName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Учебное web-приложение"</span><span class="p">;</span>
+<hr>
+<h4 id="w3c-whatwg">Роль W3C и WHATWG</h4>
+<ul>
+<li>W3C — консорциум, который исторически утверждал версии спецификаций.</li>
+<li>WHATWG — сообщество, которое ведёт HTML как “Living Standard” (живой стандарт, обновляется постоянно).</li>
+</ul>
+<p>Практический вывод: современные браузеры ориентируются на актуальную спецификацию HTML Living Standard.</p>
+<hr>
+<h4 id="html-xml-xhtml">Отличие HTML от XML, XHTML</h4>
+<p>| Критерий | HTML | XML | XHTML |
+|---|---|---|
+| Назначение | разметка интерфейса/страниц | универсальные данные | HTML в правилах XML |
+| Ошибки | браузер “прощает” многое | строгий синтаксис | строгий синтаксис |
+| Закрывающие теги | иногда опциональны | обязательны | обязательны |
+| Где используется | UI в браузере | интеграции, конфиги, данные | почти не используется в новом web |</p>
+<hr>
+<h3 id="13-html-">1.3. Структура HTML-документа</h3>
+<h4 id="_1">Базовые элементы документа</h4>
+<ul>
+<li><code>&lt;!DOCTYPE html&gt;</code> — сообщает браузеру режим стандартов.</li>
+<li><code>&lt;html&gt;</code> — корневой элемент.</li>
+<li><code>&lt;head&gt;</code> — метаданные, подключение ресурсов.</li>
+<li><code>&lt;body&gt;</code> — видимое содержимое.</li>
+</ul>
+<hr>
+<h4 id="_2">Кодировка и метатеги</h4>
+<ul>
+<li><code>charset="UTF-8"</code> — стандартная кодировка.</li>
+<li><code>viewport</code> — корректная адаптивность на мобильных.</li>
+</ul>
+<hr>
+<h4 id="_3">Подключение ресурсов</h4>
+<ul>
+<li>CSS: <code>&lt;link rel="stylesheet" href="..."&gt;</code></li>
+<li>JS: <code>&lt;script src="..." defer&gt;&lt;/script&gt;</code></li>
+</ul>
+<hr>
+<h4 id="_4">Пример базового документа с комментариями</h4>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"ru"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="cm">&lt;!-- Кодировка --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"UTF-8"</span> <span class="p">/&gt;</span>
 
-<span class="c1">// appName = "Другое имя"; </span>
-<span class="c1">// Ошибка: Assignment to constant variable</span>
-</code></pre></div>
-<p>Пример с объектом (изменение полей разрешено):</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">ticket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s2">"new"</span><span class="w"> </span><span class="p">};</span>
+    <span class="cm">&lt;!-- Адаптивность --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"viewport"</span> <span class="na">content</span><span class="o">=</span><span class="s">"width=device-width, initial-scale=1.0"</span> <span class="p">/&gt;</span>
 
-<span class="nx">ticket</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"done"</span><span class="p">;</span><span class="w">     </span><span class="c1">// допустимо</span>
-<span class="nx">ticket</span><span class="p">.</span><span class="nx">priority</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w">        </span><span class="c1">// допустимо (добавление поля)</span>
+    <span class="cm">&lt;!-- Заголовок вкладки --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Каталог товаров<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
 
-<span class="c1">// ticket = { id: 2, status: "new" };</span>
-<span class="c1">// Ошибка: нельзя переназначить ссылку на новый объект</span>
-</code></pre></div>
-<p>Практический вывод для лабораторных:</p>
-<ul>
-<li><code>const</code> используем для “стабильных” сущностей: настройки, ссылки на DOM-элементы, название приложения;</li>
-<li>если значение должно меняться в процессе выполнения — тогда нужен <code>let</code>.</li>
-</ul>
-<hr>
-<h5 id="2-let">2) <code>let</code> — переменная (значение можно изменять)</h5>
-<p><code>let</code> используется, когда значение должно изменяться в ходе работы алгоритма.</p>
-<p>Типичные случаи:</p>
-<ul>
-<li>счётчик цикла (<code>i</code>, <code>j</code>);</li>
-<li>аккумулятор суммы (<code>sum</code>);</li>
-<li>переменная максимума/минимума (<code>max</code>, <code>min</code>);</li>
-<li>флаг (<code>isValid</code>);</li>
-<li>промежуточный результат.</li>
-</ul>
-<p>Пример:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+    <span class="cm">&lt;!-- Описание для SEO --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"description"</span> <span class="na">content</span><span class="o">=</span><span class="s">"Каталог товаров: поиск, фильтры, карточки."</span> <span class="p">/&gt;</span>
 
-<span class="nx">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">counter</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w">  </span><span class="c1">// допустимо</span>
-<span class="nx">counter</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w">           </span><span class="c1">// допустимо (короче)</span>
-<span class="nx">counter</span><span class="o">++</span><span class="p">;</span><span class="w">              </span><span class="c1">// допустимо (инкремент)</span>
-</code></pre></div>
-<p>Практический вывод:</p>
-<ul>
-<li>всё, что “накапливается”, “считается”, “изменяется по шагам” — это <code>let</code>.</li>
-</ul>
-<hr>
-<h5 id="3-var">3) Почему <code>var</code> не используется (и чем он опасен)</h5>
-<p><code>var</code> — устаревший способ объявления переменных.
-Главная проблема — неблоковая область видимости (<code>var</code> “виден” не только внутри <code>{}</code>, а во всей функции), из-за чего возникают ошибки при циклах и условиях.</p>
-<p>Пример проблемы с <code>var</code> (для понимания, не использовать):</p>
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="c1">// ...</span>
-<span class="p">}</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span><span class="w"> </span><span class="c1">// 3 — i доступна снаружи цикла (неожиданно)</span>
-</code></pre></div>
-<p>С <code>let</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="c1">// ...</span>
-<span class="p">}</span>
-<span class="c1">// console.log(i); // Ошибка: i is not defined (что правильно)</span>
-</code></pre></div>
-<hr>
-<h5 id="4">4) Правило выбора (простая памятка)</h5>
-<p>Используй:</p>
-<ul>
-<li><code>const</code> — по умолчанию, если переменная не должна переназначаться;</li>
-<li><code>let</code> — только когда точно нужно изменять значение.</li>
-</ul>
-<hr>
-<h5 id="5-1-2">5) Пример из проекта (логика ЛР1 → ЛР2)</h5>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">appName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Учебное web-приложение"</span><span class="p">;</span><span class="w">             </span><span class="c1">// не меняется</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"output"</span><span class="p">);</span><span class="w">     </span><span class="c1">// ссылка на элемент не меняется</span>
+    <span class="cm">&lt;!-- Подключение CSS --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"./styles.css"</span> <span class="p">/&gt;</span>
 
-<span class="kd">const</span><span class="w"> </span><span class="nx">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1200</span><span class="p">,</span><span class="w"> </span><span class="mf">500</span><span class="p">,</span><span class="w"> </span><span class="mf">800</span><span class="p">];</span><span class="w">                      </span><span class="c1">// данные — ссылка не меняется</span>
+    <span class="cm">&lt;!-- Подключение JS (defer — после построения DOM) --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"./app.js"</span> <span class="na">defer</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 
-<span class="kd">let</span><span class="w"> </span><span class="nx">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w">                                          </span><span class="c1">// сумма будет меняться</span>
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">values</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">             </span><span class="c1">// i меняется на каждой итерации</span>
-<span class="w">  </span><span class="nx">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">values</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
-<span class="p">}</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Каталог<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
 
-<span class="nx">output</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">appName</span><span class="si">}</span><span class="sb">\nСумма: </span><span class="si">${</span><span class="nx">sum</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
-</code></pre></div>
-<hr>
-<h5 id="6">6) Типичные ошибки студентов (и как исправить)</h5>
-<p><strong>Ошибка A: объявили аккумулятор через <code>const</code></strong></p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<span class="nx">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// ошибка</span>
-</code></pre></div>
-<p>Исправление:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<span class="nx">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
-</code></pre></div>
-<hr>
-<h4 id="132">1.3.2. Типичная ошибка (и как исправить)</h4>
-<p>Одна из самых распространённых ошибок при изучении JavaScript — <strong>использование <code>const</code> для переменных, значение которых должно изменяться в ходе выполнения алгоритма</strong>.</p>
-<hr>
-<h5 id="_1">Описание ошибки</h5>
-<p>Студент объявляет переменную как <code>const</code>, а затем пытается изменить её значение:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<span class="nx">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// ошибка</span>
-</code></pre></div>
-<p>В момент выполнения второй строки JavaScript выдаёт ошибку:</p>
-<div class="highlight"><pre><span></span><code>TypeError: Assignment to constant variable
-</code></pre></div>
-<p>Причина ошибки:</p>
-<ul>
-<li><code>const</code> запрещает переназначение значения переменной;</li>
-<li>операция <code>sum += 10</code> эквивалентна <code>sum = sum + 10</code>;</li>
-<li>происходит попытка присвоить переменной новое значение, что недопустимо для <code>const</code>.</li>
-</ul>
-<hr>
-<h5 id="_2">Почему это логическая ошибка проектирования</h5>
-<p>Переменная <code>sum</code> по смыслу является:</p>
-<ul>
-<li>аккумулятором;</li>
-<li>промежуточным результатом;</li>
-<li>величиной, изменяющейся на каждом шаге алгоритма.</li>
-</ul>
-<p>Следовательно, такая переменная по определению не может быть константой.</p>
-<hr>
-<h5 id="_3">Корректное решение</h5>
-<p>Для переменных, значение которых изменяется, необходимо использовать <code>let</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<span class="nx">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// корректно</span>
-</code></pre></div>
-<hr>
-<h5 id="_4">Краткое правило для самопроверки</h5>
-<p>Перед объявлением переменной задай вопрос:</p>
-<blockquote>
-<p>Будет ли это значение изменяться в процессе работы программы?</p>
-</blockquote>
-<ul>
-<li>если нет → <code>const</code></li>
-<li>если да → <code>let</code></li>
-</ul>
-<p>Это правило применимо ко всем последующим лабораторным работам курса.</p>
-<hr>
-<h3 id="14">1.4. Типы данных (примитивы и объекты)</h3>
-<h4 id="141">1.4.1. Примитивы (основные)</h4>
-<p>В JavaScript <strong>примитивные типы данных</strong> — это значения, которые:</p>
-<ul>
-<li>не являются объектами;</li>
-<li>хранятся и передаются <strong>по значению</strong>, а не по ссылке.</li>
-</ul>
-<p>Понимание примитивов критично для алгоритмической логики, условий и сравнений.</p>
-<hr>
-<h5 id="1-number">1) <code>number</code> — числовой тип</h5>
-<p>В JavaScript <strong>нет разделения на целые и вещественные числа</strong> (<code>int</code>, <code>float</code>) — все числа относятся к типу <code>number</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1500</span><span class="p">;</span><span class="w">     </span><span class="c1">// number</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">tax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.2</span><span class="p">;</span><span class="w">        </span><span class="c1">// number</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">price</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mf">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">tax</span><span class="p">);</span>
-</code></pre></div>
-<p>Особенности:</p>
-<ul>
-<li>поддерживаются отрицательные и дробные значения;</li>
-<li>используется формат IEEE 754;</li>
-<li>возможны специальные значения: <code>NaN</code>, <code>Infinity</code>, <code>-Infinity</code>.</li>
-</ul>
-<p>Пример типичной проблемы:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.2</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// 0.30000000000000004</span>
-</code></pre></div>
-<p>Вывод: числа с плавающей точкой требуют осторожности при сравнениях.</p>
-<hr>
-<h5 id="2-string">2) <code>string</code> — строковый тип</h5>
-<p><code>string</code> используется для хранения текстовых данных.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Заявка #12"</span><span class="p">;</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Ошибка обработки данных"</span><span class="p">;</span>
-</code></pre></div>
-<p>Практическое применение:</p>
-<ul>
-<li>заголовки;</li>
-<li>сообщения пользователю;</li>
-<li>идентификаторы, коды, статусы.</li>
-</ul>
-<hr>
-<h5 id="3-boolean">3) <code>boolean</code> — логический тип</h5>
-<p><code>boolean</code> принимает только два значения:</p>
-<ul>
-<li><code>true</code></li>
-<li><code>false</code></li>
-</ul>
-<p>Используется в условиях, проверках и флагах состояния.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">isDone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+    <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Контент страницы…<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
 
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">isDone</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Задача завершена"</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Задача в процессе"</span><span class="p">);</span>
-<span class="p">}</span>
+    <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">small</span><span class="p">&gt;</span>© 2026<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 <hr>
-<h5 id="4-null">4) <code>null</code> — осознанное отсутствие значения</h5>
-<p><code>null</code> означает, что значение задано явно, но в данный момент ничего не содержит.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<h2 id="2">2. Задание</h2>
+<h3 id="_5">Цель</h3>
+<p>Спроектировать структуру клиентской части Web-приложения на уровне HTML, описав её как систему:</p>
+<div class="highlight"><pre><span></span><code>UI (HTML) → DOM → JS (events) → API (HTTP) → DB
 </code></pre></div>
-<p>Важно:</p>
-<div class="highlight"><pre><span></span><code><span class="ow">typeof</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">"object"</span><span class="p">;</span><span class="w"> </span><span class="c1">// историческая особенность JS</span>
-</code></pre></div>
-<hr>
-<h5 id="5-undefined">5) <code>undefined</code> — значение не задано</h5>
-<p><code>undefined</code> означает:</p>
+<p>Показать, что HTML в проекте:</p>
 <ul>
-<li>переменная объявлена;</li>
-<li>но значение ей ещё не присвоено.</li>
+<li>описывает интерфейсные блоки (layout);</li>
+<li>задаёт “контракт” для JS (id/class/data-атрибуты);</li>
+<li>формирует основу для отправки данных на сервер (формы);</li>
+<li>обеспечивает семантику, доступность и SEO.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">comment</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">comment</span><span class="p">);</span><span class="w"> </span><span class="c1">// undefined</span>
-</code></pre></div>
 <hr>
-<h5 id="6-bigint-symbol">6) <code>bigint</code> и <code>symbol</code> (обзорно)</h5>
+<h3 id="21">2.1. Выбор объекта проектирования</h3>
+<p>Выбрать предметную область для интерфейса Web-приложения:</p>
 <ul>
-<li><code>bigint</code> — для очень больших целых чисел;</li>
-<li><code>symbol</code> — уникальные идентификаторы.</li>
+<li>интернет-магазин;</li>
+<li>LMS (платформа курсов);</li>
+<li>сервис бронирования;</li>
+<li>ServiceDesk / заявки;</li>
+<li>доставка / логистика;</li>
+<li>расписание / запись к специалисту.</li>
 </ul>
-<p>Для лабораторной работы №2 использование не требуется, но важно знать о существовании.</p>
+<p>Требование: интерфейс должен предполагать взаимодействие с данными (каталог, формы, карточки, статусы), а не быть статической страницей “о компании”.</p>
 <hr>
-<h5 id="7-null-undefined">7) Ключевые различия <code>null</code> и <code>undefined</code></h5>
+<h3 id="22-ui-">2.2. Аналитический разбор интерфейса (UI-структура)</h3>
+<p>В отчёте указать:</p>
+<ol>
+<li>Основной сценарий пользователя (например: “выбрать товар → заполнить форму → отправить”).</li>
+<li>
+<p>Какие экранные области необходимы:</p>
+</li>
+<li>
+<p>шапка/навигация;</p>
+</li>
+<li>контентная область;</li>
+<li>фильтры/панели;</li>
+<li>карточки/списки;</li>
+<li>
+<p>формы.</p>
+</li>
+<li>
+<p>Какие типы данных будут отображаться (примерно):</p>
+</li>
+<li>
+<p>список сущностей (товары/курсы/заявки);</p>
+</li>
+<li>детальная карточка;</li>
+<li>параметры фильтрации;</li>
+<li>
+<p>данные формы.</p>
+</li>
+<li>
+<p>Какие элементы HTML подходят под каждую область (семантика).</p>
+</li>
+</ol>
+<hr>
+<h3 id="23-ui-api-db">2.3. Архитектурная схема “UI → API → DB”</h3>
+<p>Построить блок-схему (упрощённо):</p>
+<div class="highlight"><pre><span></span><code>User → UI (HTML) → DOM → JS → API → DB → API → JS → UI update
+</code></pre></div>
+<p>Обязательно показать:</p>
+<ul>
+<li>пользователь;</li>
+<li>интерфейс (HTML/DOM);</li>
+<li>клиентскую логику (JS);</li>
+<li>серверный API;</li>
+<li>базу данных.</li>
+</ul>
+<hr>
+<h3 id="24-html">2.4. Структура HTML (каркас будущего интерфейса)</h3>
+<p>Создать HTML-страницу с обязательной структурой:</p>
+<ul>
+<li><code>&lt;header&gt;</code> + <code>&lt;nav&gt;</code></li>
+<li><code>&lt;main&gt;</code> (основное содержимое)</li>
+<li><code>&lt;aside&gt;</code> (дополнительная панель: фильтры/корзина/статусы — по теме)</li>
+<li><code>&lt;footer&gt;</code></li>
+</ul>
+<p>Обязательно использовать:</p>
+<ul>
+<li>минимум 1 <code>section</code>;</li>
+<li>минимум 2 <code>article</code> (карточки сущностей);</li>
+<li>заголовочную иерархию <code>h1 → h2 → h3</code>.</li>
+</ul>
+<hr>
+<h3 id="25-void">2.5. Таблица сравнения: блочные / строчные / void / семантические</h3>
+<p>Составить таблицу (минимум 12 элементов), где для каждого элемента указать:</p>
+<ul>
+<li>тип (block/inline/void/semantic);</li>
+<li>назначение;</li>
+<li>пример использования (1 строка кода).</li>
+</ul>
+<p>Пример формы таблицы (заполнить своими примерами):</p>
 <table>
 <thead>
 <tr>
-<th>Характеристика</th>
-<th style="text-align: right;"><code>null</code></th>
-<th style="text-align: right;"><code>undefined</code></th>
+<th>Элемент</th>
+<th>Тип</th>
+<th>Назначение</th>
+<th>Пример</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Значение задано явно</td>
-<td style="text-align: right;">да</td>
-<td style="text-align: right;">нет</td>
+<td><code>section</code></td>
+<td>semantic block</td>
+<td>тематический раздел</td>
+<td><code>&lt;section&gt;...&lt;/section&gt;</code></td>
 </tr>
 <tr>
-<td>Переменная существует</td>
-<td style="text-align: right;">да</td>
-<td style="text-align: right;">да</td>
+<td><code>a</code></td>
+<td>inline</td>
+<td>ссылка/навигация</td>
+<td><code>&lt;a href="/catalog"&gt;...&lt;/a&gt;</code></td>
 </tr>
 <tr>
-<td>Используется осознанно</td>
-<td style="text-align: right;">да</td>
-<td style="text-align: right;">нет</td>
-</tr>
-<tr>
-<td>Тип (<code>typeof</code>)</td>
-<td style="text-align: right;"><code>"object"</code></td>
-<td style="text-align: right;"><code>"undefined"</code></td>
+<td><code>img</code></td>
+<td>void</td>
+<td>изображение</td>
+<td><code>&lt;img src="..." alt="..."&gt;</code></td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h4 id="142">1.4.2. Объекты (обзорно)</h4>
-<p>В JavaScript <strong>объекты</strong> относятся к ссылочным типам данных.
-Они:</p>
+<h3 id="26-1">2.6. Проектирование формы (минимум 1 форма)</h3>
+<p>В интерфейсе должна быть форма, ориентированная на работу с Web-сервисом:</p>
 <ul>
-<li>хранятся <strong>по ссылке</strong>;</li>
-<li>могут изменяться по содержимому даже при объявлении через <code>const</code>;</li>
-<li>используются для моделирования сущностей предметной области.</li>
+<li>обязательные поля (<code>required</code>);</li>
+<li>корректные типы (<code>email</code>, <code>number</code>, <code>date</code>, <code>url</code> — по необходимости);</li>
+<li>минимум 1 <code>pattern</code>;</li>
+<li>минимум 1 <code>select</code> или группа <code>radio</code>.</li>
 </ul>
-<p>Пример:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">ticket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s2">"Не работает принтер"</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span>
-<span class="p">};</span>
-
-<span class="nx">ticket</span><span class="p">.</span><span class="nx">priority</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w">   </span><span class="c1">// допустимо</span>
-</code></pre></div>
-<hr>
-<h3 id="15">1.5. Приведение типов и ввод данных: почему возникают ошибки</h3>
-<p>Одной из ключевых особенностей JavaScript является <strong>автоматическое (неявное) приведение типов</strong>.
-Это означает, что язык в ряде случаев сам пытается преобразовать значения к нужному типу, чтобы выполнить операцию.</p>
-<p>С одной стороны, это делает язык гибким.
-С другой стороны — именно из-за этого возникает большое количество логических ошибок у начинающих разработчиков.</p>
-<hr>
-<h4 id="151">1.5.1. Пример типичной проблемы</h4>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"10"</span><span class="p">;</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"5"</span><span class="p">;</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span><span class="w"> </span><span class="c1">// "105"</span>
-</code></pre></div>
-<p>Причина:</p>
+<p>Форма должна быть “API-ready”, то есть:</p>
 <ul>
-<li>переменные <code>a</code> и <code>b</code> имеют тип <code>string</code>;</li>
-<li>оператор <code>+</code> для строк означает объединение.</li>
+<li>поля имеют <code>name</code>;</li>
+<li>есть <code>id</code> + <code>label for</code>;</li>
+<li>структура понятна для отправки на сервер.</li>
 </ul>
 <hr>
-<h4 id="152">1.5.2. Правильное решение: явное приведение типов</h4>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Number</span><span class="p">(</span><span class="s2">"10"</span><span class="p">);</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Number</span><span class="p">(</span><span class="s2">"5"</span><span class="p">);</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span><span class="w"> </span><span class="c1">// 15</span>
-</code></pre></div>
-<hr>
-<h4 id="153-nan">1.5.3. Проверка корректности числа (<code>NaN</code>)</h4>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Number</span><span class="p">(</span><span class="s2">"abc"</span><span class="p">);</span><span class="w"> </span><span class="c1">// NaN</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">x</span><span class="p">));</span><span class="w"> </span><span class="c1">// true</span>
-</code></pre></div>
-<hr>
-<h4 id="154">1.5.4. Практический пример с вводом</h4>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">inputValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"1200"</span><span class="p">;</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Number</span><span class="p">(</span><span class="nx">inputValue</span><span class="p">);</span>
-
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">value</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Ошибка: введено не число"</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Значение принято:"</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-<hr>
-<h3 id="16">1.6. Операторы: арифметика, сравнение, логика</h3>
-<p>Операторы используются для вычислений, сравнений и построения логических условий.</p>
-<hr>
-<h4 id="161">1.6.1. Арифметические операторы</h4>
+<h3 id="27-api">2.7. Передача данных на API (демонстрационный сценарий)</h3>
+<p>Добавить пример отправки формы через <code>fetch()</code> (как демонстрация связи UI → API).
+В отчёте указать:</p>
 <ul>
-<li><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code></li>
-</ul>
-<p>Пример:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">mod</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w">  </span><span class="c1">// 1</span>
-</code></pre></div>
-<hr>
-<h4 id="162">1.6.2. Операторы сравнения: почему важно <code>===</code></h4>
-<ul>
-<li><code>===</code> сравнивает значение и тип;</li>
-<li><code>==</code> может приводить типы автоматически.</li>
-</ul>
-<p>Пример:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">5</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"5"</span><span class="p">);</span><span class="w">   </span><span class="c1">// true</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">5</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">"5"</span><span class="p">);</span><span class="w">  </span><span class="c1">// false</span>
-</code></pre></div>
-<hr>
-<h4 id="163">1.6.3. Логические операторы</h4>
-<ul>
-<li><code>&amp;&amp;</code> — И</li>
-<li><code>||</code> — ИЛИ</li>
-<li><code>!</code> — НЕ</li>
-</ul>
-<p>Пример:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">userAge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">19</span><span class="p">;</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">isBlocked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-
-<span class="kd">const</span><span class="w"> </span><span class="nx">hasAccess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">userAge</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">18</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">userAge</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">65</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">isBlocked</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hasAccess</span><span class="p">);</span>
-</code></pre></div>
-<hr>
-<h3 id="17">1.7. Условия: ветвление логики</h3>
-<p>Основные конструкции ветвления:</p>
-<ul>
-<li><code>if / else</code></li>
-<li><code>switch</code></li>
+<li>URL;</li>
+<li>HTTP-метод;</li>
+<li>заголовки;</li>
+<li>пример JSON-тела;</li>
+<li>ожидаемый статус-код;</li>
+<li>пример JSON-ответа.</li>
 </ul>
 <hr>
-<h4 id="171-if-else">1.7.1. <code>if / else</code></h4>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">75</span><span class="p">;</span>
-
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">90</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Отлично"</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">70</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Хорошо"</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Нужно улучшить"</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-<hr>
-<h4 id="172-switch">1.7.2. <code>switch</code></h4>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"new"</span><span class="p">;</span>
-
-<span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">status</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="s2">"new"</span><span class="o">:</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Новая запись"</span><span class="p">);</span>
-<span class="w">    </span><span class="k">break</span><span class="p">;</span>
-<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="s2">"done"</span><span class="o">:</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Завершено"</span><span class="p">);</span>
-<span class="w">    </span><span class="k">break</span><span class="p">;</span>
-<span class="w">  </span><span class="k">default</span><span class="o">:</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Неизвестный статус"</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-<hr>
-<h3 id="18">1.8. Циклы: повторение действий</h3>
-<p>Циклы используются для многократного выполнения действий.</p>
-<hr>
-<h4 id="181-for">1.8.1. <code>for</code></h4>
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-<hr>
-<h4 id="182-while">1.8.2. <code>while</code></h4>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
-
-<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">n</span><span class="p">);</span>
-<span class="w">  </span><span class="nx">n</span><span class="o">--</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<hr>
-<h2 id="2">2. Практические задания по блоку (по одной задаче на каждую тему)</h2>
-<p>Цель: закрепить знания разделов 1.3–1.11 на материале <strong>своей предметной области</strong>.</p>
-<h3 id="_5">Смысл лабораторной работы</h3>
-<p>Освоение фундаментальных конструкций языка JavaScript и логики управления выполнением программы: переменные, типы данных, операторы, условия, циклы, базовые алгоритмы обработки данных.</p>
-<hr>
-<h3 id="_6">Ключевой результат</h3>
-<p>Реализованный набор алгоритмов обработки данных, применимых к выбранной предметной области, с:</p>
+<h3 id="28">2.8. Краткий аналитический вывод</h3>
+<p>1–2 страницы:</p>
 <ul>
-<li>корректной реализацией на JavaScript;</li>
-<li>обработкой типовых ошибок ввода;</li>
-<li>демонстрацией работы через консоль/страницу;</li>
-<li>фиксацией результатов в репозитории GitHub (единый проект семестра).</li>
+<li>почему выбранная структура HTML корректна с точки зрения семантики;</li>
+<li>как DOM будет использоваться JS (какие узлы будут точками привязки);</li>
+<li>как форма связана с REST-сценарием;</li>
+<li>какие потенциальные ошибки предотвращены (доступность, валидность, id/name).</li>
 </ul>
 <hr>
-<h3 id="21-13-let-const">2.1. Задание к теме 1.3. Переменные и константы: <code>let</code>, <code>const</code></h3>
-<p><strong>Задание:</strong>
-Создайте “конфигурацию приложения” и счётчик действий пользователя.</p>
-<p><strong>Требования:</strong></p>
+<h2 id="3">3. Итоговая задача</h2>
+<h3 id="html-web-">«Проектирование HTML-структуры клиентской части Web-приложения»</h3>
+<hr>
+<h3 id="31-ui-">3.1. Мини-каталог UI-компонентов (структурный)</h3>
+<p>Составить список 8–12 UI-компонентов (блоков) вашего интерфейса. Например:</p>
+<ul>
+<li>Header</li>
+<li>Navigation</li>
+<li>SearchBar</li>
+<li>FilterPanel</li>
+<li>CatalogGrid</li>
+<li>ProductCard</li>
+<li>Pagination</li>
+<li>OrderForm</li>
+<li>StatusMessage</li>
+<li>Footer</li>
+</ul>
+<p>Для каждого указать:</p>
+<ul>
+<li>назначение;</li>
+<li>какие HTML-теги используются;</li>
+<li>какие атрибуты будут нужны для JS (<code>id</code>, <code>class</code>, <code>data-*</code>).</li>
+</ul>
+<hr>
+<h3 id="32-ui-api-db">3.2. Схема “UI → API → DB” на одном сценарии</h3>
+<p>Описать бизнес-сценарий:</p>
+<ul>
+<li>действие пользователя (например: “создать заявку”);</li>
+<li>какие поля вводятся;</li>
+<li>какой запрос уходит (URL + method);</li>
+<li>что делает сервер;</li>
+<li>что записывается/читается из БД;</li>
+<li>какой JSON возвращается;</li>
+<li>как обновляется UI.</li>
+</ul>
+<hr>
+<h3 id="33-ui-">3.3. Два сценария ошибок (UI-уровень)</h3>
+<p>Предусмотреть ошибки, которые видит пользователь:</p>
+<ul>
+<li>ошибка валидации формы (400);</li>
+<li>ошибка доступа/не найдено (401/403/404).</li>
+</ul>
+<p>Для каждого:</p>
+<ul>
+<li>причина;</li>
+<li>что отображается в UI (сообщение, подсветка поля);</li>
+<li>пример JSON-ошибки (как ответ сервера).</li>
+</ul>
+<hr>
+<h3 id="34">3.4. Для выполнения требуется</h3>
 <ol>
-<li>
-<p>Объявить <code>const appConfig</code> (объект), который содержит:</p>
-</li>
-<li>
-<p><code>appTitle</code> — название системы по предметной области,</p>
-</li>
-<li><code>defaultStatus</code> — статус по умолчанию (например, <code>"new"</code>),</li>
-<li><code>minValueForFilter</code> — порог для фильтрации (например, <code>800</code>).</li>
-<li>Объявить <code>let actionCount = 0</code>.</li>
-<li>Увеличить <code>actionCount</code> 3 раза (любым способом: <code>+= 1</code>, <code>++</code>).</li>
-<li>Изменить содержимое <code>appConfig</code> (например, поменять <code>minValueForFilter</code>), но <strong>не переназначать</strong> сам объект.</li>
-</ol>
-<p><strong>Ожидаемый результат (консоль):</strong></p>
-<ul>
-<li>вывод <code>actionCount</code> (3)</li>
-<li>вывод <code>appConfig</code> с обновлённым полем</li>
-</ul>
-<hr>
-<h3 id="22-14">2.2. Задание к теме 1.4. Типы данных: примитивы, объекты</h3>
-<p><strong>Задание:</strong>
-Смоделируйте минимум 6 сущностей предметной области в виде объектов.</p>
-<p><strong>Требования к каждому объекту:</strong></p>
-<ul>
-<li><code>id</code> (number)</li>
-<li><code>title</code> (string)</li>
-<li><code>value</code> (number)</li>
-<li><code>status</code> (string)</li>
-<li><code>createdAt</code> (string <code>YYYY-MM-DD</code>)</li>
-</ul>
-<p><strong>Ожидаемый результат:</strong></p>
-<ul>
-<li><code>console.log(...)</code> выводит набор сущностей, отражающих вашу предметную область.</li>
-</ul>
-<hr>
-<h3 id="23-15">2.3. Задание к теме 1.5. Приведение типов и ввод данных</h3>
-<p><strong>Задание:</strong>
-Смоделируйте ввод порога фильтрации как строки и корректно преобразуйте его в число.</p>
-<p><strong>Требования:</strong></p>
-<ol>
-<li>Создать <code>const inputMinValue = "800";</code></li>
-<li>Преобразовать в число: <code>const minValue = Number(inputMinValue);</code></li>
-<li>Если <code>Number.isNaN(minValue)</code> → вывести сообщение об ошибке.</li>
-<li>Иначе → вывести в консоль <code>minValue</code>.</li>
-</ol>
-<p><strong>Ожидаемый результат:</strong></p>
-<ul>
-<li>корректный числовой <code>minValue</code> (800) и отсутствие <code>NaN</code>.</li>
-</ul>
-<hr>
-<h3 id="24-16">2.4. Задание к теме 1.6. Операторы: арифметика, сравнение, логика</h3>
-<p><strong>Задание:</strong>
-Проверить “доступ” к операции в зависимости от параметров.</p>
-<p><strong>Требования:</strong></p>
-<ol>
-<li>
-<p>Создать:</p>
-</li>
-<li>
-<p><code>const userAge = 19;</code></p>
-</li>
-<li><code>const isBlocked = false;</code></li>
-<li>
-<p>Рассчитать:</p>
-</li>
-<li>
-<p><code>const hasAccess = userAge &gt;= 18 &amp;&amp; userAge &lt; 65 &amp;&amp; !isBlocked;</code></p>
-</li>
-<li>Вывести <code>hasAccess</code> в консоль.</li>
-</ol>
-<p><strong>Ожидаемый результат:</strong></p>
-<ul>
-<li><code>true</code> при корректных условиях.</li>
-</ul>
-<hr>
-<h3 id="25-17-ifelse-switch">2.5. Задание к теме 1.7. Условия: ветвление логики (<code>if/else</code>, <code>switch</code>)</h3>
-<p><strong>Задание:</strong>
-Сформировать текст “описания статуса” для сущности предметной области.</p>
-<p><strong>Требования:</strong></p>
-<ol>
-<li>Взять одну сущность предметной области (любой объект).</li>
-<li>
-<p>Через <code>switch (item.status)</code> вывести:</p>
-</li>
-<li>
-<p><code>"Новая запись"</code> для <code>"new"</code></p>
-</li>
-<li><code>"Завершено"</code> для <code>"done"</code></li>
-<li><code>"Неизвестный статус"</code> для других</li>
-<li>
-<p>Дополнительно через <code>if/else</code> вывести категорию по <code>value</code>:</p>
-</li>
-<li>
-<p><code>&gt;= 1000</code> → <code>"Высокое значение"</code></p>
-</li>
-<li><code>&gt;= 700</code> → <code>"Среднее значение"</code></li>
-<li>иначе → <code>"Низкое значение"</code></li>
+<li>Шаблон отчёта.</li>
+<li>Вариант задания в ЛМС (предметная область).</li>
+<li>Оформление по методическим указаниям.</li>
+<li>Ссылка на репозиторий (или архив проекта).</li>
 </ol>
 <hr>
-<h3 id="26-18-for-while">2.6. Задание к теме 1.8. Циклы: <code>for</code>, <code>while</code></h3>
-<p><strong>Задание:</strong>
-Реализовать повторяющееся действие и подсчитать количество сущностей со статусом <code>"new"</code>.</p>
-<p><strong>Требования:</strong></p>
+<h3 id="35">3.5. Запрет</h3>
+<p>❗ Запрещается использование систем искусственного интеллекта для выполнения лабораторной работы.</p>
+<p>Работы, выполненные с использованием ИИ, оцениваются в 0 баллов без возможности доработки.</p>
+<hr>
+<h2 id="4">4. Контрольные вопросы</h2>
 <ol>
-<li>Выполнить повторение действий с использованием цикла.</li>
-<li>Если <code>status === "new"</code> → увеличить счётчик.</li>
-<li>Вывести результат в консоль.</li>
-</ol>
-<hr>
-<h2 id="3-1-2">3. Итоговая задача: “Интерактивный вывод на экран по кнопкам” (ЛР1 → ЛР2)</h2>
-<p>Цель: продолжить логику простой верстки из ЛР1, добавив интерактивные кнопки и вывод результатов на страницу.</p>
-<hr>
-<h3 id="31-indexhtml">3.1. Модификация верстки <code>index.html</code> (кнопки + зона вывода)</h3>
-<p>В ваш <code>index.html</code> (в рамках уже созданной структуры ЛР1) добавить:</p>
-<ol>
-<li>
-<p>В блок “Список …” (вторая секция) добавить кнопки:</p>
-</li>
-<li>
-<p>“Показать все записи”</p>
-</li>
-<li>“Показать только NEW”</li>
-<li>
-<p>“Показать статистику”</p>
-</li>
-<li>
-<p>Добавить область вывода (например, <code>&lt;pre&gt;</code>), куда будут выводиться данные.</p>
-</li>
-</ol>
-<p><strong>Шаблон (адаптировать текст под предметную область):</strong></p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Название вашей системы<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Создание записи<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Форма будет реализована в следующих лабораторных работах<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Список записей<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Отображение данных будет добавлено позже<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-
-  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">"btnAll"</span><span class="p">&gt;</span>Показать все записи<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">"btnNew"</span><span class="p">&gt;</span>Показать только NEW<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">"btnStats"</span><span class="p">&gt;</span>Показать статистику<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-
-  <span class="p">&lt;</span><span class="nt">pre</span> <span class="na">id</span><span class="o">=</span><span class="s">"output"</span><span class="p">&gt;&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
-</code></pre></div>
-<hr>
-<h3 id="32">3.2. Требования к логике</h3>
-<ul>
-<li>все данные берутся из набора данных вашей предметной области;</li>
-<li>использовать <code>const/let</code>, циклы, условия, строгие сравнения <code>===</code>;</li>
-<li>результаты выводятся в <code>output.textContent</code>;</li>
-<li>
-<p>в “статистике” обязательно использовать:</p>
-</li>
-<li>
-<p>сумму <code>value</code>;</p>
-</li>
-<li>максимум <code>value</code>;</li>
-<li>количество <code>status === "new"</code>;</li>
-<li>фильтрацию по порогу <code>minValue</code> (ввод как строка → <code>Number()</code>).</li>
-</ul>
-<hr>
-<h3 id="33-2">3.3. Что считается “сложной задачей” в рамках ЛР2</h3>
-<p>В “Показать статистику” студент должен вывести структурированный отчёт, например:</p>
-<ul>
-<li>Данные корректны</li>
-<li>Всего записей: 6</li>
-<li>Сумма value: 5200</li>
-<li>Максимум value: 1500</li>
-<li>Количество status="new": 4</li>
-<li>Фильтр value &gt;= 800: (список записей)</li>
-</ul>
-<hr>
-<h3 id="34">3.4. Требования к сдаче</h3>
-<p>В одном репозитории должны быть:</p>
-<ul>
-<li>обновлённый <code>index.html</code> (кнопки + <code>&lt;pre id="output"&gt;</code>);</li>
-<li>обновлённый <code>script.js</code> (данные + логика + обработчики + вывод);</li>
-<li>при необходимости — уточнение в <code>README.md</code> (что добавлено в ЛР2);</li>
-<li><code>passport.md</code> остаётся и используется дальше.</li>
-</ul>
-<hr>
-<h3 id="34_1">3.4. Для выполнения требуется</h3>
-<ol>
-<li><strong>Шаблон отчёта</strong>, указанный в описании лабораторной работы.</li>
-<li><strong>Вариант задания</strong>, закреплённый за студентом на семестр и опубликованный в ЛМС.</li>
-<li><strong>Требования к оформлению</strong> — согласно методическим указаниям в ЛМС или соответствующему разделу документации.</li>
-<li><strong>Ссылка на репозиторий</strong>,прикрепляется студентом к отчету. </li>
-</ol>
-<h3 id="36">3.6. Запрет</h3>
-<p>❗ <strong>Запрещается использование систем искусственного интеллекта для выполнения лабораторной работы.</strong></p>
-<p>Работы, выполненные с использованием ИИ, полностью или частично скопированные, а также не сданные, оцениваются в <strong>0 баллов</strong> без возможности доработки.</p>
-<hr>
-<h2 id="4_1">4. Контрольные вопросы</h2>
-<ol>
-<li>Чем <code>let</code> отличается от <code>const</code>?</li>
-<li>Какие типы данных являются примитивами в JavaScript?</li>
-<li>Почему <code>===</code> предпочтительнее <code>==</code>?</li>
-<li>Что такое <code>NaN</code> и как его проверить?</li>
-<li>Когда удобнее использовать <code>switch</code>, а когда <code>if/else</code>?</li>
-<li>В чём отличие <code>for</code> и <code>while</code>?</li>
-<li>Как <code>console.log</code> помогает при отладке?</li>
-<li>Почему важно приводить вводимые данные к нужному типу?</li>
-<li>Почему порядок условий критичен для корректной логики?</li>
-<li>Как эта лабораторная связана с последующими работами?</li>
+<li>Чем HTML отличается от XML и XHTML?</li>
+<li>Что такое DOM и почему он появляется после загрузки HTML?</li>
+<li>Зачем нужны семантические теги (<code>header/nav/main/article</code>)?</li>
+<li>Почему полям формы нужны <code>name</code> и связка <code>label-for</code>?</li>
+<li>Как <code>defer</code> влияет на работу JS с DOM?</li>
 </ol>
 <hr>
 <h2 id="5-">5. Чек-лист для самопроверки</h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: right;">Баллы</th>
-<th>Критерии оценки</th>
+<th>Баллы</th>
+<th>Критерии</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;"><strong>10</strong></td>
-<td>Реализована логика обработки данных, предусмотрены проверки ввода, результаты выводятся в консоль и на страницу, изменения зафиксированы в GitHub</td>
+<td>10</td>
+<td>Полная теория, архитектурная схема UI→API→DB, валидный семантический HTML, форма с валидацией, пример fetch + JSON, вывод</td>
 </tr>
 <tr>
-<td style="text-align: right;"><strong>8</strong></td>
-<td>Логика реализована, но проверки частичные или вывод только в консоль/только на страницу</td>
+<td>8–9</td>
+<td>Небольшие неточности (семантика/валидация/доступность)</td>
 </tr>
 <tr>
-<td style="text-align: right;"><strong>6</strong></td>
-<td>Реализована часть логики, слабая привязка к предметной области</td>
+<td>6–7</td>
+<td>Частичный результат, слабая архитектурная связь</td>
 </tr>
 <tr>
-<td style="text-align: right;"><strong>4</strong></td>
-<td>Код формальный, без проверок</td>
+<td>&lt;6</td>
+<td>Ошибки в структуре, нет формы или нет логики UI→API</td>
 </tr>
 <tr>
-<td style="text-align: right;"><strong>2</strong></td>
-<td>Есть только шаблон без работающей логики</td>
-</tr>
-<tr>
-<td style="text-align: right;"><strong>0</strong></td>
-<td>Работа не сдана или выполнена с использованием ИИ</td>
+<td>0</td>
+<td>Работа не сдана или выполнена с ИИ</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h2 id="6_1">6. Шаблон отчёта</h2>
+<h2 id="6">6. Шаблон отчёта</h2>
+<p>Структура отчёта (рекомендуемая):</p>
+<ol>
+<li>Тема, цель, инструменты</li>
+<li>Теория (ключевые понятия: HTML/DOM/семантика/формы)</li>
+<li>Архитектурная схема “UI → API → DB”</li>
+<li>Реализация HTML-структуры (код + пояснения)</li>
+<li>Реализация формы + валидация</li>
+<li>Демонстрация отправки на API (fetch + JSON)</li>
+<li>Ответы на контрольные вопросы</li>
+<li>Вывод</li>
+</ol>
 <p>👉 <a href="assets/files/LR2%20%28Shablon%29.docx">Скачать шаблон отчёта</a></p>
 
 
