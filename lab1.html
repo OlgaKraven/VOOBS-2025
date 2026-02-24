@@ -1,0 +1,3651 @@
+<!DOCTYPE html><html lang="ru" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="domain.html">
+      
+      
+        <link rel="next" href="lab2.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/icons/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Лабораторная работа 1 - Основы разработки Веб-сервисов</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#no1-web-api-json-xml" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="index.html" title="Основы разработки Веб-сервисов" class="md-header__button md-logo" aria-label="Основы разработки Веб-сервисов" data-md-component="logo">
+      
+  <img src="assets/icons/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Основы разработки Веб-сервисов
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Лабораторная работа 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Основы разработки Веб-сервисов" class="md-nav__button md-logo" aria-label="Основы разработки Веб-сервисов" data-md-component="logo">
+      
+  <img src="assets/icons/logo.png" alt="logo">
+
+    </a>
+    Основы разработки Веб-сервисов
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Описание дисциплины
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="domain.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Предметная область
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторные работы
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лабораторные работы
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа 1
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="lab1.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Теория
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Теория">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.0. Цель работы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. История и стандарты HTML
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1. История и стандарты HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-html-html-20-html5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.1. Эволюция HTML (HTML 2.0 → HTML5)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-w3c-whatwg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.2. Роль W3C и WHATWG
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-html-xml-xhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.3. Отличие HTML от XML и XHTML
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.4. Понятие DOM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.5. Браузер как интерпретатор HTML
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-html-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Структура HTML-документа
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2. Структура HTML-документа">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-doctype" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1. DOCTYPE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.2. &lt;html&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-head" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.3. &lt;head&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-body" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.4. &lt;body&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#125" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.5. Кодировка
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#126" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.6. Метатеги
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#127" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.7. Подключение ресурсов
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#128" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.8. Пример базового документа с комментариями
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-html-web-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. HTML в архитектуре Web-приложения: “разметка как проектирование”
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3. HTML в архитектуре Web-приложения: “разметка как проектирование”">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.1. Почему структура важнее “красоты”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-html-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.2. Связь HTML и данных (API)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-html-js" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.3. Контракт между HTML и JS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-ui-html-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.4. UI-состояния и HTML-структура
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Мини-схемы (для отчёта)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4. Мини-схемы (для отчёта)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-web-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.1. Схема уровней Web-интерфейса
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.2. Схема взаимодействия UI с сервером
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5. Элементы HTML
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#151" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.1. Классификация элементов
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.2. Текстовая разметка
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153-ul-ol-dl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.3. Списки (ul, ol, dl) и вложенные списки
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#154-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.4. Ссылки и навигация &lt;a&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#155" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.5. Изображения и медиа
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6. Таблицы
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6. Таблицы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.1. Базовая структура
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162-rowspan-colspan-tfoot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.2. rowspan / colspan, группировка колонок, &lt;tfoot&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#163" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.3. Семантика и доступность таблиц
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#164-caption-colgroup-thead-tbody-tfoot-rowspan-colspan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.4. Пример сложной таблицы (с caption, colgroup, thead, tbody, tfoot, rowspan, colspan)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-html-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7. HTML-формы (ключевой блок)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.7. HTML-формы (ключевой блок)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#171-form-action-method-get-post" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.1. Структура формы &lt;form&gt;, action, method (GET / POST)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#172" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.2. Элементы формы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#173-required-pattern-minlength-maxlength-typeemailurl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.3. Валидация: required, pattern, minlength, maxlength, type=email/url
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#174-web-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.4. Передача данных Web-сервису. Пример формы, работающей с API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.7.4. Передача данных Web-сервису. Пример формы, работающей с API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-html-js-fetch-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пример 1: Форма входа (HTML + JS + fetch API)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-html5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8. Семантика HTML5
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.8. Семантика HTML5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#div" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Различие div и семантических элементов
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9. Атрибуты HTML (глобальные)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-accessibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10. Доступность (Accessibility)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111-seo-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11. SEO-основы в HTML
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112-html-css-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12. Интеграция HTML с CSS и JavaScript
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.12. Интеграция HTML с CSS и JavaScript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Подключение CSS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#js-defer-async" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Подключение JS: defer / async
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13. Лучшие практики
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14. Типичные ошибки новичков
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Задание
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Задание">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Цель
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Выбор объекта проектирования
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-ui-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Аналитический разбор интерфейса (UI-структура)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-ui-api-db" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Архитектурная схема “UI → API → DB”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Структура HTML (каркас будущего интерфейса)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-block-inline-void-semantic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5. Таблица сравнения: block / inline / void / semantic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6. Проектирование формы (минимум 1 форма)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7. Передача данных на API (демонстрационный сценарий)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8. Краткий аналитический вывод (1–2 страницы)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Итоговая задача
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Итоговая задача">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html-web-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        «Проектирование HTML-структуры клиентской части web-приложения»
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#31-ui-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Мини-каталог UI-компонентов (структурный)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-ui-api-db" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Схема “UI → API → DB” на одном сценарии
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-ui-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Два сценария ошибок (UI-уровень)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Для выполнения требуется
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5. Запрет
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Контрольные вопросы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Чек-лист для самопроверки
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Шаблон отчёта
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lab2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lab3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lab4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="requirements.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Требования для оформления
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="questions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Вопросы к зачету
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Теория
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Теория">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.0. Цель работы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. История и стандарты HTML
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1. История и стандарты HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-html-html-20-html5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.1. Эволюция HTML (HTML 2.0 → HTML5)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-w3c-whatwg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.2. Роль W3C и WHATWG
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-html-xml-xhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.3. Отличие HTML от XML и XHTML
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.4. Понятие DOM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.5. Браузер как интерпретатор HTML
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-html-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Структура HTML-документа
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2. Структура HTML-документа">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-doctype" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1. DOCTYPE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.2. &lt;html&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-head" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.3. &lt;head&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-body" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.4. &lt;body&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#125" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.5. Кодировка
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#126" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.6. Метатеги
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#127" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.7. Подключение ресурсов
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#128" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.8. Пример базового документа с комментариями
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-html-web-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. HTML в архитектуре Web-приложения: “разметка как проектирование”
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3. HTML в архитектуре Web-приложения: “разметка как проектирование”">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.1. Почему структура важнее “красоты”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-html-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.2. Связь HTML и данных (API)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-html-js" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.3. Контракт между HTML и JS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-ui-html-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.4. UI-состояния и HTML-структура
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Мини-схемы (для отчёта)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4. Мини-схемы (для отчёта)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-web-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.1. Схема уровней Web-интерфейса
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.2. Схема взаимодействия UI с сервером
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5. Элементы HTML
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#151" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.1. Классификация элементов
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.2. Текстовая разметка
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153-ul-ol-dl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.3. Списки (ul, ol, dl) и вложенные списки
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#154-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.4. Ссылки и навигация &lt;a&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#155" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.5. Изображения и медиа
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6. Таблицы
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6. Таблицы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.1. Базовая структура
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162-rowspan-colspan-tfoot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.2. rowspan / colspan, группировка колонок, &lt;tfoot&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#163" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.3. Семантика и доступность таблиц
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#164-caption-colgroup-thead-tbody-tfoot-rowspan-colspan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.4. Пример сложной таблицы (с caption, colgroup, thead, tbody, tfoot, rowspan, colspan)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-html-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7. HTML-формы (ключевой блок)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.7. HTML-формы (ключевой блок)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#171-form-action-method-get-post" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.1. Структура формы &lt;form&gt;, action, method (GET / POST)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#172" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.2. Элементы формы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#173-required-pattern-minlength-maxlength-typeemailurl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.3. Валидация: required, pattern, minlength, maxlength, type=email/url
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#174-web-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.4. Передача данных Web-сервису. Пример формы, работающей с API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.7.4. Передача данных Web-сервису. Пример формы, работающей с API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-html-js-fetch-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пример 1: Форма входа (HTML + JS + fetch API)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-html5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8. Семантика HTML5
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.8. Семантика HTML5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#div" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Различие div и семантических элементов
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9. Атрибуты HTML (глобальные)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-accessibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10. Доступность (Accessibility)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111-seo-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11. SEO-основы в HTML
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112-html-css-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12. Интеграция HTML с CSS и JavaScript
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.12. Интеграция HTML с CSS и JavaScript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Подключение CSS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#js-defer-async" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Подключение JS: defer / async
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13. Лучшие практики
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14. Типичные ошибки новичков
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Задание
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Задание">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Цель
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Выбор объекта проектирования
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-ui-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Аналитический разбор интерфейса (UI-структура)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-ui-api-db" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Архитектурная схема “UI → API → DB”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Структура HTML (каркас будущего интерфейса)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-block-inline-void-semantic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5. Таблица сравнения: block / inline / void / semantic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6. Проектирование формы (минимум 1 форма)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7. Передача данных на API (демонстрационный сценарий)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8. Краткий аналитический вывод (1–2 страницы)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Итоговая задача
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Итоговая задача">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html-web-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        «Проектирование HTML-структуры клиентской части web-приложения»
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#31-ui-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Мини-каталог UI-компонентов (структурный)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-ui-api-db" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Схема “UI → API → DB” на одном сценарии
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-ui-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Два сценария ошибок (UI-уровень)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Для выполнения требуется
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5. Запрет
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Контрольные вопросы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Чек-лист для самопроверки
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Шаблон отчёта
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="no1-web-api-json-xml">Лабораторная работа №1. Web-сервис и API. JSON / XML</h1>
+<hr>
+<h2 id="1">1. Теория</h2>
+<h3 id="10">1.0. Цель работы</h3>
+<p>Сформировать у обучающегося системное понимание HTML как языка разметки клиентской части Web-приложения:</p>
+<ul>
+<li>что такое HTML и зачем он нужен в Web-архитектуре;</li>
+<li>как устроен HTML-документ и почему структура важнее “красоты”;</li>
+<li>как элементы HTML образуют DOM-дерево;</li>
+<li>как проектировать структуру интерфейса под сценарии и будущую интеграцию с API;</li>
+<li>как писать валидную, семантическую, доступную разметку.</li>
+</ul>
+<p>Закрепить навык архитектурного описания UI через схему:</p>
+<div class="highlight"><pre><span></span><code>UI (HTML) → DOM → JS (events) → API (HTTP) → DB
+</code></pre></div>
+<p>и понимание того, что клиентская разметка не существует отдельно, а проектируется под данные и сценарии взаимодействия.</p>
+<p><strong>Подводка (почему это важно):</strong>
+Во взрослом Web-проекте HTML — это не “текст с тегами”, а <strong>контракт</strong> между дизайнером, фронтендом, бэкендом и пользователем. Если HTML построен правильно, то:</p>
+<ul>
+<li>данные из API легко “ложатся” в UI,</li>
+<li>события JS привязываются к понятным узлам,</li>
+<li>доступность (A11y) достигается без костылей,</li>
+<li>SEO и стабильность рендера не требуют “магии”.</li>
+</ul>
+<hr>
+<h3 id="11-html">1.1. История и стандарты HTML</h3>
+<h4 id="111-html-html-20-html5">1.1.1. Эволюция HTML (HTML 2.0 → HTML5)</h4>
+<p>HTML начинался как язык для разметки научных документов и ссылок, но с развитием Web превратился в основу интерфейсов web-приложений.</p>
+<ul>
+<li>
+<p><strong>HTML 2.0 (1995)</strong>
+  Содержал базовые конструкции: заголовки, абзацы, ссылки, простейшие формы.
+  Главная цель — текст + гиперссылки.</p>
+</li>
+<li>
+<p><strong>HTML 3.2 / 4.01 (1997–1999)</strong>
+  Добавились таблицы, скрипты, стили. В этот период активно использовали HTML для “вёрстки внешнего вида” (таблицы как сетка, <code>font</code>, <code>center</code>), из-за чего страдала структура и смысл разметки.
+  <strong>Подводка:</strong> так родилась “div-верстка” и привычка верстать “как попало”, а потом “чинить CSS/JS”.</p>
+</li>
+<li>
+<p><strong>XHTML (2000-е)</strong>
+  Попытка привести HTML к строгости XML: обязательные закрывающие теги, строгая вложенность, чувствительность к ошибкам.
+  На практике оказался слишком “ломким” для реального Web (страница могла не работать из-за одной синтаксической ошибки).
+  <strong>Подводка:</strong> идеальная строгость — хорошо для данных, но плохо для хаотичного реального Web.</p>
+</li>
+<li>
+<p><strong>HTML5 (2014+ и далее как Living Standard)</strong>
+  Появились семантические элементы (<code>header</code>, <code>nav</code>, <code>main</code>, <code>article</code> и др.), новые типы полей форм, встроенные возможности для медиа (<code>audio</code>, <code>video</code>, <code>source</code>, <code>picture</code>), улучшения доступности и унификация поведения браузеров.</p>
+</li>
+</ul>
+<p>Ключевой вывод: современный HTML ориентирован не на “красивую разметку текста”, а на <strong>проектирование структуры интерфейса</strong>, пригодной для:</p>
+<ul>
+<li>динамики (JS),</li>
+<li>данных (API),</li>
+<li>доступности,</li>
+<li>SEO.</li>
+</ul>
+<p><strong>Мини-пример (смысл HTML5):</strong>
+Раньше могли написать так:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"top"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"menu"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"content"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"bottom"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Сегодня это должно стать <strong>семантически понятным</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>И это не “мода”, а архитектура: браузер, поисковик и скрин-ридер начинают понимать, <em>что есть что</em>.</p>
+<hr>
+<h4 id="112-w3c-whatwg">1.1.2. Роль W3C и WHATWG</h4>
+<p>Стандарты HTML формируются и поддерживаются организациями:</p>
+<ul>
+<li><strong>W3C (World Wide Web Consortium)</strong> — исторический центр стандартизации Web-технологий (HTML, CSS, Accessibility-спецификации, рекомендации).</li>
+<li><strong>WHATWG (Web Hypertext Application Technology Working Group)</strong> — сообщество, ведущее HTML как <strong>Living Standard</strong> (живой стандарт), который обновляется непрерывно, отражая реальные возможности браузеров.</li>
+</ul>
+<p>Практический вывод для разработки: “HTML5” в учебной логике — это современный HTML, который развивается. Поэтому:</p>
+<ul>
+<li>новые элементы и атрибуты появляются и закрепляются как часть Living Standard;</li>
+<li>корректность лучше проверять валидатором и актуальными справочниками, а не только старой книжкой.</li>
+</ul>
+<p><strong>Подводка:</strong>
+В учебных заданиях важно писать “как в стандарте”, потому что:</p>
+<ul>
+<li>это снижает число ошибок при интеграции,</li>
+<li>повышает переносимость,</li>
+<li>облегчает сопровождение.</li>
+</ul>
+<hr>
+<h4 id="113-html-xml-xhtml">1.1.3. Отличие HTML от XML и XHTML</h4>
+<p>HTML часто путают с “языком тегов” вообще. На самом деле различия принципиальные:</p>
+<p>| Критерий | HTML | XML | XHTML |
+|---|---|---|
+| Назначение | UI и структура документа в браузере | универсальный формат данных | HTML в синтаксисе XML |
+| Терпимость к ошибкам | высокая: браузер “восстанавливает” структуру | низкая: ошибка = документ некорректен | низкая: ошибка может “сломать” документ |
+| Синтаксис | допускает “упрощения” | строго формальный | строго формальный |
+| Главная идея | представление и смысл | хранение/передача данных | дисциплина и совместимость |</p>
+<p>Вывод:
+<strong>HTML — для интерфейса, XML — для данных, XHTML — исторический компромисс, который сегодня используется редко.</strong></p>
+<p><strong>Пример для понимания (HTML vs XML):</strong></p>
+<p>HTML (интерфейс):</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span><span class="p">&gt;</span>Купить<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>XML (данные):</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;product&gt;</span>
+<span class="w">  </span><span class="nt">&lt;name&gt;</span>Serum<span class="nt">&lt;/name&gt;</span>
+<span class="w">  </span><span class="nt">&lt;price</span><span class="w"> </span><span class="na">currency=</span><span class="s">"EUR"</span><span class="nt">&gt;</span>19.99<span class="nt">&lt;/price&gt;</span>
+<span class="nt">&lt;/product&gt;</span>
+</code></pre></div>
+<p>Подводка: в Web-приложении <strong>данные приходят в JSON/XML</strong>, а <strong>UI строится HTML</strong> (через DOM).</p>
+<hr>
+<h4 id="114-dom">1.1.4. Понятие DOM</h4>
+<p><strong>DOM (Document Object Model)</strong> — это представление HTML-документа в виде <strong>дерева объектов</strong>.</p>
+<p>Критически важно понимать: браузер не “показывает HTML-текст”. Он:</p>
+<ol>
+<li>читает HTML,</li>
+<li>строит DOM,</li>
+<li>рисует страницу на основе DOM + CSS.</li>
+</ol>
+<p>Схема:</p>
+<div class="highlight"><pre><span></span><code>HTML-текст → парсер → DOM-дерево → (CSSOM) → render tree → layout → paint
+</code></pre></div>
+<p>DOM-дерево состоит из узлов:</p>
+<ul>
+<li><code>Document</code> (корень),</li>
+<li><code>Element</code> (теги),</li>
+<li><code>Text</code> (текстовые узлы),</li>
+<li>комментарии и другие типы.</li>
+</ul>
+<p>Пример (логика, как думает браузер):</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Каталог<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Товары в наличии<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>DOM-идея: JavaScript работает не с HTML-строкой, а с объектами:</p>
+<ul>
+<li>найти элемент,</li>
+<li>поменять текст,</li>
+<li>добавить класс,</li>
+<li>создать карточку товара из данных API.</li>
+</ul>
+<p><strong>Пример “HTML → DOM → JS”:</strong></p>
+<p>HTML:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">section</span> <span class="na">id</span><span class="o">=</span><span class="s">"catalog"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Каталог<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"catalogList"</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>JS (логика работы с DOM):</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#catalogList"</span><span class="p">);</span>
+<span class="nx">list</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Загрузка..."</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>Подводка:</strong>
+Если в HTML нет понятных “точек входа” (<code>id</code>, <code>data-*</code>), JS превращается в хаос: сложные селекторы, зависимость от структуры, ломается при любом редизайне.</p>
+<hr>
+<h4 id="115-html">1.1.5. Браузер как интерпретатор HTML</h4>
+<p>Браузер выполняет “производственный конвейер” рендеринга:</p>
+<ol>
+<li><strong>Parsing HTML → DOM</strong>
+   строится дерево элементов.</li>
+<li><strong>Parsing CSS → CSSOM</strong>
+   строится дерево стилей.</li>
+<li><strong>DOM + CSSOM → Render Tree</strong>
+   остаются только видимые узлы и их визуальные свойства.</li>
+<li><strong>Layout</strong>
+   вычисляются размеры и позиции элементов.</li>
+<li><strong>Paint</strong>
+   отрисовка пикселей.</li>
+<li><strong>Compositing</strong>
+   сборка слоёв (анимации, эффекты, ускорение).</li>
+</ol>
+<p>Практический вывод: качество HTML влияет на:</p>
+<ul>
+<li><strong>скорость и стабильность UI</strong> (чрезмерные вложенности, лишние узлы),</li>
+<li><strong>предсказуемость поведения</strong> (правильная вложенность),</li>
+<li><strong>доступность и SEO</strong> (семантика),</li>
+<li><strong>простоту JS-логики</strong> (понятные селекторы, <code>id</code>, <code>data-*</code>).</li>
+</ul>
+<p><strong>Пример “плохой структуры” (лишняя вложенность):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"wrap"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"wrap2"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"wrap3"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"wrap4"</span><span class="p">&gt;</span>Кнопка<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Пример “нормальной структуры”:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn"</span><span class="p">&gt;</span>Кнопка<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Подводка: меньше узлов — проще стили, проще события, быстрее рендер.</p>
+<hr>
+<h3 id="12-html-">1.2. Структура HTML-документа</h3>
+<h4 id="121-doctype">1.2.1. DOCTYPE</h4>
+<p><code>&lt;!DOCTYPE html&gt;</code> — объявление типа документа.
+Оно включает <strong>standards mode</strong>, в котором браузер использует современные правила рендеринга.</p>
+<p>Без DOCTYPE возможен “quirks mode”, где браузер имитирует старое поведение (опасно для вёрстки и предсказуемости).</p>
+<p><strong>Пример:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</code></pre></div>
+<hr>
+<h4 id="122-html">1.2.2. <code>&lt;html&gt;</code></h4>
+<p>Корневой элемент документа. Часто содержит атрибут <code>lang</code>, который критичен для доступности:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"ru"</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><code>lang</code> помогает:</p>
+<ul>
+<li>скрин-ридерам правильно произносить текст,</li>
+<li>поисковым системам корректно индексировать язык,</li>
+<li>браузеру выбирать шрифтовые и типографические настройки.</li>
+</ul>
+<p><strong>Подводка:</strong>
+Если сайт на русском, но <code>lang="en"</code>, скрин-ридер может читать русские слова “по-английски”, что делает интерфейс фактически непригодным.</p>
+<hr>
+<h4 id="123-head">1.2.3. <code>&lt;head&gt;</code></h4>
+<p><code>head</code> не отображается напрямую, но управляет:</p>
+<ul>
+<li>кодировкой,</li>
+<li>адаптивностью,</li>
+<li>SEO-метаданными,</li>
+<li>подключением ресурсов (CSS/JS),</li>
+<li>иконками,</li>
+<li>политиками безопасности (в продакшене — CSP и др.).</li>
+</ul>
+<p>Ключевые элементы head:</p>
+<ul>
+<li><code>meta charset</code></li>
+<li><code>meta viewport</code></li>
+<li><code>title</code></li>
+<li><code>meta description</code></li>
+<li><code>link rel="stylesheet"</code></li>
+<li><code>script defer</code></li>
+</ul>
+<p><strong>Пример минимально корректного head:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"UTF-8"</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"viewport"</span> <span class="na">content</span><span class="o">=</span><span class="s">"width=device-width, initial-scale=1.0"</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Каталог товаров<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"description"</span> <span class="na">content</span><span class="o">=</span><span class="s">"Каталог товаров: поиск, фильтры, карточки."</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr>
+<h4 id="124-body">1.2.4. <code>&lt;body&gt;</code></h4>
+<p><code>body</code> — видимая часть страницы: структура интерфейса и элементы взаимодействия.</p>
+<p>Важно: body должен быть организован логически, как интерфейс приложения, а не “куча дивов”.</p>
+<p><strong>Подводка:</strong>
+Если тело страницы — это “набор блоков”, то дальше:</p>
+<ul>
+<li>трудно выделить основной контент (<code>main</code>),</li>
+<li>трудно навигироваться с клавиатуры,</li>
+<li>сложно интегрировать компоненты (каталог, корзина, профиль).</li>
+</ul>
+<hr>
+<h4 id="125">1.2.5. Кодировка</h4>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"UTF-8"</span> <span class="p">/&gt;</span>
+</code></pre></div>
+<p>UTF-8 — стандарт для современного Web, предотвращает:</p>
+<ul>
+<li>“кракозябры”,</li>
+<li>ошибки с национальными символами,</li>
+<li>проблемы при обработке данных.</li>
+</ul>
+<hr>
+<h4 id="126">1.2.6. Метатеги</h4>
+<p>Ключевой метатег адаптивности:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"viewport"</span> <span class="na">content</span><span class="o">=</span><span class="s">"width=device-width, initial-scale=1.0"</span> <span class="p">/&gt;</span>
+</code></pre></div>
+<p>SEO-метатег:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"description"</span> <span class="na">content</span><span class="o">=</span><span class="s">"..."</span> <span class="p">/&gt;</span>
+</code></pre></div>
+<p><strong>Подводка:</strong>
+<code>description</code> часто попадает в сниппет поисковой выдачи. Неправильное описание = хуже CTR, хуже видимость.</p>
+<hr>
+<h4 id="127">1.2.7. Подключение ресурсов</h4>
+<p>CSS:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"./styles.css"</span> <span class="p">/&gt;</span>
+</code></pre></div>
+<p>JS (рекомендуемая практика для UI):</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"./app.js"</span> <span class="na">defer</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Почему <code>defer</code> важен:</p>
+<ul>
+<li>HTML строит DOM,</li>
+<li>после этого запускается JS,</li>
+<li>значит можно безопасно искать элементы в документе.</li>
+</ul>
+<p><strong>Пример проблемы без <code>defer</code>:</strong>
+Если JS запускается раньше DOM, то:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#catalogList"</span><span class="p">)</span><span class="w"> </span><span class="c1">// может быть null</span>
+</code></pre></div>
+<hr>
+<h4 id="128">1.2.8. Пример базового документа с комментариями</h4>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"ru"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="cm">&lt;!-- Кодировка документа --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"UTF-8"</span> <span class="p">/&gt;</span>
+
+    <span class="cm">&lt;!-- Адаптивность (мобильные устройства) --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"viewport"</span> <span class="na">content</span><span class="o">=</span><span class="s">"width=device-width, initial-scale=1.0"</span> <span class="p">/&gt;</span>
+
+    <span class="cm">&lt;!-- Заголовок вкладки (важно для SEO) --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Каталог товаров<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+
+    <span class="cm">&lt;!-- Описание страницы (SEO snippet) --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"description"</span> <span class="na">content</span><span class="o">=</span><span class="s">"Каталог товаров: поиск, фильтры, карточки."</span> <span class="p">/&gt;</span>
+
+    <span class="cm">&lt;!-- Подключение CSS (визуальный слой) --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"./styles.css"</span> <span class="p">/&gt;</span>
+
+    <span class="cm">&lt;!-- Подключение JS (логика), defer — выполнение после построения DOM --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"./app.js"</span> <span class="na">defer</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="cm">&lt;!-- Семантическая шапка --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Каталог<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+
+    <span class="cm">&lt;!-- Основной контент страницы --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Контент страницы…<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+
+    <span class="cm">&lt;!-- Подвал --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">small</span><span class="p">&gt;</span>© 2026<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr>
+<h3 id="13-html-web-">1.3. HTML в архитектуре Web-приложения: “разметка как проектирование”</h3>
+<h4 id="131">1.3.1. Почему структура важнее “красоты”</h4>
+<p>В web-разработке внешний вид меняется часто: темы, дизайн-система, адаптив, редизайн.
+Если HTML написан правильно, то:</p>
+<ul>
+<li>CSS можно полностью заменить без переписывания структуры,</li>
+<li>JS-логика будет устойчивее (понятные точки привязки),</li>
+<li>экран будет доступен людям с ограниченными возможностями,</li>
+<li>страница будет лучше индексироваться.</li>
+</ul>
+<p>Если HTML плохой (всё через <code>div</code>, хаотичная вложенность), то:</p>
+<ul>
+<li>сложно поддерживать,</li>
+<li>сложно тестировать,</li>
+<li>сложно внедрять новые компоненты,</li>
+<li>растёт количество ошибок UI.</li>
+</ul>
+<p><strong>Пример “архитектурной” страницы каталога:</strong>
+У нас есть сценарии:
+(1) пользователь ищет товар → (2) фильтрует → (3) открывает карточку → (4) добавляет в корзину.
+Значит в HTML заранее должны быть:</p>
+<ul>
+<li>форма поиска,</li>
+<li>зона фильтров,</li>
+<li>контейнер списка,</li>
+<li>шаблон карточки/точки привязки.</li>
+</ul>
+<hr>
+<h4 id="132-html-api">1.3.2. Связь HTML и данных (API)</h4>
+<p>HTML проектируется под данные, которые приходят с сервера.
+Пример: если сервер отдаёт список товаров, то UI обычно имеет:</p>
+<ul>
+<li>контейнер списка,</li>
+<li>карточку сущности (повторяющийся <code>article</code>),</li>
+<li>элементы управления (кнопки, фильтры),</li>
+<li>состояния загрузки/ошибки.</li>
+</ul>
+<p>Архитектурная цепочка:</p>
+<div class="highlight"><pre><span></span><code>API (JSON) → JS парсит данные → создаёт DOM-узлы → пользователь видит UI
+</code></pre></div>
+<p><strong>Мини-пример данных API:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Сыворотка"</span><span class="p">,</span><span class="w"> </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">1999</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">102</span><span class="p">,</span><span class="w"> </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Крем"</span><span class="p">,</span><span class="w"> </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">1499</span><span class="w"> </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<p><strong>Пример HTML-контейнера под эти данные:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">section</span> <span class="na">id</span><span class="o">=</span><span class="s">"catalog"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Каталог<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"catalogState"</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">"polite"</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"catalogList"</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Подводка: <code>catalogState</code> нужен для состояния (loading/error/empty), а <code>catalogList</code> — для карточек.</p>
+<hr>
+<h4 id="133-html-js">1.3.3. Контракт между HTML и JS</h4>
+<p>Чтобы JS мог управлять UI, HTML должен содержать:</p>
+<ul>
+<li>уникальные <code>id</code> для ключевых узлов (точки входа),</li>
+<li><code>class</code> для групп,</li>
+<li><code>data-*</code> для идентификаторов сущностей (id товара, id заявки),</li>
+<li>корректную семантику элементов управления (<code>button</code>, <code>a</code>, <code>form</code>).</li>
+</ul>
+<p>Пример “контракта”:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">section</span> <span class="na">id</span><span class="o">=</span><span class="s">"catalog"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"catalogList"</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>JS ожидает, что <code>#catalogList</code> существует, и будет туда “рисовать” карточки.</p>
+<p><strong>Расширенный пример “контракта” для карточки товара:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">article</span> <span class="na">class</span><span class="o">=</span><span class="s">"product-card"</span> <span class="na">data-product-id</span><span class="o">=</span><span class="s">"101"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">"product-title"</span><span class="p">&gt;</span>Сыворотка<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"product-price"</span><span class="p">&gt;</span>1999 ₽<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn-add"</span> <span class="na">data-action</span><span class="o">=</span><span class="s">"add-to-cart"</span><span class="p">&gt;</span>
+    В корзину
+  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Подводка: <code>data-action</code> позволяет ловить события “делегированием” и не навешивать тысячу обработчиков.</p>
+<hr>
+<h4 id="134-ui-html-">1.3.4. UI-состояния и HTML-структура</h4>
+<p>Даже без CSS и JS структура должна предусматривать состояния:</p>
+<ul>
+<li>пустой список (“нет данных”),</li>
+<li>загрузка (“loading…”),</li>
+<li>ошибка (“не удалось загрузить”),</li>
+<li>успешное действие (“сохранено”).</li>
+</ul>
+<p>Это часть архитектурного мышления: UI — это не только “страница”, а система состояний.</p>
+<p><strong>Пример блоков под состояния:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"catalogState"</span> <span class="na">role</span><span class="o">=</span><span class="s">"status"</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">"polite"</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"catalogList"</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>JS в зависимости от ситуации меняет <code>catalogState</code>:</p>
+<ul>
+<li>“Загрузка…”</li>
+<li>“Ошибка: нет сети”</li>
+<li>“Ничего не найдено”</li>
+</ul>
+<hr>
+<h3 id="14-">1.4. Мини-схемы (для отчёта)</h3>
+<h4 id="141-web-">1.4.1. Схема уровней Web-интерфейса</h4>
+<div class="highlight"><pre><span></span><code>HTML (структура) + CSS (стиль) + JS (поведение) → UI
+</code></pre></div>
+<h4 id="142-ui">1.4.2. Схема взаимодействия UI с сервером</h4>
+<div class="highlight"><pre><span></span><code>User action → DOM event → JS → HTTP request → API → DB
+                               ↓
+                          HTTP response (JSON)
+                               ↓
+                          JS → DOM update → UI
+</code></pre></div>
+<p><strong>Подводка (как это связано с лабораторными):</strong></p>
+<ul>
+<li>В ЛР по HTML вы строите <strong>структуру</strong> и “точки входа”.</li>
+<li>В ЛР по JS вы учитесь слушать <strong>DOM events</strong> и обновлять DOM.</li>
+<li>В ЛР по HTTP/API вы добавляете <strong>fetch()</strong> и обработку статусов.</li>
+<li>В результате получается “живой” интерфейс, который реально работает с данными.</li>
+</ul>
+<hr>
+<h3 id="15-html">1.5. Элементы HTML</h3>
+<h3 id="151">1.5.1. Классификация элементов</h3>
+<table>
+<thead>
+<tr>
+<th>Тип</th>
+<th>Примеры</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Блочные</td>
+<td><code>div</code>, <code>section</code>, <code>article</code>, <code>main</code></td>
+<td>Формируют структуру, занимают “строку”</td>
+</tr>
+<tr>
+<td>Строчные</td>
+<td><code>span</code>, <code>a</code>, <code>strong</code>, <code>em</code></td>
+<td>Внутри текста, не разрывают поток</td>
+</tr>
+<tr>
+<td>Пустые (void)</td>
+<td><code>img</code>, <code>br</code>, <code>hr</code>, <code>meta</code>, <code>link</code>, <code>input</code></td>
+<td>Не имеют закрывающего тега</td>
+</tr>
+<tr>
+<td>Семантические</td>
+<td><code>header</code>, <code>nav</code>, <code>main</code>, <code>article</code>, <code>footer</code></td>
+<td>Придают смысл структуре</td>
+</tr>
+<tr>
+<td>Устаревшие</td>
+<td><code>font</code>, <code>center</code>, <code>marquee</code></td>
+<td>Не использовать</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Подводка:</strong>
+Правильный выбор элемента — это:</p>
+<ul>
+<li>меньше CSS “костылей”,</li>
+<li>меньше проблем с доступностью,</li>
+<li>понятная структура для других разработчиков.</li>
+</ul>
+<hr>
+<h3 id="152">1.5.2. Текстовая разметка</h3>
+<p><strong>Заголовки (иерархия смыслов):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Название страницы<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Раздел<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Подраздел<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Абзацы и текст:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Обычный текст.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Важное<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>Акцент<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Цитаты:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">blockquote</span> <span class="na">cite</span><span class="o">=</span><span class="s">"https://example.com"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Цитируемый фрагмент...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Код и моноширинный текст:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Вызовите <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>fetch()<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span> для запроса данных.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Предварительно форматированный текст:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">pre</span><span class="p">&gt;</span>
+line 1
+  line 2
+<span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Подводка: <code>pre</code> сохраняет пробелы и переносы, а <code>code</code> — семантически помечает код.</p>
+<hr>
+<h3 id="153-ul-ol-dl">1.5.3. Списки (<code>ul</code>, <code>ol</code>, <code>dl</code>) и вложенные списки</h3>
+<p><strong>Маркированный список (<code>ul</code>):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Пункт<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Пункт<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Нумерованный (<code>ol</code>):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Шаг 1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Шаг 2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Список определений (<code>dl</code>):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">dl</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>HTML<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>Язык разметки<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Вложенный список (часто для меню/категорий):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Категория 1
+    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Подкатегория 1.1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Подкатегория 1.2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Категория 2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Подводка: списки — это не только “маркер”, а важная семантика (особенно для навигации и доступности).</p>
+<hr>
+<h3 id="154-a">1.5.4. Ссылки и навигация <code>&lt;a&gt;</code></h3>
+<p><strong>Базовая ссылка:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"/catalog"</span><span class="p">&gt;</span>Каталог<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Абсолютный и относительный путь:</strong></p>
+<ul>
+<li>относительный: <code>href="/catalog"</code> или <code>href="./catalog.html"</code></li>
+<li>абсолютный: <code>href="https://example.com/catalog"</code></li>
+</ul>
+<p><strong>Якоря (переход внутри страницы):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#contacts"</span><span class="p">&gt;</span>Контакты<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">section</span> <span class="na">id</span><span class="o">=</span><span class="s">"contacts"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Контакты<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Открытие в новой вкладке + безопасность:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://example.com"</span> <span class="na">target</span><span class="o">=</span><span class="s">"_blank"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"noopener noreferrer"</span><span class="p">&gt;</span>
+  Открыть сайт
+<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Подводка: <code>rel="noopener"</code> защищает от доступа новой вкладки к <code>window.opener</code> (важно для безопасности).</p>
+<hr>
+<h3 id="155">1.5.5. Изображения и медиа</h3>
+<p><strong>Изображение (<code>img</code>) и <code>alt</code>:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"img.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Флакон сыворотки на белом фоне"</span> <span class="p">/&gt;</span>
+</code></pre></div>
+<p><strong>Оптимизация: lazy loading + размеры:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span>
+  <span class="na">src</span><span class="o">=</span><span class="s">"img.jpg"</span>
+  <span class="na">alt</span><span class="o">=</span><span class="s">"Флакон"</span>
+  <span class="na">loading</span><span class="o">=</span><span class="s">"lazy"</span>
+  <span class="na">width</span><span class="o">=</span><span class="s">"600"</span>
+  <span class="na">height</span><span class="o">=</span><span class="s">"600"</span>
+<span class="p">/&gt;</span>
+</code></pre></div>
+<p>Подводка: <code>width/height</code> помогают избежать “скачков” layout (CLS).</p>
+<p><strong>Адаптивные изображения (<code>picture</code>):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">picture</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">source</span> <span class="na">srcset</span><span class="o">=</span><span class="s">"img.webp"</span> <span class="na">type</span><span class="o">=</span><span class="s">"image/webp"</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">source</span> <span class="na">srcset</span><span class="o">=</span><span class="s">"img.jpg"</span> <span class="na">type</span><span class="o">=</span><span class="s">"image/jpeg"</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"img.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Флакон"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">picture</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Аудио и видео:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">audio</span> <span class="na">controls</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">"sound.ogg"</span> <span class="na">type</span><span class="o">=</span><span class="s">"audio/ogg"</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">"sound.mp3"</span> <span class="na">type</span><span class="o">=</span><span class="s">"audio/mpeg"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">audio</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">video</span> <span class="na">controls</span> <span class="na">width</span><span class="o">=</span><span class="s">"640"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">"video.mp4"</span> <span class="na">type</span><span class="o">=</span><span class="s">"video/mp4"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr>
+<h2 id="16">1.6. Таблицы</h2>
+<p>Таблицы используются <strong>только для табличных данных</strong>, а не “для верстки”.</p>
+<h3 id="161">1.6.1. Базовая структура</h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Имя<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Возраст<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Анна<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>25<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="162-rowspan-colspan-tfoot">1.6.2. <code>rowspan</code> / <code>colspan</code>, группировка колонок, <code>&lt;tfoot&gt;</code></h3>
+<p><strong>Подводка:</strong>
+Если таблица — это отчет/прайс/расписание, она почти всегда должна иметь:</p>
+<ul>
+<li>заголовки (<code>th</code>),</li>
+<li>тело (<code>tbody</code>),</li>
+<li>иногда итог (<code>tfoot</code>),</li>
+<li>иногда группировку колонок (<code>colgroup</code>).</li>
+</ul>
+<h3 id="163">1.6.3. Семантика и доступность таблиц</h3>
+<ul>
+<li><code>th</code> задает заголовки</li>
+<li>можно использовать <code>scope="col"</code> / <code>scope="row"</code> для ясности</li>
+<li>подпись таблицы — <code>caption</code></li>
+</ul>
+<h3 id="164-caption-colgroup-thead-tbody-tfoot-rowspan-colspan">1.6.4. Пример сложной таблицы (с <code>caption</code>, <code>colgroup</code>, <code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>rowspan</code>, <code>colspan</code>)</h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">caption</span><span class="p">&gt;</span>Прайс-лист услуг (пример сложной таблицы)<span class="p">&lt;/</span><span class="nt">caption</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">colgroup</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">col</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">col</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">col</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">col</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">colgroup</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">"col"</span><span class="p">&gt;</span>Категория<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">"col"</span><span class="p">&gt;</span>Услуга<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">"col"</span><span class="p">&gt;</span>Длительность<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">"col"</span><span class="p">&gt;</span>Цена<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">"rowgroup"</span> <span class="na">rowspan</span><span class="o">=</span><span class="s">"2"</span><span class="p">&gt;</span>Косметология<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Увлажняющая маска<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>30 мин<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>1200 ₽<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Пилинг<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>40 мин<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>1800 ₽<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span> <span class="na">scope</span><span class="o">=</span><span class="s">"rowgroup"</span> <span class="na">rowspan</span><span class="o">=</span><span class="s">"2"</span><span class="p">&gt;</span>Массаж<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Шейно-воротниковая зона<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>25 мин<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>1500 ₽<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Спина<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>45 мин<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>2200 ₽<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">tfoot</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">"3"</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Итого услуг в таблице<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>4<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tfoot</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr>
+<h2 id="17-html-">1.7. HTML-формы (ключевой блок)</h2>
+<p><strong>Подводка (почему это ключевой блок):</strong>
+Форма — это главный механизм взаимодействия пользователя с web-сервисом: регистрация, вход, поиск, оформление заказа, заявки, обратная связь. Формы — “мост” между UI и сервером.</p>
+<hr>
+<h3 id="171-form-action-method-get-post">1.7.1. Структура формы <code>&lt;form&gt;</code>, <code>action</code>, <code>method</code> (GET / POST)</h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">"/api/users"</span> <span class="na">method</span><span class="o">=</span><span class="s">"POST"</span><span class="p">&gt;</span>
+  ...
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div>
+<ul>
+<li>
+<p><code>GET</code> — данные идут в URL (query string), удобно для поиска/фильтрации:</p>
+</li>
+<li>
+<p><code>/catalog?query=serum&amp;sort=price</code></p>
+</li>
+<li>
+<p><code>POST</code> — данные идут в тело запроса, применяется для создания/входа/отправки:</p>
+</li>
+<li>
+<p><code>/api/login</code> с JSON или form-data</p>
+</li>
+</ul>
+<hr>
+<h3 id="172">1.7.2. Элементы формы</h3>
+<p><strong><code>input</code> (типов много):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">name</span><span class="o">=</span><span class="s">"name"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"email"</span> <span class="na">name</span><span class="o">=</span><span class="s">"email"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"password"</span> <span class="na">name</span><span class="o">=</span><span class="s">"password"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"tel"</span> <span class="na">name</span><span class="o">=</span><span class="s">"phone"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"url"</span> <span class="na">name</span><span class="o">=</span><span class="s">"site"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"number"</span> <span class="na">name</span><span class="o">=</span><span class="s">"age"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"date"</span> <span class="na">name</span><span class="o">=</span><span class="s">"date"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"color"</span> <span class="na">name</span><span class="o">=</span><span class="s">"color"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">name</span><span class="o">=</span><span class="s">"agree"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"radio"</span> <span class="na">name</span><span class="o">=</span><span class="s">"plan"</span> <span class="na">value</span><span class="o">=</span><span class="s">"basic"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"file"</span> <span class="na">name</span><span class="o">=</span><span class="s">"avatar"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"hidden"</span> <span class="na">name</span><span class="o">=</span><span class="s">"token"</span> <span class="na">value</span><span class="o">=</span><span class="s">"..."</span> <span class="p">/&gt;</span>
+</code></pre></div>
+<p><strong><code>textarea</code>:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">name</span><span class="o">=</span><span class="s">"message"</span> <span class="na">rows</span><span class="o">=</span><span class="s">"4"</span><span class="p">&gt;&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong><code>select/option</code>:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">select</span> <span class="na">name</span><span class="o">=</span><span class="s">"city"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">"msk"</span><span class="p">&gt;</span>Москва<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">"spb"</span><span class="p">&gt;</span>Санкт-Петербург<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong><code>button</code>:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span><span class="p">&gt;</span>Отправить<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"reset"</span><span class="p">&gt;</span>Сброс<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span><span class="p">&gt;</span>Обычная кнопка<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr>
+<h3 id="173-required-pattern-minlength-maxlength-typeemailurl">1.7.3. Валидация: <code>required</code>, <code>pattern</code>, <code>minlength</code>, <code>maxlength</code>, <code>type=email/url</code></h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span>
+  <span class="na">type</span><span class="o">=</span><span class="s">"email"</span>
+  <span class="na">name</span><span class="o">=</span><span class="s">"email"</span>
+  <span class="na">required</span>
+  <span class="na">minlength</span><span class="o">=</span><span class="s">"6"</span>
+  <span class="na">maxlength</span><span class="o">=</span><span class="s">"64"</span>
+<span class="p">/&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">input</span>
+  <span class="na">type</span><span class="o">=</span><span class="s">"password"</span>
+  <span class="na">name</span><span class="o">=</span><span class="s">"password"</span>
+  <span class="na">required</span>
+  <span class="na">minlength</span><span class="o">=</span><span class="s">"8"</span>
+  <span class="na">pattern</span><span class="o">=</span><span class="s">"(?=.*\d)(?=.*[A-Z]).{8,}"</span>
+  <span class="na">aria-describedby</span><span class="o">=</span><span class="s">"pwdHint"</span>
+<span class="p">/&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">small</span> <span class="na">id</span><span class="o">=</span><span class="s">"pwdHint"</span><span class="p">&gt;</span>
+  Пароль: минимум 8 символов, 1 цифра и 1 заглавная буква.
+<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Подводка: HTML-валидация — это первый уровень. В production сервер все равно проверяет данные повторно.</p>
+<hr>
+<h3 id="174-web-api">1.7.4. Передача данных Web-сервису. Пример формы, работающей с API</h3>
+<p><strong>Архитектура взаимодействия:</strong></p>
+<div class="highlight"><pre><span></span><code>User → Form → DOM event → JS → HTTP request → API → DB
+                                   ↓
+                              HTTP response
+                                   ↓
+                              JS → DOM update
+</code></pre></div>
+<h4 id="1-html-js-fetch-api">Пример 1: Форма входа (HTML + JS + fetch API)</h4>
+<p>HTML:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">id</span><span class="o">=</span><span class="s">"loginForm"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>
+    Email
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"email"</span> <span class="na">name</span><span class="o">=</span><span class="s">"email"</span> <span class="na">required</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>
+    Пароль
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"password"</span> <span class="na">name</span><span class="o">=</span><span class="s">"password"</span> <span class="na">required</span> <span class="na">minlength</span><span class="o">=</span><span class="s">"8"</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span><span class="p">&gt;</span>Войти<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">"loginState"</span> <span class="na">role</span><span class="o">=</span><span class="s">"status"</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">"polite"</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>JS (сценарий работы формы с API):</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">form</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#loginForm"</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#loginState"</span><span class="p">);</span>
+
+<span class="nx">form</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"submit"</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+
+<span class="w">  </span><span class="nx">state</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Отправка..."</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">formData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">FormData</span><span class="p">(</span><span class="nx">form</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">payload</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="nx">fromEntries</span><span class="p">(</span><span class="nx">formData</span><span class="p">.</span><span class="nx">entries</span><span class="p">());</span>
+
+<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="s2">"/api/login"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"Content-Type"</span><span class="o">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">      </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">payload</span><span class="p">),</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">res</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">state</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`Ошибка входа: </span><span class="si">${</span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<span class="w">      </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">state</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`Успешно. Пользователь: </span><span class="si">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="o">?</span><span class="p">.</span><span class="nx">email</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="s2">"ok"</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">state</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Ошибка сети. Повторите позже."</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Подводка: HTML предоставляет структуру, <code>id</code>/<code>name</code> — контракт данных, JS обрабатывает событие и связывает UI с REST.</p>
+<hr>
+<h2 id="18-html5">1.8. Семантика HTML5</h2>
+<p>Семантические элементы дают смысл структуре документа:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">figcaption</span><span class="p">&gt;&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="div">Различие <code>div</code> и семантических элементов</h3>
+<ul>
+<li><code>div</code> — нейтральный контейнер без смысла (используется, когда <em>нет</em> подходящей семантики).</li>
+<li><code>section/article/main/nav/header/footer</code> — <strong>объясняют</strong>, что находится внутри.</li>
+</ul>
+<p><strong>Плохой пример (всё div):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"top"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"menu"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"content"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Хороший пример (семантика):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr>
+<h2 id="19-html">1.9. Атрибуты HTML (глобальные)</h2>
+<table>
+<thead>
+<tr>
+<th>Атрибут</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>уникальная точка привязки (CSS/JS/якоря)</td>
+</tr>
+<tr>
+<td><code>class</code></td>
+<td>группировка для стилей и логики</td>
+</tr>
+<tr>
+<td><code>data-*</code></td>
+<td>хранение пользовательских данных (id сущности, действие)</td>
+</tr>
+<tr>
+<td><code>aria-*</code></td>
+<td>доступность (описания, состояния)</td>
+</tr>
+<tr>
+<td><code>role</code></td>
+<td>роль элемента, когда семантики не хватает</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Пример <code>data-*</code> как контракт:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">data-action</span><span class="o">=</span><span class="s">"add-to-cart"</span> <span class="na">data-product-id</span><span class="o">=</span><span class="s">"101"</span><span class="p">&gt;</span>
+  В корзину
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr>
+<h2 id="110-accessibility">1.10. Доступность (Accessibility)</h2>
+<p><strong>Что обязательно учитывать:</strong></p>
+<ul>
+<li><code>alt</code> у изображений (если изображение смысловое)</li>
+<li>правильная иерархия заголовков <code>h1 → h2 → h3</code> (не прыгать)</li>
+<li><code>aria-label</code> для элементов без текста (иконки)</li>
+<li>управление с клавиатуры (<code>tabindex</code>, фокус)</li>
+</ul>
+<p><strong>Примеры:</strong></p>
+<p>Иконка-кнопка:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">"Открыть меню"</span><span class="p">&gt;</span>
+  ☰
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Изображение:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"product.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Крем для лица в баночке, белый фон"</span> <span class="p">/&gt;</span>
+</code></pre></div>
+<hr>
+<h2 id="111-seo-html">1.11. SEO-основы в HTML</h2>
+<p><strong>Базовые SEO-элементы:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Каталог товаров<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"description"</span> <span class="na">content</span><span class="o">=</span><span class="s">"Каталог: поиск, фильтры, карточки, цены."</span> <span class="p">/&gt;</span>
+</code></pre></div>
+<p><strong>Подводка:</strong>
+Даже идеальный дизайн не помогает, если <code>title</code>/<code>description</code> пустые, а структура хаотичная.</p>
+<p>Структурированные данные (Schema.org) — следующий уровень (обычно через JSON-LD).</p>
+<hr>
+<h2 id="112-html-css-javascript">1.12. Интеграция HTML с CSS и JavaScript</h2>
+<h3 id="css">Подключение CSS</h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"./styles.css"</span> <span class="p">/&gt;</span>
+</code></pre></div>
+<h3 id="js-defer-async">Подключение JS: <code>defer</code> / <code>async</code></h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"./app.js"</span> <span class="na">defer</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<ul>
+<li><code>defer</code> — скрипт выполнится <strong>после</strong> построения DOM (почти всегда правильно для UI).</li>
+<li><code>async</code> — скрипт выполняется как загрузится (может “обогнать” DOM), чаще для аналитики/виджетов.</li>
+</ul>
+<p><strong>Подводка:</strong>
+В учебных UI-проектах почти всегда: <code>defer</code>.</p>
+<hr>
+<h2 id="113">1.13. Лучшие практики</h2>
+<ul>
+<li>Чистая структура (читаемый, предсказуемый HTML)</li>
+<li>Правильная вложенность (не ломать дерево)</li>
+<li>Валидность (валидатор)</li>
+<li>Отделение структуры (HTML) и представления (CSS)</li>
+<li>Производительность (без лишних узлов, изображения оптимизированы, нет “табличной верстки”)</li>
+</ul>
+<hr>
+<h2 id="114">1.14. Типичные ошибки новичков</h2>
+<ul>
+<li>Неправильная вложенность (например, <code>p</code> внутри <code>p</code>, интерактив внутри интерактива)</li>
+<li>Использование <code>div</code> вместо семантики</li>
+<li>Отсутствие <code>alt</code></li>
+<li>Inline-стили (<code>style="..."</code>) вместо CSS</li>
+<li>Дублирование <code>id</code> (ломает JS и якоря)</li>
+<li>“Кнопка” через <code>div</code> вместо <code>&lt;button&gt;</code> (ломает доступность и клавиатуру)</li>
+</ul>
+<hr>
+<h2 id="2">2. Задание</h2>
+<h3 id="_1">Цель</h3>
+<p>Спроектировать структуру <strong>клиентской части web-приложения</strong> на уровне HTML и описать её как систему:</p>
+<div class="highlight"><pre><span></span><code>UI (HTML) → DOM → JS (events) → API (HTTP) → DB
+</code></pre></div>
+<p>Нужно показать, что HTML в проекте:</p>
+<ul>
+<li><strong>описывает интерфейсные блоки</strong> (layout: шапка, меню, каталог, формы, статусы);</li>
+<li>задаёт <strong>контракт для JS</strong> (id/class/data-* как точки привязки и источники данных);</li>
+<li>формирует основу для <strong>отправки данных на сервер</strong> (формы, валидируемые поля, name);</li>
+<li>обеспечивает <strong>семантику, доступность и SEO</strong> (header/main/section/article, заголовки, label, aria).</li>
+</ul>
+<hr>
+<h3 id="21">2.1. Выбор объекта проектирования</h3>
+<p>Выберите <strong>предметную область</strong> интерфейса (одну):</p>
+<ul>
+<li>интернет-магазин;</li>
+<li>LMS (платформа курсов);</li>
+<li>сервис бронирования;</li>
+<li>ServiceDesk (заявки/инциденты);</li>
+<li>доставка / логистика;</li>
+<li>расписание / запись к специалисту.</li>
+</ul>
+<p><strong>Требование:</strong> интерфейс обязан работать с данными (каталог/список, карточки, фильтры, статусы, форма отправки), а не быть статической страницей “о компании”.</p>
+<p><strong>Что нужно указать в отчёте:</strong></p>
+<ol>
+<li>Название предметной области.</li>
+<li>Какая <strong>сущность главная</strong> (товар / курс / переговорная / заявка / заказ / запись).</li>
+<li>Какая <strong>операция главная</strong> (создать заказ / записаться / создать заявку / забронировать).</li>
+</ol>
+<hr>
+<h3 id="22-ui-">2.2. Аналитический разбор интерфейса (UI-структура)</h3>
+<p>В отчёте опишите интерфейс <strong>как набор экранных областей и данных</strong>.</p>
+<p><strong>1) Основной сценарий пользователя (1–2 абзаца):</strong>
+Пример формата:</p>
+<ul>
+<li>“Открыть каталог → отфильтровать → открыть карточку → заполнить форму → отправить → увидеть статус”.</li>
+</ul>
+<p><strong>2) Экранные области (что обязательно должно быть):</strong></p>
+<ul>
+<li><strong>Header + Navigation</strong> (логотип, переходы, вход/профиль при необходимости);</li>
+<li><strong>Main</strong> (главный контент: каталог/список + детальная зона);</li>
+<li><strong>Aside</strong> (фильтры/корзина/панель статусов/помощь);</li>
+<li><strong>Footer</strong> (контакты/политики/копирайт).</li>
+</ul>
+<p><strong>3) Типы данных, которые отображаются (примерно):</strong></p>
+<ul>
+<li>список сущностей (например: <code>products[]</code>, <code>courses[]</code>, <code>tickets[]</code>);</li>
+<li>детальная карточка (например: <code>product</code>, <code>course</code>, <code>ticket</code>);</li>
+<li>параметры фильтра (например: <code>category</code>, <code>priceFrom</code>, <code>status</code>);</li>
+<li>данные формы (например: <code>name</code>, <code>email</code>, <code>date</code>, <code>comment</code>, <code>priority</code>).</li>
+</ul>
+<p><strong>4) Семантика (какие теги под что подходят):</strong></p>
+<ul>
+<li><code>&lt;header&gt;</code> — шапка сайта/приложения;</li>
+<li><code>&lt;nav&gt;</code> — навигация;</li>
+<li><code>&lt;main&gt;</code> — основное содержимое;</li>
+<li><code>&lt;section&gt;</code> — тематический раздел (каталог, оформление, профиль);</li>
+<li><code>&lt;article&gt;</code> — самостоятельная сущность (карточка товара/курса/заявки);</li>
+<li><code>&lt;aside&gt;</code> — боковая панель;</li>
+<li><code>&lt;form&gt;</code> — ввод данных для отправки на сервер;</li>
+<li><code>&lt;ul&gt;/&lt;ol&gt;</code> — списки результатов;</li>
+<li><code>&lt;button&gt;</code> — действие (submit, фильтр, загрузка);</li>
+<li><code>&lt;output&gt;</code> / <code>&lt;p role="status"&gt;</code> — статус/результат операции.</li>
+</ul>
+<hr>
+<h3 id="23-ui-api-db">2.3. Архитектурная схема “UI → API → DB”</h3>
+<p>Постройте блок-схему (допустимы Mermaid / draw.io / Figma) по шаблону:</p>
+<div class="highlight"><pre><span></span><code>User → UI (HTML) → DOM → JS → API → DB → API → JS → UI update
+</code></pre></div>
+<p><strong>На схеме обязательно должны быть:</strong></p>
+<ul>
+<li><strong>пользователь</strong>;</li>
+<li><strong>UI (HTML/DOM)</strong>;</li>
+<li><strong>клиентская логика JS</strong> (обработчики событий, fetch);</li>
+<li><strong>серверный API</strong>;</li>
+<li><strong>база данных</strong>.</li>
+</ul>
+<p><strong>Что подписать на стрелках:</strong></p>
+<ul>
+<li>“click/submit/input” (события);</li>
+<li>“fetch: GET/POST/…” (HTTP-запрос);</li>
+<li>“SQL/ORM read/write” (работа с БД);</li>
+<li>“JSON response” (ответ);</li>
+<li>“render/update DOM” (обновление UI).</li>
+</ul>
+<hr>
+<h3 id="24-html">2.4. Структура HTML (каркас будущего интерфейса)</h3>
+<p>Создайте HTML-страницу, которая соответствует структуре:</p>
+<ul>
+<li><code>&lt;header&gt;</code> + <code>&lt;nav&gt;</code></li>
+<li><code>&lt;main&gt;</code> (основное содержимое)</li>
+<li><code>&lt;aside&gt;</code> (фильтры/корзина/статусы — по вашей теме)</li>
+<li><code>&lt;footer&gt;</code></li>
+</ul>
+<p><strong>Обязательные требования к разметке:</strong></p>
+<ul>
+<li>минимум <strong>1</strong> <code>&lt;section&gt;</code>;</li>
+<li>минимум <strong>2</strong> <code>&lt;article&gt;</code> (карточки сущностей);</li>
+<li>заголовочная иерархия <strong>h1 → h2 → h3</strong> (без пропусков уровней);</li>
+<li>у интерактивных элементов должны быть <strong>id/class/data-</strong>* для JS-привязки.</li>
+</ul>
+<p><strong>Рекомендации (чтобы было “API-ready”):</strong></p>
+<ul>
+<li>список сущностей оформляйте как <code>&lt;section&gt;</code> + контейнер списка (<code>&lt;div class="grid"&gt;</code> или <code>&lt;ul&gt;</code>);</li>
+<li>карточки — <code>&lt;article data-id="..."&gt;</code>;</li>
+<li>блок статуса — отдельный узел (например <code>&lt;div id="status" role="status" aria-live="polite"&gt;&lt;/div&gt;</code>).</li>
+</ul>
+<hr>
+<h3 id="25-block-inline-void-semantic">2.5. Таблица сравнения: block / inline / void / semantic</h3>
+<p>Составьте таблицу <strong>минимум на 12 элементов</strong>. Для каждого элемента укажите:</p>
+<ul>
+<li>тип: <code>block</code> / <code>inline</code> / <code>void</code> / <code>semantic</code> (можно комбинировать: <code>semantic block</code>);</li>
+<li>назначение;</li>
+<li>пример (1 строка кода).</li>
+</ul>
+<p><strong>Требования к таблице:</strong></p>
+<ul>
+<li>минимум 3 semantic;</li>
+<li>минимум 3 inline;</li>
+<li>минимум 3 block;</li>
+<li>минимум 2 void.</li>
+</ul>
+<p>Пример строки:</p>
+<ul>
+<li><code>img | void | вставка изображения | &lt;img src="..." alt="..."&gt;</code></li>
+</ul>
+<hr>
+<h3 id="26-1">2.6. Проектирование формы (минимум 1 форма)</h3>
+<p>В интерфейсе должна быть минимум одна форма, ориентированная на web-сервис (создание заказа/заявки/брони/записи).</p>
+<p><strong>Обязательно в форме:</strong></p>
+<ul>
+<li>минимум 3 поля ввода;</li>
+<li><code>required</code> у обязательных полей;</li>
+<li>корректные типы (<code>email</code>, <code>number</code>, <code>date</code>, <code>url</code>, <code>tel</code> — по смыслу);</li>
+<li>минимум 1 <code>pattern</code>;</li>
+<li>минимум 1 <code>select</code> <strong>или</strong> группа <code>radio</code>;</li>
+<li>у каждого поля: <code>name</code>, <code>id</code>, и связанный <code>&lt;label for="..."&gt;</code>.</li>
+</ul>
+<p><strong>Форма должна быть “API-ready”:</strong></p>
+<ul>
+<li><code>name</code> совпадают с ожидаемыми полями JSON/DTO;</li>
+<li>понятная структура (fieldset для групп, например контакты/детали/опции);</li>
+<li>есть кнопка <code>type="submit"</code>.</li>
+</ul>
+<hr>
+<h3 id="27-api">2.7. Передача данных на API (демонстрационный сценарий)</h3>
+<p>Добавьте пример отправки формы через <code>fetch()</code> (демо связи UI → API).</p>
+<p>В отчёте <strong>обязательно указать:</strong></p>
+<ol>
+<li><strong>URL</strong> (пример: <code>/api/orders</code>).</li>
+<li><strong>HTTP-метод</strong> (обычно <code>POST</code>).</li>
+<li><strong>Заголовки</strong> (например <code>Content-Type: application/json</code>).</li>
+<li><strong>JSON-тело запроса</strong> (пример минимум 5 полей).</li>
+<li><strong>Ожидаемый статус-код</strong> (например <code>201 Created</code> или <code>200 OK</code>).</li>
+<li><strong>Пример JSON-ответа</strong> (например: <code>id</code>, <code>status</code>, <code>createdAt</code>, <code>message</code>, <code>data</code>).</li>
+</ol>
+<p><strong>Важно:</strong> даже если реального сервера нет, вы описываете контракт так, будто API существует.</p>
+<hr>
+<h3 id="28-12">2.8. Краткий аналитический вывод (1–2 страницы)</h3>
+<p>Напишите связный текст, где объясняете:</p>
+<ol>
+<li>Почему выбранная структура HTML корректна с точки зрения <strong>семантики</strong> (header/nav/main/section/article/aside/footer).</li>
+<li>
+<p>Какие узлы DOM будут точками привязки для JS:</p>
+</li>
+<li>
+<p>элементы статуса,</p>
+</li>
+<li>контейнер списка карточек,</li>
+<li>форма,</li>
+<li>фильтры,</li>
+<li>кнопки действий.</li>
+<li>Как форма связана с REST-сценарием (какой ресурс создаётся/изменяется).</li>
+<li>
+<p>Какие ошибки предотвращены:</p>
+</li>
+<li>
+<p>доступность (label/for, aria-live),</p>
+</li>
+<li>валидность (required, type, pattern),</li>
+<li>корректные id/name (контракт для JS и API),</li>
+<li>предсказуемая структура DOM.</li>
+</ol>
+<hr>
+<h2 id="3">3. Итоговая задача</h2>
+<h3 id="html-web-">«Проектирование HTML-структуры клиентской части web-приложения»</h3>
+<hr>
+<h3 id="31-ui-">3.1. Мини-каталог UI-компонентов (структурный)</h3>
+<p>Составьте список <strong>8–12 UI-компонентов</strong> вашего интерфейса (блоков). Пример:</p>
+<ul>
+<li>Header</li>
+<li>Navigation</li>
+<li>SearchBar</li>
+<li>FilterPanel (aside)</li>
+<li>CatalogGrid</li>
+<li>EntityCard (ProductCard/CourseCard/TicketCard)</li>
+<li>Pagination</li>
+<li>DetailPanel (модалка/страница деталей)</li>
+<li>MainForm (OrderForm/BookingForm/TicketForm)</li>
+<li>StatusMessage (toast/alert)</li>
+<li>Footer</li>
+</ul>
+<p><strong>Для каждого компонента укажите:</strong></p>
+<ul>
+<li>назначение (1–2 предложения);</li>
+<li>какие HTML-теги используются;</li>
+<li>
+<p>какие атрибуты нужны для JS:</p>
+</li>
+<li>
+<p><code>id</code> (для уникальных узлов),</p>
+</li>
+<li><code>class</code> (для групп),</li>
+<li><code>data-*</code> (для идентификаторов сущностей, статусов, ролей).</li>
+</ul>
+<hr>
+<h3 id="32-ui-api-db">3.2. Схема “UI → API → DB” на одном сценарии</h3>
+<p>Опишите один <strong>бизнес-сценарий</strong> (полностью, по шагам):</p>
+<ol>
+<li>Действие пользователя (например: “создать заявку/заказ/бронь”).</li>
+<li>Какие поля вводятся (перечень + типы данных).</li>
+<li>
+<p>Какой запрос уходит:</p>
+</li>
+<li>
+<p>URL,</p>
+</li>
+<li>method,</li>
+<li>headers,</li>
+<li>JSON body (пример).</li>
+<li>Что делает сервер (валидация, расчёты, права доступа).</li>
+<li>Что записывается/читается из БД (какая таблица/коллекция и ключевые поля).</li>
+<li>Какой JSON возвращается (пример).</li>
+<li>Как обновляется UI (статус, очистка формы, добавление карточки в список, редирект).</li>
+</ol>
+<hr>
+<h3 id="33-ui-">3.3. Два сценария ошибок (UI-уровень)</h3>
+<p>Предусмотрите <strong>две ошибки</strong>, видимые пользователю:</p>
+<ol>
+<li>
+<p><strong>400 Bad Request (валидация формы)</strong>
+   Указать:</p>
+</li>
+<li>
+<p>причина (например: неверный email, пустое обязательное поле, pattern не совпал);</p>
+</li>
+<li>что отображается в UI (подсветка поля, текст под полем, общий alert);</li>
+<li>
+<p>пример JSON-ошибки:</p>
+</li>
+<li>
+<p><code>error</code>, <code>message</code>, <code>fieldErrors[]</code> или аналог.</p>
+</li>
+<li>
+<p><strong>401/403/404 (доступ / не найдено)</strong>
+   Указать:</p>
+</li>
+<li>
+<p>причина (нет авторизации / нет прав / сущность не существует);</p>
+</li>
+<li>что отображается в UI (сообщение + действия: “войти”, “назад”, “обновить”);</li>
+<li>пример JSON-ошибки (код, сообщение, traceId при необходимости).</li>
+</ol>
+<hr>
+<h3 id="34">3.4. Для выполнения требуется</h3>
+<ol>
+<li>Шаблон отчёта (по методическим указаниям).</li>
+<li>Вариант задания в ЛМС (выбранная предметная область).</li>
+<li>Оформление по требованиям (структура, нумерация, рисунки/схемы, таблицы).</li>
+<li>Ссылка на репозиторий (или архив проекта).</li>
+</ol>
+<hr>
+<h3 id="35">3.5. Запрет</h3>
+<p>❗ Запрещается использование систем искусственного интеллекта для выполнения лабораторной работы.</p>
+<p>Работы, выполненные с использованием ИИ, оцениваются в <strong>0 баллов</strong> без возможности доработки.</p>
+<hr>
+<h2 id="4">4. Контрольные вопросы</h2>
+<p>Ответить кратко (1–3 предложения):</p>
+<ol>
+<li>Отличие <code>GET</code> от <code>POST</code>.</li>
+<li>Что означает статус <code>404</code>.</li>
+<li>Что такое REST-ресурс.</li>
+<li>Почему JSON часто удобнее XML для API.</li>
+<li>Различие web-приложения и web-сервиса.</li>
+<li>Зачем нужны <code>name</code> у полей формы.</li>
+<li>Что такое DOM и зачем JS “точки привязки”.</li>
+<li>Для чего нужны <code>data-*</code> атрибуты.</li>
+</ol>
+<hr>
+<h2 id="5-">5. Чек-лист для самопроверки</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Баллы</th>
+<th>Критерии</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">10</td>
+<td>Выбор предметной области + сценарий, схема UI→API→DB, HTML-каркас по требованиям, таблица 12 элементов, форма API-ready, fetch-сценарий, вывод, 2 ошибки, мини-каталог компонентов</td>
+</tr>
+<tr>
+<td style="text-align: right;">8–9</td>
+<td>Есть все разделы, но есть мелкие нарушения: слабая семантика/мало атрибутов для JS/неполная ошибка/неточности в HTTP</td>
+</tr>
+<tr>
+<td style="text-align: right;">6–7</td>
+<td>Частично выполнено: нет схемы или форма/таблица/вывод сделаны поверхностно</td>
+</tr>
+<tr>
+<td style="text-align: right;">&lt;6</td>
+<td>Несистемно: нет архитектурной логики, отсутствуют ключевые артефакты</td>
+</tr>
+<tr>
+<td style="text-align: right;">0</td>
+<td>Работа не сдана или выполнена с ИИ</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="6">6. Шаблон отчёта</h2>
+<p>👉 <a href="assets/files/LR1%20%28Shablon%29.docx">Скачать шаблон отчёта</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.code.copy", "content.image.zoom", "navigation.top", "navigation.tracking", "toc.follow"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="assets/js/mermaid-init.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

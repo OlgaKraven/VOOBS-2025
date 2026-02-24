@@ -1,0 +1,4093 @@
+<!DOCTYPE html><html lang="ru" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="lab2.html">
+      
+      
+        <link rel="next" href="lab4.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/icons/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Лабораторная работа 3 - Основы разработки Веб-сервисов</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#no3-web-" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="index.html" title="Основы разработки Веб-сервисов" class="md-header__button md-logo" aria-label="Основы разработки Веб-сервисов" data-md-component="logo">
+      
+  <img src="assets/icons/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Основы разработки Веб-сервисов
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Лабораторная работа 3
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Основы разработки Веб-сервисов" class="md-nav__button md-logo" aria-label="Основы разработки Веб-сервисов" data-md-component="logo">
+      
+  <img src="assets/icons/logo.png" alt="logo">
+
+    </a>
+    Основы разработки Веб-сервисов
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Описание дисциплины
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="domain.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Предметная область
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторные работы
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лабораторные работы
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lab1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lab2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа 3
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="lab3.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Теория
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Теория">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.0. Цель работы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Введение в CSS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1. Введение в CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.1. Назначение CSS: разделение структуры и представления
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.2. Принцип каскадности
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.3. Принцип наследования
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Способы подключения CSS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2. Способы подключения CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-inline-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1. Inline (в атрибуте style)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-internal-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.2. Internal (внутри &lt;style&gt;)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-external" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.3. External (отдельный файл)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-import" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.4. @import
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Селекторы CSS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3. Селекторы CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.1. Базовые селекторы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.2. Комбинаторы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.3. Атрибутные селекторы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.4. Псевдоклассы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#135" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.5. Псевдоэлементы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#136" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.6. Таблица специфичности (приоритет селекторов)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Каскадность и специфичность
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4. Каскадность и специфичность">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.1. Что такое каскад (как браузер выбирает итоговый стиль)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.2. !important как крайняя мера
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.3. Порядок подключения файлов
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#144" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.4. Примеры конфликтов и решения
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5. Цвета и фоны
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5. Цвета и фоны">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.1. Базовые свойства
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.2. Градиенты и прозрачность
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153-css-custom-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.3. CSS-переменные (custom properties)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6. Работа с текстом и типографикой
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6. Работа с текстом и типографикой">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161-web-font-face" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.1. Web-шрифты (через @font-face)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-box-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7. Box Model (фундамент)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.7. Box Model (фундамент)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#171-box-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.1. Состав Box Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#172-box-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.2. Схема Box Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#173-box-sizing-overflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.3. box-sizing, overflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8. Позиционирование
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.8. Позиционирование">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#181" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.1. Виды позиционирования
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#182" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.2. Практические кейсы
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-flexbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9. Flexbox
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.9. Flexbox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#191" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.1. Базовые свойства
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#192-flexbox-header-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.2. Пример макета интерфейса на Flexbox (Header + Controls)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-css-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10. CSS Grid
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.10. CSS Grid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1101" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.1. Базовые свойства
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1102-auto-fit-auto-fill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.2. Auto-fit / auto-fill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1103-grid-areas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.3. Grid areas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1104-flexbox-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.4. Отличие Flexbox и Grid
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11. Адаптивный дизайн
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.11. Адаптивный дизайн">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1111-media-queries-breakpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11.1. Media queries и breakpoints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1112-mobile-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11.2. Mobile-first подход
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11.3. Пример адаптивной карточки
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12. Анимации и переходы
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.12. Анимации и переходы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1121-transition-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.1. transition + transform
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1122-keyframes-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.2. @keyframes + animation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1123-hover-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.3. Пример hover-анимации кнопки
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13. Продвинутые возможности CSS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.13. Продвинутые возможности CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1131-calc-clamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13.1. Переменные, calc(), clamp()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1132-filter-backdrop-filter-object-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13.2. filter, backdrop-filter, object-fit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14. Архитектура CSS (как строится масштабируемый проект)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.14. Архитектура CSS (как строится масштабируемый проект)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1141-bem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.1. БЭМ (BEM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1142-smacss-atomic-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.2. SMACSS / Atomic CSS / Модульный подход (идея)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1143" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.3. Организация файлов проекта (пример)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115-ux-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15. Доступность и UX в CSS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.15. Доступность и UX в CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1151" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.1. Контраст и читабельность
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1152-focus-visible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.2. :focus-visible и клавиатура
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1153-hover-vs-touch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.3. hover vs touch
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16. Производительность CSS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.16. Производительность CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1161-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.1. Минимизация и критический CSS (идея)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1162-devtools-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.2. DevTools-анализ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117-css-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17. Интеграция CSS с JavaScript
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.17. Интеграция CSS с JavaScript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1171" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17.1. Манипуляция классами (основа)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1172-js" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17.2. Динамические стили и анимации через JS (когда уместно)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#118" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.18. Типичные ошибки новичков (и как их диагностировать)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#119-css-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.19. Мини-схемы для отчёта (CSS в системе UI)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.19. Мини-схемы для отчёта (CSS в системе UI)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1191" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.19.1. Слои формирования интерфейса
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1192-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.19.2. CSS как “контракт” со структурой и состояниями
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Задание
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Задание">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Смысл лабораторной работы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ключевой результат
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Задания на закрепление теоретического материала (выполнить до стилизации предметной области)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1. Задания на закрепление теоретического материала (выполнить до стилизации предметной области)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.1. Блок A — каскад и конфликты (обязательное)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-b-box-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.2. Блок B — Box Model и стабильная сетка
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-c-flexbox-header-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.3. Блок C — макет на Flexbox (header-панель)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-d-grid-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.4. Блок D — Grid-сетка каталога + адаптив
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#215-e-js" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.5. Блок E — интеграция с JS (состояния)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#216-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.6. Блок F — доступность
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Исходные данные (предметная область)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Структура проекта (рекомендуется)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Обязательные требования к сдаваемому UI
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-web-1-2-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Итоговая задача: “Стилизация интерфейса Web-приложения” (ЛР-1 → ЛР-2 → ЛР-3)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Итоговая задача: “Стилизация интерфейса Web-приложения” (ЛР-1 → ЛР-2 → ЛР-3)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-indexhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Модификация верстки index.html
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Требования к логике и архитектуре
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Требования к сдаче
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Для выполнения требуется
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Запрет
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Контрольные вопросы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Чек-лист для самопроверки
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Шаблон отчёта
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lab4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="requirements.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Требования для оформления
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="questions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Вопросы к зачету
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Теория
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Теория">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.0. Цель работы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Введение в CSS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1. Введение в CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.1. Назначение CSS: разделение структуры и представления
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.2. Принцип каскадности
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.3. Принцип наследования
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Способы подключения CSS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2. Способы подключения CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-inline-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1. Inline (в атрибуте style)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-internal-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.2. Internal (внутри &lt;style&gt;)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-external" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.3. External (отдельный файл)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-import" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.4. @import
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. Селекторы CSS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3. Селекторы CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.1. Базовые селекторы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.2. Комбинаторы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.3. Атрибутные селекторы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.4. Псевдоклассы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#135" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.5. Псевдоэлементы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#136" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.6. Таблица специфичности (приоритет селекторов)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Каскадность и специфичность
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4. Каскадность и специфичность">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.1. Что такое каскад (как браузер выбирает итоговый стиль)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.2. !important как крайняя мера
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.3. Порядок подключения файлов
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#144" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.4. Примеры конфликтов и решения
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5. Цвета и фоны
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5. Цвета и фоны">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.1. Базовые свойства
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.2. Градиенты и прозрачность
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153-css-custom-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.3. CSS-переменные (custom properties)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6. Работа с текстом и типографикой
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6. Работа с текстом и типографикой">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161-web-font-face" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.1. Web-шрифты (через @font-face)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-box-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7. Box Model (фундамент)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.7. Box Model (фундамент)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#171-box-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.1. Состав Box Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#172-box-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.2. Схема Box Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#173-box-sizing-overflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7.3. box-sizing, overflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8. Позиционирование
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.8. Позиционирование">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#181" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.1. Виды позиционирования
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#182" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8.2. Практические кейсы
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-flexbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9. Flexbox
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.9. Flexbox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#191" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.1. Базовые свойства
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#192-flexbox-header-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9.2. Пример макета интерфейса на Flexbox (Header + Controls)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-css-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10. CSS Grid
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.10. CSS Grid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1101" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.1. Базовые свойства
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1102-auto-fit-auto-fill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.2. Auto-fit / auto-fill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1103-grid-areas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.3. Grid areas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1104-flexbox-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10.4. Отличие Flexbox и Grid
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11. Адаптивный дизайн
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.11. Адаптивный дизайн">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1111-media-queries-breakpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11.1. Media queries и breakpoints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1112-mobile-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11.2. Mobile-first подход
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11.3. Пример адаптивной карточки
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12. Анимации и переходы
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.12. Анимации и переходы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1121-transition-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.1. transition + transform
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1122-keyframes-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.2. @keyframes + animation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1123-hover-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12.3. Пример hover-анимации кнопки
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13. Продвинутые возможности CSS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.13. Продвинутые возможности CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1131-calc-clamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13.1. Переменные, calc(), clamp()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1132-filter-backdrop-filter-object-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13.2. filter, backdrop-filter, object-fit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14. Архитектура CSS (как строится масштабируемый проект)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.14. Архитектура CSS (как строится масштабируемый проект)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1141-bem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.1. БЭМ (BEM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1142-smacss-atomic-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.2. SMACSS / Atomic CSS / Модульный подход (идея)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1143" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14.3. Организация файлов проекта (пример)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115-ux-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15. Доступность и UX в CSS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.15. Доступность и UX в CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1151" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.1. Контраст и читабельность
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1152-focus-visible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.2. :focus-visible и клавиатура
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1153-hover-vs-touch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15.3. hover vs touch
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16. Производительность CSS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.16. Производительность CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1161-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.1. Минимизация и критический CSS (идея)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1162-devtools-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16.2. DevTools-анализ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117-css-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17. Интеграция CSS с JavaScript
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.17. Интеграция CSS с JavaScript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1171" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17.1. Манипуляция классами (основа)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1172-js" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17.2. Динамические стили и анимации через JS (когда уместно)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#118" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.18. Типичные ошибки новичков (и как их диагностировать)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#119-css-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.19. Мини-схемы для отчёта (CSS в системе UI)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.19. Мини-схемы для отчёта (CSS в системе UI)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1191" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.19.1. Слои формирования интерфейса
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1192-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.19.2. CSS как “контракт” со структурой и состояниями
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Задание
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Задание">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Смысл лабораторной работы
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ключевой результат
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Задания на закрепление теоретического материала (выполнить до стилизации предметной области)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1. Задания на закрепление теоретического материала (выполнить до стилизации предметной области)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.1. Блок A — каскад и конфликты (обязательное)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-b-box-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.2. Блок B — Box Model и стабильная сетка
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-c-flexbox-header-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.3. Блок C — макет на Flexbox (header-панель)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-d-grid-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.4. Блок D — Grid-сетка каталога + адаптив
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#215-e-js" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.5. Блок E — интеграция с JS (состояния)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#216-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.6. Блок F — доступность
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Исходные данные (предметная область)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Структура проекта (рекомендуется)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Обязательные требования к сдаваемому UI
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-web-1-2-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Итоговая задача: “Стилизация интерфейса Web-приложения” (ЛР-1 → ЛР-2 → ЛР-3)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Итоговая задача: “Стилизация интерфейса Web-приложения” (ЛР-1 → ЛР-2 → ЛР-3)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-indexhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Модификация верстки index.html
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Требования к логике и архитектуре
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Требования к сдаче
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Для выполнения требуется
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Запрет
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Контрольные вопросы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Чек-лист для самопроверки
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Шаблон отчёта
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="no3-web-">Лабораторная работа №3. Стилизация интерфейса Web-приложения</h1>
+<h2 id="1">1. Теория</h2>
+<h3 id="10">1.0. Цель работы</h3>
+<p>Сформировать у обучающегося системное понимание <strong>CSS как слоя представления и компоновки интерфейса Web-приложения</strong>, который:</p>
+<ul>
+<li>управляет визуальной и пространственной организацией UI (layout, типографика, цвета, состояния);</li>
+<li>работает по правилам <strong>каскада, наследования и специфичности</strong>;</li>
+<li>проектирует <strong>адаптивный интерфейс</strong> (mobile-first, breakpoints, responsive-паттерны);</li>
+<li>обеспечивает <strong>масштабируемую архитектуру стилей</strong> (компоненты, методологии, организация файлов);</li>
+<li>интегрируется с HTML (семантика, классы/атрибуты) и JavaScript (классы, состояния, анимации).</li>
+</ul>
+<p>Закрепить навык архитектурного описания UI через схему:</p>
+<div class="highlight"><pre><span></span><code>UI (HTML) → DOM → CSS (cascade/layout) → JS (events/state) → API (HTTP) → DB
+</code></pre></div>
+<p><strong>Подводка (почему это важно):</strong>
+В реальном проекте CSS — это не «раскраска». Это <strong>правила отображения данных и состояний</strong>. Один и тот же UI-компонент должен:</p>
+<ul>
+<li>выглядеть одинаково во всех местах проекта,</li>
+<li>вести себя предсказуемо при изменениях (добавили блок → не “поехало”),</li>
+<li>корректно адаптироваться под разные экраны,</li>
+<li>быть управляемым из JS через состояния (<code>is-open</code>, <code>is-loading</code>, <code>is-error</code>),</li>
+<li>оставаться поддерживаемым командой (архитектура, методология, ограничения).</li>
+</ul>
+<hr>
+<h3 id="11-css">1.1. Введение в CSS</h3>
+<h4 id="111-css">1.1.1. Назначение CSS: разделение структуры и представления</h4>
+<p><strong>HTML</strong> описывает <em>структуру и смысл</em> (семантику): что является заголовком, списком, кнопкой, формой.
+<strong>CSS</strong> описывает <em>как это выглядит</em> и <em>как расположено</em>: сетка, отступы, цвет, типографика, состояние.</p>
+<p><strong>Подводка:</strong> если вы смешиваете HTML и CSS (например, делаете внешний вид через inline-стили), вы теряете масштабируемость: невозможно быстро поменять тему, дизайн-систему, адаптивность.</p>
+<p><strong>Пример “плохо” (inline-стили ломают поддержку):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">style</span><span class="o">=</span><span class="s">"background: red; color: white; padding: 12px 16px;"</span><span class="p">&gt;</span>
+  Купить
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Пример “нормально” (контракт через класс):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn--primary"</span><span class="p">&gt;</span>Купить<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">.</span><span class="nc">btn--primary</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#e11d48</span><span class="p">;</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#fff</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<hr>
+<h4 id="112">1.1.2. Принцип каскадности</h4>
+<p><strong>Каскад</strong> — механизм, по которому браузер выбирает итоговые значения свойств, когда на элемент влияют несколько правил.</p>
+<p>Каскад учитывает (в упрощении):</p>
+<ol>
+<li>важность (<code>!important</code>),</li>
+<li>происхождение (user-agent / user / author),</li>
+<li>специфичность селектора,</li>
+<li>порядок правил (ниже в файле → при равенстве выигрывает).</li>
+</ol>
+<p><strong>Подводка:</strong> каскад — это “разрешитель конфликтов”. Если вы не понимаете каскад, вы начинаете “лечить” стили <code>!important</code>, а это разрушает архитектуру.</p>
+<hr>
+<h4 id="113">1.1.3. Принцип наследования</h4>
+<p><strong>Наследование</strong> — передача некоторых свойств от родителя к потомкам. Наследуются в основном <em>текстовые</em> свойства (<code>color</code>, <code>font-family</code>, <code>line-height</code>), но не layout-свойства (например, <code>margin</code> не наследуется).</p>
+<p><strong>Пример:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">page</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">system-ui</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#111827</span><span class="p">;</span>
+<span class="w">  </span><span class="k">line-height</span><span class="p">:</span><span class="w"> </span><span class="mf">1.5</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"page"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Заголовок<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Текст наследует цвет и шрифт.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Подводка:</strong> наследование — главный инструмент “глобальной консистентности” (типографика, цвет текста), но его нужно держать под контролем (не делать “глобальные” правила, которые ломают компоненты).</p>
+<hr>
+<h3 id="12-css">1.2. Способы подключения CSS</h3>
+<h4 id="121-inline-style">1.2.1. Inline (в атрибуте <code>style</code>)</h4>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">"color: #e11d48; font-weight: 700;"</span><span class="p">&gt;</span>Акцентный текст<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Когда допустимо:</strong> быстрый прототип, единичная правка, письма (email), генерация стилей из CMS.
+<strong>Минусы:</strong> не переиспользуется, сложно сопровождать, конфликтует с архитектурой.</p>
+<hr>
+<h4 id="122-internal-style">1.2.2. Internal (внутри <code>&lt;style&gt;</code>)</h4>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#e5e7eb</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Подводка:</strong> в учебных мини-работах допустимо, но в проекте это усложняет кеширование и поддержку.</p>
+<hr>
+<h4 id="123-external">1.2.3. External (отдельный файл)</h4>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"./styles.css"</span> <span class="p">/&gt;</span>
+</code></pre></div>
+<p><strong>Это основной промышленный способ.</strong>
+Плюсы: кеширование, структура проекта, переиспользование, командная работа.</p>
+<hr>
+<h4 id="124-import">1.2.4. <code>@import</code></h4>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="nt">url</span><span class="o">(</span><span class="s2">"./base.css"</span><span class="o">)</span><span class="p">;</span>
+<span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="nt">url</span><span class="o">(</span><span class="s2">"./components/card.css"</span><span class="o">)</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>Подводка:</strong> <code>@import</code> может ухудшать загрузку (особенно при каскаде импортов). В современных проектах чаще используют сборщики/бандлеры, а в “чистом CSS” — аккуратно и минимально.</p>
+<hr>
+<h2 id="13-css">1.3. Селекторы CSS</h2>
+<h3 id="131">1.3.1. Базовые селекторы</h3>
+<p><strong>По тегу:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">button</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">cursor</span><span class="p">:</span><span class="w"> </span><span class="kc">pointer</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p><strong>По классу:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p><strong>По id:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">#</span><span class="nn">app</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">min-height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">vh</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p><strong>Подводка:</strong></p>
+<ul>
+<li><code>id</code> должен быть уникальным, и стили через <code>#id</code> часто создают проблемы со специфичностью.</li>
+<li>В UI-архитектуре чаще используют <strong>классы</strong> и <strong>data-атрибуты</strong>.</li>
+</ul>
+<hr>
+<h3 id="132">1.3.2. Комбинаторы</h3>
+<p><strong>Потомок (любой уровень вложенности):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p><strong>Прямой потомок:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">nav</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">text-decoration</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p><strong>Соседний элемент (<code>+</code>):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">label</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nt">input</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">margin-top</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p><strong>Общий сосед (<code>~</code>):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">input</span><span class="p">:</span><span class="nd">focus</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="p">.</span><span class="nc">hint</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">opacity</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p><strong>Подводка:</strong> чем сложнее селектор, тем выше риск “ломкости”: небольшая правка HTML ломает стили. Поэтому архитектурно лучше иметь классы компонентов.</p>
+<hr>
+<h3 id="133">1.3.3. Атрибутные селекторы</h3>
+<div class="highlight"><pre><span></span><code><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">"email"</span><span class="o">]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">border-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#93c5fd</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="nt">button</span><span class="o">[</span><span class="nt">data-action</span><span class="o">=</span><span class="s2">"add-to-cart"</span><span class="o">]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">700</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p><strong>Подводка:</strong> <code>data-*</code> удобно для “контракта” с JS: CSS может стилизовать, а JS — находить/управлять.</p>
+<hr>
+<h3 id="134">1.3.4. Псевдоклассы</h3>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">transform</span><span class="p">:</span><span class="w"> </span><span class="nb">translateY</span><span class="p">(</span><span class="mi">-1</span><span class="kt">px</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">.</span><span class="nc">btn</span><span class="p">:</span><span class="nd">active</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">transform</span><span class="p">:</span><span class="w"> </span><span class="nb">translateY</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">.</span><span class="nc">field</span><span class="p">:</span><span class="nd">focus</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">outline</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#60a5fa</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">.</span><span class="nc">item</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">2n</span><span class="o">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#f9fafb</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p><strong>Подводка:</strong> псевдоклассы — это модель состояний без JS: hover/focus/active — критично для UX и доступности.</p>
+<hr>
+<h3 id="135">1.3.5. Псевдоэлементы</h3>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">badge</span><span class="p">::</span><span class="nd">before</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">content</span><span class="p">:</span><span class="w"> </span><span class="s2">"● "</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">.</span><span class="nc">card</span><span class="p">::</span><span class="nd">after</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">content</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">;</span><span class="w"> </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">block</span><span class="p">;</span><span class="w"> </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#e5e7eb</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<hr>
+<h3 id="136">1.3.6. Таблица специфичности (приоритет селекторов)</h3>
+<table>
+<thead>
+<tr>
+<th>Селектор</th>
+<th>Пример</th>
+<th>Специфичность (A,B,C)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inline style</td>
+<td><code>style="..."</code></td>
+<td>выше всех (условно 1,0,0,0)</td>
+</tr>
+<tr>
+<td><code>#id</code></td>
+<td><code>#header</code></td>
+<td>(1,0,0)</td>
+</tr>
+<tr>
+<td><code>.class</code>, <code>[attr]</code>, <code>:pseudo-class</code></td>
+<td><code>.btn</code>, <code>[type="text"]</code>, <code>:hover</code></td>
+<td>(0,1,0)</td>
+</tr>
+<tr>
+<td><code>tag</code>, <code>::pseudo-element</code></td>
+<td><code>button</code>, <code>::before</code></td>
+<td>(0,0,1)</td>
+</tr>
+<tr>
+<td><code>*</code>, комбинаторы</td>
+<td><code>*</code>, <code>&gt;</code>, <code>+</code>, <code>~</code></td>
+<td>(0,0,0)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Подводка:</strong> если вы начали “побеждать” стили повышением специфичности, вы строите систему конфликтов. В архитектуре лучше управлять правилами через компоненты и слои.</p>
+<hr>
+<h2 id="14">1.4. Каскадность и специфичность</h2>
+<h3 id="141">1.4.1. Что такое каскад (как браузер выбирает итоговый стиль)</h3>
+<p>Когда несколько правил задают одно свойство, браузер выбирает итог по схеме:</p>
+<ol>
+<li><code>!important</code> (если есть),</li>
+<li>более специфичный селектор,</li>
+<li>правило, объявленное позже.</li>
+</ol>
+<hr>
+<h3 id="142-important">1.4.2. <code>!important</code> как крайняя мера</h3>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">black</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p><strong>Подводка:</strong> <code>!important</code> должен быть исключением (например, утилитарные классы, временный фикс, переопределение сторонних библиотек). Иначе каскад превращается в “гонку вооружений”.</p>
+<hr>
+<h3 id="143">1.4.3. Порядок подключения файлов</h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"./base.css"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"./components.css"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"./pages/catalog.css"</span> <span class="p">/&gt;</span>
+</code></pre></div>
+<p><strong>Подводка:</strong> порядок — это часть архитектуры: базовые правила → компоненты → страницы → overrides.</p>
+<hr>
+<h3 id="144">1.4.4. Примеры конфликтов и решения</h3>
+<p><strong>Конфликт:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">button</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#111827</span><span class="p">;</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">.</span><span class="nc">btn</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#e11d48</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn"</span><span class="p">&gt;</span>Купить<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Итог: <code>background</code> будет <strong>#e11d48</strong>, потому что <code>.btn</code> специфичнее, а <code>color</code> останется белым из <code>button</code>.</p>
+<p><strong>Плохое “решение” через специфичность:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="nt">main</span><span class="w"> </span><span class="p">.</span><span class="nc">toolbar</span><span class="w"> </span><span class="p">.</span><span class="nc">btn</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#e11d48</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p><strong>Хорошее решение (слой компонента + модификатор):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#111827</span><span class="p">;</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#fff</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">.</span><span class="nc">btn--primary</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#e11d48</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<hr>
+<h2 id="15">1.5. Цвета и фоны</h2>
+<h3 id="151">1.5.1. Базовые свойства</h3>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">text-muted</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#6b7280</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#ffffff</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">.</span><span class="nc">hero</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="s2">"./img/bg.jpg"</span><span class="p">);</span><span class="w"> </span><span class="k">background-size</span><span class="p">:</span><span class="w"> </span><span class="kc">cover</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<h3 id="152">1.5.2. Градиенты и прозрачность</h3>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">hero</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">135</span><span class="kt">deg</span><span class="p">,</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">225</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">72</span><span class="p">,</span><span class="mf">0.9</span><span class="p">),</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">59</span><span class="p">,</span><span class="mi">130</span><span class="p">,</span><span class="mi">246</span><span class="p">,</span><span class="mf">0.6</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="153-css-custom-properties">1.5.3. CSS-переменные (custom properties)</h3>
+<div class="highlight"><pre><span></span><code><span class="p">:</span><span class="nd">root</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nv">--color-bg</span><span class="p">:</span><span class="w"> </span><span class="mh">#0b1220</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">--color-text</span><span class="p">:</span><span class="w"> </span><span class="mh">#e5e7eb</span><span class="p">;</span>
+<span class="w">  </span><span class="nv">--radius</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">page</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--color-bg</span><span class="p">);</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--color-text</span><span class="p">);</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--radius</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Подводка:</strong> переменные — фундамент темизации и дизайн-системы: один источник правды вместо “магических” цветов по проекту.</p>
+<hr>
+<h2 id="16">1.6. Работа с текстом и типографикой</h2>
+<div class="highlight"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">system-ui</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">apple-system</span><span class="p">,</span><span class="w"> </span><span class="n">Segoe</span><span class="w"> </span><span class="n">UI</span><span class="p">,</span><span class="w"> </span><span class="n">Roboto</span><span class="p">,</span><span class="w"> </span><span class="n">Arial</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">line-height</span><span class="p">:</span><span class="w"> </span><span class="mf">1.5</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h1</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">800</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">letter-spacing</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">left</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">.</span><span class="nc">upper</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">text-transform</span><span class="p">:</span><span class="w"> </span><span class="kc">uppercase</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<h3 id="161-web-font-face">1.6.1. Web-шрифты (через <code>@font-face</code>)</h3>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">font-face</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">font-family</span><span class="o">:</span><span class="w"> </span><span class="s2">"MyFont"</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">src</span><span class="o">:</span><span class="w"> </span><span class="nt">url</span><span class="o">(</span><span class="s2">"./fonts/MyFont.woff2"</span><span class="o">)</span><span class="w"> </span><span class="nt">format</span><span class="o">(</span><span class="s2">"woff2"</span><span class="o">);</span>
+<span class="w">  </span><span class="nt">font-display</span><span class="o">:</span><span class="w"> </span><span class="nt">swap</span><span class="o">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">title</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">"MyFont"</span><span class="p">,</span><span class="w"> </span><span class="n">system-ui</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p><strong>Подводка:</strong> <code>font-display: swap</code> снижает риск “невидимого текста” при загрузке шрифта.</p>
+<hr>
+<h2 id="17-box-model">1.7. Box Model (фундамент)</h2>
+<h3 id="171-box-model">1.7.1. Состав Box Model</h3>
+<ul>
+<li><strong>content</strong> — содержимое (текст/контент)</li>
+<li><strong>padding</strong> — внутренний отступ</li>
+<li><strong>border</strong> — граница</li>
+<li><strong>margin</strong> — внешний отступ</li>
+</ul>
+<h3 id="172-box-model">1.7.2. Схема Box Model</h3>
+<div class="highlight"><pre><span></span><code>┌─────────────────────────────── margin ───────────────────────────────┐
+│  ┌──────────────────────────── border ─────────────────────────────┐  │
+│  │  ┌──────────────────────── padding ───────────────────────────┐  │  │
+│  │  │                       content                              │  │  │
+│  │  └────────────────────────────────────────────────────────────┘  │  │
+│  └──────────────────────────────────────────────────────────────────┘  │
+└────────────────────────────────────────────────────────────────────────┘
+</code></pre></div>
+<h3 id="173-box-sizing-overflow">1.7.3. <code>box-sizing</code>, <code>overflow</code></h3>
+<div class="highlight"><pre><span></span><code><span class="c">/* промышленный дефолт */</span>
+<span class="o">*,</span><span class="w"> </span><span class="o">*</span><span class="p">::</span><span class="nd">before</span><span class="o">,</span><span class="w"> </span><span class="o">*</span><span class="p">::</span><span class="nd">after</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">box-sizing</span><span class="p">:</span><span class="w"> </span><span class="kc">border-box</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">320</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#e5e7eb</span><span class="p">;</span>
+<span class="w">  </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Подводка:</strong> без <code>border-box</code> расчёты размеров становятся непредсказуемыми, особенно в сетках и адаптиве.</p>
+<hr>
+<h2 id="18">1.8. Позиционирование</h2>
+<h3 id="181">1.8.1. Виды позиционирования</h3>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">static-example</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">static</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">.</span><span class="nc">relative-example</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">relative</span><span class="p">;</span><span class="w"> </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">.</span><span class="nc">absolute-example</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span><span class="w"> </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="k">right</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">.</span><span class="nc">fixed-example</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">fixed</span><span class="p">;</span><span class="w"> </span><span class="k">bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">right</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">.</span><span class="nc">sticky-example</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">sticky</span><span class="p">;</span><span class="w"> </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<h3 id="182">1.8.2. Практические кейсы</h3>
+<p><strong>Бейдж на карточке (absolute внутри relative):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">relative</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">.</span><span class="nc">card__badge</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">right</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="kt">px</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">999</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#111827</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#fff</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Подводка:</strong> <code>absolute</code> работает относительно ближайшего предка с <code>position: relative;</code> — это типовая основа UI-бейджей, меню, модалок.</p>
+<hr>
+<h2 id="19-flexbox">1.9. Flexbox</h2>
+<h3 id="191">1.9.1. Базовые свойства</h3>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">toolbar</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">space-between</span><span class="p">;</span>
+<span class="w">  </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">  </span><span class="k">flex-wrap</span><span class="p">:</span><span class="w"> </span><span class="kc">wrap</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="192-flexbox-header-controls">1.9.2. Пример макета интерфейса на Flexbox (Header + Controls)</h3>
+<p><strong>HTML:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">"toolbar"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">"toolbar__title"</span><span class="p">&gt;</span>Каталог<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toolbar__actions"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn"</span><span class="p">&gt;</span>Фильтры<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn--primary"</span><span class="p">&gt;</span>Добавить<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>CSS:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">toolbar</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">  </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">space-between</span><span class="p">;</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">toolbar__actions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Подводка:</strong> Flexbox идеален для “линейных” компоновок: панели, строки, группы кнопок, выравнивание по оси.</p>
+<hr>
+<h2 id="110-css-grid">1.10. CSS Grid</h2>
+<h3 id="1101">1.10.1. Базовые свойства</h3>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">grid</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="nf">repeat</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="1102-auto-fit-auto-fill">1.10.2. Auto-fit / auto-fill</h3>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">catalog</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="nf">repeat</span><span class="p">(</span><span class="kc">auto</span><span class="nv">-fit</span><span class="p">,</span><span class="w"> </span><span class="nf">minmax</span><span class="p">(</span><span class="mi">220</span><span class="kt">px</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="1103-grid-areas">1.10.3. Grid areas</h3>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">page</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">280</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template-areas</span><span class="p">:</span><span class="w"> </span><span class="s2">"sidebar main"</span><span class="p">;</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">sidebar</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">grid-area</span><span class="p">:</span><span class="w"> </span><span class="n">sidebar</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">.</span><span class="nc">main</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">grid-area</span><span class="p">:</span><span class="w"> </span><span class="n">main</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<hr>
+<h3 id="1104-flexbox-grid">1.10.4. Отличие Flexbox и Grid</h3>
+<table>
+<thead>
+<tr>
+<th>Критерий</th>
+<th>Flexbox</th>
+<th>Grid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Модель</td>
+<td>1-мерная (ряд/колонка)</td>
+<td>2-мерная (ряд + колонка)</td>
+</tr>
+<tr>
+<td>Лучше для</td>
+<td>панели, группы, выравнивание</td>
+<td>сетки карточек, layout страниц</td>
+</tr>
+<tr>
+<td>Контроль</td>
+<td>распределение по оси</td>
+<td>точное размещение в сетке</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Подводка:</strong> не “Flex или Grid”, а “Flex внутри Grid”: страница строится Grid, а внутри компонентов используется Flex.</p>
+<hr>
+<h2 id="111">1.11. Адаптивный дизайн</h2>
+<h3 id="1111-media-queries-breakpoints">1.11.1. Media queries и breakpoints</h3>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="o">(</span><span class="nt">max-width</span><span class="o">:</span><span class="w"> </span><span class="nt">640px</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="1112-mobile-first">1.11.2. Mobile-first подход</h3>
+<div class="highlight"><pre><span></span><code><span class="c">/* мобильный по умолчанию */</span>
+<span class="p">.</span><span class="nc">layout</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span><span class="w"> </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="c">/* расширяем для больших экранов */</span>
+<span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="o">(</span><span class="nt">min-width</span><span class="o">:</span><span class="w"> </span><span class="nt">900px</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">layout</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">280</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Подводка:</strong> mobile-first снижает количество переопределений: вы “наращиваете” интерфейс по мере роста экрана.</p>
+<hr>
+<h3 id="1113">1.11.3. Пример адаптивной карточки</h3>
+<p><strong>HTML:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">article</span> <span class="na">class</span><span class="o">=</span><span class="s">"product-card"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">class</span><span class="o">=</span><span class="s">"product-card__img"</span> <span class="na">src</span><span class="o">=</span><span class="s">"./product.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Товар"</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"product-card__body"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">"product-card__title"</span><span class="p">&gt;</span>Сыворотка<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"product-card__price"</span><span class="p">&gt;</span>1999 ₽<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn--primary"</span><span class="p">&gt;</span>В корзину<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>CSS:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">product-card</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">96</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">;</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#e5e7eb</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">product-card__img</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">96</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">96</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">object-fit</span><span class="p">:</span><span class="w"> </span><span class="kc">cover</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="o">(</span><span class="nt">max-width</span><span class="o">:</span><span class="w"> </span><span class="nt">520px</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">product-card</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">product-card__img</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">    </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">180</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr>
+<h2 id="112_1">1.12. Анимации и переходы</h2>
+<h3 id="1121-transition-transform">1.12.1. <code>transition</code> + <code>transform</code></h3>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">transition</span><span class="p">:</span><span class="w"> </span><span class="k">transform</span><span class="w"> </span><span class="mi">160</span><span class="kt">ms</span><span class="w"> </span><span class="kc">ease</span><span class="p">,</span><span class="w"> </span><span class="k">box-shadow</span><span class="w"> </span><span class="mi">160</span><span class="kt">ms</span><span class="w"> </span><span class="kc">ease</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">btn</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">transform</span><span class="p">:</span><span class="w"> </span><span class="nb">translateY</span><span class="p">(</span><span class="mi">-2</span><span class="kt">px</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="1122-keyframes-animation">1.12.2. <code>@keyframes</code> + <code>animation</code></h3>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">keyframes</span><span class="w"> </span><span class="nt">pulse</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">0</span><span class="o">%</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">transform</span><span class="p">:</span><span class="w"> </span><span class="nb">scale</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="nt">50</span><span class="o">%</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">transform</span><span class="p">:</span><span class="w"> </span><span class="nb">scale</span><span class="p">(</span><span class="mf">1.03</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="nt">100</span><span class="o">%</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">transform</span><span class="p">:</span><span class="w"> </span><span class="nb">scale</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">badge--pulse</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">animation</span><span class="p">:</span><span class="w"> </span><span class="n">pulse</span><span class="w"> </span><span class="mf">1.2</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease-in-out</span><span class="w"> </span><span class="kc">infinite</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="1123-hover-">1.12.3. Пример hover-анимации кнопки</h3>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn--primary</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#e11d48</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#fff</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">transition</span><span class="p">:</span><span class="w"> </span><span class="k">transform</span><span class="w"> </span><span class="mi">160</span><span class="kt">ms</span><span class="w"> </span><span class="kc">ease</span><span class="p">,</span><span class="w"> </span><span class="k">filter</span><span class="w"> </span><span class="mi">160</span><span class="kt">ms</span><span class="w"> </span><span class="kc">ease</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">btn--primary</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">transform</span><span class="p">:</span><span class="w"> </span><span class="nb">translateY</span><span class="p">(</span><span class="mi">-2</span><span class="kt">px</span><span class="p">);</span><span class="w"> </span><span class="k">filter</span><span class="p">:</span><span class="w"> </span><span class="nb">brightness</span><span class="p">(</span><span class="mf">1.05</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">.</span><span class="nc">btn--primary</span><span class="p">:</span><span class="nd">active</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">transform</span><span class="p">:</span><span class="w"> </span><span class="nb">translateY</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p><strong>Подводка:</strong> анимация должна быть “смысловой”: показать интерактивность и обратную связь, а не отвлекать.</p>
+<hr>
+<h2 id="113-css">1.13. Продвинутые возможности CSS</h2>
+<h3 id="1131-calc-clamp">1.13.1. Переменные, <code>calc()</code>, <code>clamp()</code></h3>
+<div class="highlight"><pre><span></span><code><span class="p">:</span><span class="nd">root</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">--space</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="nb">calc</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="nv">--space</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+
+<span class="p">.</span><span class="nc">title</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="nf">clamp</span><span class="p">(</span><span class="mi">20</span><span class="kt">px</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="kt">vw</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="kt">px</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="1132-filter-backdrop-filter-object-fit">1.13.2. <code>filter</code>, <code>backdrop-filter</code>, <code>object-fit</code></h3>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">avatar</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">filter</span><span class="p">:</span><span class="w"> </span><span class="nb">grayscale</span><span class="p">(</span><span class="mi">30</span><span class="kt">%</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+
+<span class="p">.</span><span class="nc">glass</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mf">0.08</span><span class="p">);</span>
+<span class="w">  </span><span class="n">backdrop-filter</span><span class="p">:</span><span class="w"> </span><span class="nb">blur</span><span class="p">(</span><span class="mi">10</span><span class="kt">px</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">media</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">object-fit</span><span class="p">:</span><span class="w"> </span><span class="kc">cover</span><span class="p">;</span><span class="w"> </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"> </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">240</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<hr>
+<h2 id="114-css">1.14. Архитектура CSS (как строится масштабируемый проект)</h2>
+<h3 id="1141-bem">1.14.1. БЭМ (BEM)</h3>
+<p><strong>Принцип:</strong> блок → элемент → модификатор.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">article</span> <span class="na">class</span><span class="o">=</span><span class="s">"card card--featured"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">"card__title"</span><span class="p">&gt;</span>Заголовок<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"card__desc"</span><span class="p">&gt;</span>Описание<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">card</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">.</span><span class="nc">card__title</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">800</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">.</span><span class="nc">card--featured</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#e11d48</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p><strong>Подводка:</strong> БЭМ уменьшает конфликты: стиль компонента не “протекает” на соседние элементы.</p>
+<hr>
+<h3 id="1142-smacss-atomic-css">1.14.2. SMACSS / Atomic CSS / Модульный подход (идея)</h3>
+<table>
+<thead>
+<tr>
+<th>Подход</th>
+<th>Идея</th>
+<th>Когда полезен</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SMACSS</td>
+<td>деление стилей на категории (Base/Layout/Module/State/Theme)</td>
+<td>большие проекты</td>
+</tr>
+<tr>
+<td>Atomic/Utility</td>
+<td>много маленьких классов-утилит</td>
+<td>быстрые UI, дизайн-система</td>
+</tr>
+<tr>
+<td>Модульный</td>
+<td>компоненты как модули (card.css, button.css)</td>
+<td>командная разработка</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="1143">1.14.3. Организация файлов проекта (пример)</h3>
+<div class="highlight"><pre><span></span><code>styles/
+  base/
+    reset.css
+    tokens.css
+    typography.css
+  components/
+    button.css
+    card.css
+    form.css
+  pages/
+    catalog.css
+  main.css
+</code></pre></div>
+<p><code>main.css</code> подключает базу и компоненты (или собирается сборщиком).</p>
+<hr>
+<h2 id="115-ux-css">1.15. Доступность и UX в CSS</h2>
+<h3 id="1151">1.15.1. Контраст и читабельность</h3>
+<p><strong>Подводка:</strong> визуально красивый интерфейс может быть <strong>нечитаемым</strong>. Минимум — достаточный контраст текста и фона.</p>
+<h3 id="1152-focus-visible">1.15.2. <code>:focus-visible</code> и клавиатура</h3>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn</span><span class="p">:</span><span class="nd">focus-visible</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">outline</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#60a5fa</span><span class="p">;</span>
+<span class="w">  </span><span class="k">outline-offset</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="1153-hover-vs-touch">1.15.3. hover vs touch</h3>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="o">(</span><span class="nt">hover</span><span class="o">:</span><span class="w"> </span><span class="nt">hover</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">btn</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">transform</span><span class="p">:</span><span class="w"> </span><span class="nb">translateY</span><span class="p">(</span><span class="mi">-2</span><span class="kt">px</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Подводка:</strong> на touch-устройствах hover может “залипать”, поэтому проверка <code>hover: hover</code> — взрослая практика.</p>
+<hr>
+<h2 id="116-css">1.16. Производительность CSS</h2>
+<h3 id="1161-css">1.16.1. Минимизация и критический CSS (идея)</h3>
+<ul>
+<li>минимизировать CSS для production (сборщик/минификатор),</li>
+<li>выносить критические стили первого экрана (по возможности),</li>
+<li>избегать огромных каскадов переопределений.</li>
+</ul>
+<h3 id="1162-devtools-">1.16.2. DevTools-анализ</h3>
+<p><strong>Подводка:</strong> если интерфейс “тормозит”, проблема часто не в JS, а в layout/paint из-за тяжелых эффектов, огромных теней, анимаций размеров вместо transform.</p>
+<hr>
+<h2 id="117-css-javascript">1.17. Интеграция CSS с JavaScript</h2>
+<h3 id="1171">1.17.1. Манипуляция классами (основа)</h3>
+<p><strong>HTML:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn"</span> <span class="na">id</span><span class="o">=</span><span class="s">"toggleFilters"</span><span class="p">&gt;</span>Фильтры<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">aside</span> <span class="na">class</span><span class="o">=</span><span class="s">"filters"</span> <span class="na">id</span><span class="o">=</span><span class="s">"filtersPanel"</span><span class="p">&gt;&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>CSS (состояние):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">filters</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">.</span><span class="nc">filters</span><span class="p">.</span><span class="nc">is-open</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">block</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p><strong>JS:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#toggleFilters"</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">panel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#filtersPanel"</span><span class="p">);</span>
+
+<span class="nx">btn</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">panel</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s2">"is-open"</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><strong>Подводка:</strong> хорошая практика — управлять UI через <strong>классы состояния</strong>, а не через <code>element.style = ...</code>. Так сохраняется архитектура и каскад.</p>
+<hr>
+<h3 id="1172-js">1.17.2. Динамические стили и анимации через JS (когда уместно)</h3>
+<p>JS уместен, когда стиль зависит от вычислений/данных (например, прогресс-бар):</p>
+<div class="highlight"><pre><span></span><code><span class="nx">progressEl</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">setProperty</span><span class="p">(</span><span class="s2">"--progress"</span><span class="p">,</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">value</span><span class="si">}</span><span class="sb">%`</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">progress</span><span class="p">::</span><span class="nd">after</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--progress</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<hr>
+<h2 id="118">1.18. Типичные ошибки новичков (и как их диагностировать)</h2>
+<ol>
+<li>
+<p><strong>Inline-стили как основной подход</strong>
+   → нет переиспользования, хаос, сложный рефакторинг.</p>
+</li>
+<li>
+<p><strong>Конфликты из-за <code>#id</code> и высокой специфичности</strong>
+   → потом приходится “перебивать” селекторы ещё более сложными.</p>
+</li>
+<li>
+<p><strong><code>!important</code> везде</strong>
+   → каскад перестаёт работать как система.</p>
+</li>
+<li>
+<p><strong>Нет адаптивности</strong>
+   → “на моём ноутбуке ок” ≠ работающий интерфейс.</p>
+</li>
+<li>
+<p><strong>Непонимание специфичности</strong>
+   → “почему стиль не применился?” решают не анализом, а случайными правками.</p>
+</li>
+</ol>
+<p><strong>Мини-чек диагностики (как думать):</strong></p>
+<ul>
+<li>стиль не применился → проверь селектор (попадает ли), затем специфичность, затем порядок подключений;</li>
+<li>всё “поехало” → проверь box model (<code>box-sizing</code>), размеры, overflow, сетку (Grid/Flex);</li>
+<li>на мобилке плохо → mobile-first, breakpoints, размеры (clamp), touch/hover.</li>
+</ul>
+<hr>
+<h2 id="119-css-ui">1.19. Мини-схемы для отчёта (CSS в системе UI)</h2>
+<h3 id="1191">1.19.1. Слои формирования интерфейса</h3>
+<div class="highlight"><pre><span></span><code>HTML (семантика/структура)
+    ↓
+DOM (дерево элементов)
+    ↓
+CSS (каскад, специфичность, layout)
+    ↓
+Render tree → Layout → Paint
+    ↓
+UI (видимый интерфейс)
+</code></pre></div>
+<h3 id="1192-css">1.19.2. CSS как “контракт” со структурой и состояниями</h3>
+<div class="highlight"><pre><span></span><code>HTML: class / data-*  ←→  CSS: компоненты/состояния  ←→  JS: toggle/state
+</code></pre></div>
+<hr>
+<h2 id="2">2. Задание</h2>
+<p>Цель: закрепить <strong>каскадность и специфичность</strong>, <strong>box model</strong>, основы <strong>layout (Flexbox/Grid)</strong>, <strong>адаптивность</strong>, <strong>состояния UI</strong> и <strong>доступность</strong> на материале интерфейса Web-приложения.</p>
+<hr>
+<h3 id="_1">Смысл лабораторной работы</h3>
+<p>Переход от “разметка есть” к “интерфейс выглядит и ведёт себя как система”:</p>
+<ul>
+<li>один и тот же компонент должен корректно выглядеть в разных местах;</li>
+<li>конфликты стилей должны решаться <strong>архитектурно</strong>, а не <code>!important</code>;</li>
+<li>layout должен быть <strong>устойчивым</strong> (не “поехал” из-за padding/border);</li>
+<li>интерфейс должен быть <strong>адаптивным</strong> и управляемым через <strong>состояния</strong> (классами);</li>
+<li>интерактивные элементы должны быть удобны для клавиатуры (focus).</li>
+</ul>
+<hr>
+<h3 id="_2">Ключевой результат</h3>
+<p>Интерфейсная страница, в которой:</p>
+<ul>
+<li>продемонстрирован конфликт каскада и корректное решение через “компонент + модификатор”;</li>
+<li>включён глобальный <code>box-sizing: border-box</code>, карточки фиксированной ширины не “раздуваются”;</li>
+<li>собрана header-панель на Flexbox с переносом элементов;</li>
+<li>каталог карточек построен на Grid (<code>auto-fit/minmax</code>) и адаптирован под мобильный;</li>
+<li>панель фильтров открывается/закрывается через JS (<code>classList.toggle</code>) и CSS-класс состояния <code>.is-open</code>;</li>
+<li>реализован <code>:focus-visible</code> и проверена Tab-навигация.</li>
+</ul>
+<hr>
+<h3 id="21">2.1. Задания на закрепление теоретического материала (выполнить до стилизации предметной области)</h3>
+<p>Данный блок выполняется в <strong>отдельной песочнице <code>practice-lr3.css</code></strong> (или внизу <code>styles.css</code>), чтобы студент мог показать понимание каскада, box model и layout <strong>до</strong> финальной стилизации проекта.</p>
+<p>Требования к оформлению:</p>
+<ul>
+<li>к каждому блоку A–F должен быть маленький демонстрационный HTML-фрагмент (можно прямо в <code>index.html</code> внутри секции “practice”);</li>
+<li>запрещено использовать <code>!important</code> (в этой ЛР это отдельное правило);</li>
+<li>обязательно сделать <strong>комментарии в CSS</strong>: что конфликтует и почему выигрывает.</li>
+</ul>
+<hr>
+<h4 id="211-a">2.1.1. Блок A — каскад и конфликты (обязательное)</h4>
+<p><strong>Задача A1.</strong> Создать 3 правила, конфликтующие по одному свойству (<code>color</code>) для одного и того же элемента.</p>
+<p><strong>HTML (пример):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">"practice"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">"demoText"</span> <span class="na">class</span><span class="o">=</span><span class="s">"text text--accent"</span><span class="p">&gt;</span>Текст для проверки каскада<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>CSS (пример конфликта):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c">/* Правило 1 — по тегу (низкая специфичность) */</span>
+<span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#111827</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="c">/* Правило 2 — по классу (выше) */</span>
+<span class="p">.</span><span class="nc">text</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#2563eb</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="c">/* Правило 3 — по id (ещё выше) */</span>
+<span class="p">#</span><span class="nn">demoText</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#e11d48</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p><strong>Что требуется показать в отчёте:</strong></p>
+<ol>
+<li>какие 3 правила задают <code>color</code>;</li>
+<li>почему выиграло конкретное (специфичность);</li>
+<li>что будет, если поменять порядок правил (для одинаковой специфичности).</li>
+</ol>
+<hr>
+<p><strong>Задача A2.</strong> Доказать влияние <strong>порядка</strong> при одинаковой специфичности.</p>
+<p><strong>CSS (пример):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">text--accent</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#16a34a</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span><span class="c">/* правило выше */</span>
+<span class="p">.</span><span class="nc">text--accent</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#f97316</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span><span class="c">/* правило ниже — должно выиграть */</span>
+</code></pre></div>
+<p><strong>Ожидаемый результат:</strong></p>
+<ul>
+<li>цвет текста — <code>#f97316</code>, потому что специфичность одинаковая, выигрывает правило ниже.</li>
+</ul>
+<hr>
+<p><strong>Задача A3.</strong> Убрать конфликт архитектурно: “компонент + модификатор”, <strong>без <code>!important</code></strong>.</p>
+<p><strong>HTML (пример):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"label label--danger"</span><span class="p">&gt;</span>Статус: Ошибка<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"label label--success"</span><span class="p">&gt;</span>Статус: Успех<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>CSS (архитектурное решение):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">label</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">700</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="kt">px</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">999</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#111827</span><span class="p">;</span><span class="w"> </span><span class="c">/* базовое */</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">label--danger</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#b91c1c</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">.</span><span class="nc">label--success</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#166534</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p><strong>Ожидаемый результат:</strong></p>
+<ul>
+<li>нет “борьбы селекторов”, внешний вид управляется модификаторами.</li>
+</ul>
+<hr>
+<h4 id="212-b-box-model">2.1.2. Блок B — Box Model и стабильная сетка</h4>
+<p><strong>Задача B1.</strong> Подключить <code>box-sizing: border-box</code> глобально.</p>
+<p><strong>CSS (обязательно):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="o">*,</span><span class="w"> </span><span class="o">*</span><span class="p">::</span><span class="nd">before</span><span class="o">,</span><span class="w"> </span><span class="o">*</span><span class="p">::</span><span class="nd">after</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">box-sizing</span><span class="p">:</span><span class="w"> </span><span class="kc">border-box</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Подводка (что проверяем):</strong> при <code>border-box</code> ширина элемента включает padding и border, поэтому карточки в сетке ведут себя предсказуемо.</p>
+<hr>
+<p><strong>Задача B2.</strong> Сделать карточку товара шириной <strong>320px</strong> с <code>padding</code> и <code>border</code>, и проверить, что ширина не растёт.</p>
+<p><strong>HTML (пример):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"card-demo"</span><span class="p">&gt;</span>Карточка 320px<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>CSS (пример):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">card-demo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">320</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#e5e7eb</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Что проверить:</strong></p>
+<ul>
+<li>в DevTools → computed width должен быть <strong>320px</strong>, а не 320 + padding + border.</li>
+</ul>
+<hr>
+<h4 id="213-c-flexbox-header-">2.1.3. Блок C — макет на Flexbox (header-панель)</h4>
+<p><strong>Задача C1.</strong> Собрать header-панель: заголовок слева, кнопки справа.</p>
+<p><strong>HTML (пример):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">"toolbar"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">"toolbar__title"</span><span class="p">&gt;</span>Каталог<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toolbar__actions"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn"</span><span class="p">&gt;</span>Фильтры<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn--primary"</span><span class="p">&gt;</span>Добавить<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>CSS (пример):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">toolbar</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">  </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">space-between</span><span class="p">;</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">toolbar__actions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr>
+<p><strong>Задача C2.</strong> Добавить <code>flex-wrap</code>, чтобы на узком экране кнопки переносились.</p>
+<p><strong>CSS (добавить):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">toolbar</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">flex-wrap</span><span class="p">:</span><span class="w"> </span><span class="kc">wrap</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">toolbar__actions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">flex-wrap</span><span class="p">:</span><span class="w"> </span><span class="kc">wrap</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Ожидаемый результат:</strong></p>
+<ul>
+<li>при уменьшении ширины окна кнопки не ломают layout и уходят на новую строку.</li>
+</ul>
+<hr>
+<h4 id="214-d-grid-">2.1.4. Блок D — Grid-сетка каталога + адаптив</h4>
+<p><strong>Задача D1.</strong> Сделать сетку карточек <code>auto-fit/minmax</code>.</p>
+<p><strong>HTML (пример):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">"catalog"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">article</span> <span class="na">class</span><span class="o">=</span><span class="s">"product-card"</span><span class="p">&gt;</span>Карточка 1<span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">article</span> <span class="na">class</span><span class="o">=</span><span class="s">"product-card"</span><span class="p">&gt;</span>Карточка 2<span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">article</span> <span class="na">class</span><span class="o">=</span><span class="s">"product-card"</span><span class="p">&gt;</span>Карточка 3<span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">article</span> <span class="na">class</span><span class="o">=</span><span class="s">"product-card"</span><span class="p">&gt;</span>Карточка 4<span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>CSS (пример):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">catalog</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="nf">repeat</span><span class="p">(</span><span class="kc">auto</span><span class="nv">-fit</span><span class="p">,</span><span class="w"> </span><span class="nf">minmax</span><span class="p">(</span><span class="mi">220</span><span class="kt">px</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">product-card</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#e5e7eb</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr>
+<p><strong>Задача D2.</strong> Добавить breakpoint для мобильного: карточка становится “в столбик” (перестройка внутренней структуры карточки).</p>
+<p><strong>HTML (пример карточки с медиа + контентом):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">article</span> <span class="na">class</span><span class="o">=</span><span class="s">"product-card2"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">class</span><span class="o">=</span><span class="s">"product-card2__img"</span> <span class="na">src</span><span class="o">=</span><span class="s">"./product.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Товар"</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"product-card2__body"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">"product-card2__title"</span><span class="p">&gt;</span>Название<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"product-card2__meta"</span><span class="p">&gt;</span>Цена · Статус<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn--primary"</span><span class="p">&gt;</span>В корзину<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>CSS (пример):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">product-card2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">96</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">;</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#e5e7eb</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">product-card2__img</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">96</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">96</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">object-fit</span><span class="p">:</span><span class="w"> </span><span class="kc">cover</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="o">(</span><span class="nt">max-width</span><span class="o">:</span><span class="w"> </span><span class="nt">520px</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">product-card2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">;</span><span class="w"> </span><span class="c">/* “в столбик” */</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="p">.</span><span class="nc">product-card2__img</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">    </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">180</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Ожидаемый результат:</strong></p>
+<ul>
+<li>на мобильном изображение сверху, контент ниже, ничего не выходит за границы.</li>
+</ul>
+<hr>
+<h4 id="215-e-js">2.1.5. Блок E — интеграция с JS (состояния)</h4>
+<p><strong>Задача E1.</strong> Реализовать панель фильтров, которая открывается/закрывается через <code>classList.toggle</code>.</p>
+<p><strong>HTML (пример):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn"</span> <span class="na">id</span><span class="o">=</span><span class="s">"btnFilters"</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span><span class="p">&gt;</span>Фильтры<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">aside</span> <span class="na">class</span><span class="o">=</span><span class="s">"filters"</span> <span class="na">id</span><span class="o">=</span><span class="s">"filtersPanel"</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">"filters__title"</span><span class="p">&gt;</span>Фильтры<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">"field"</span><span class="p">&gt;</span>
+    Статус
+    <span class="p">&lt;</span><span class="nt">select</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>Все<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>new<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>done<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>CSS (состояние):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">filters</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#e5e7eb</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">filters</span><span class="p">.</span><span class="nc">is-open</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">block</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>JS (пример):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#btnFilters"</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">panel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#filtersPanel"</span><span class="p">);</span>
+
+<span class="nx">btn</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">panel</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s2">"is-open"</span><span class="p">);</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">isOpen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">panel</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="s2">"is-open"</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">panel</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">"aria-hidden"</span><span class="p">,</span><span class="w"> </span><span class="nb">String</span><span class="p">(</span><span class="o">!</span><span class="nx">isOpen</span><span class="p">));</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><strong>Ожидаемый результат:</strong></p>
+<ul>
+<li>открытие/закрытие происходит <strong>через класс состояния</strong>, а не через inline-стили.</li>
+</ul>
+<hr>
+<h4 id="216-f">2.1.6. Блок F — доступность</h4>
+<p><strong>Задача F1.</strong> Добавить <code>:focus-visible</code> для интерактивных элементов.</p>
+<p><strong>CSS (пример):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn</span><span class="p">:</span><span class="nd">focus-visible</span><span class="o">,</span>
+<span class="nt">a</span><span class="p">:</span><span class="nd">focus-visible</span><span class="o">,</span>
+<span class="nt">select</span><span class="p">:</span><span class="nd">focus-visible</span><span class="o">,</span>
+<span class="nt">input</span><span class="p">:</span><span class="nd">focus-visible</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">outline</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#60a5fa</span><span class="p">;</span>
+<span class="w">  </span><span class="k">outline-offset</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr>
+<p><strong>Задача F2.</strong> Проверить Tab-навигацию.</p>
+<p><strong>Требования к проверке (описать в отчёте):</strong></p>
+<ol>
+<li>Нажать <code>Tab</code> и пройти по кнопкам/полям в логичном порядке.</li>
+<li>Фокус должен быть <strong>видимым</strong> на каждом элементе.</li>
+<li>Не должно быть “ловушек фокуса” (когда Tab застревает).</li>
+</ol>
+<p><strong>Ожидаемый результат:</strong></p>
+<ul>
+<li>пользователь может управлять интерфейсом без мыши.</li>
+</ul>
+<hr>
+<h3 id="22">2.2. Исходные данные (предметная область)</h3>
+<p>Для выполнения лабораторной работы используется предметная область, закреплённая за студентом на семестр (как в ЛР-1/ЛР-2).</p>
+<p>Требования:</p>
+<ul>
+<li>интерфейс должен содержать: <strong>header-панель</strong>, <strong>панель фильтров</strong>, <strong>каталог карточек</strong>;</li>
+<li>карточки должны быть <strong>реального смысла</strong> для предметной области (товары/заявки/курсы/записи и т.д.);</li>
+<li>минимум 6–8 карточек для демонстрации Grid-сетки и адаптива.</li>
+</ul>
+<hr>
+<h3 id="23">2.3. Структура проекта (рекомендуется)</h3>
+<p><strong>Задание:</strong> организовать стили и скрипт так, чтобы было понятно, где что лежит.</p>
+<p>Минимальный набор файлов:</p>
+<ul>
+<li><code>index.html</code></li>
+<li><code>styles.css</code> (или <code>styles/main.css</code>)</li>
+<li><code>script.js</code> (только для toggle фильтров)</li>
+</ul>
+<p>Подключение:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"./styles.css"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"./script.js"</span> <span class="na">defer</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Ожидаемый результат:</strong></p>
+<ul>
+<li>страница открывается без ошибок, стили применяются, toggle работает.</li>
+</ul>
+<hr>
+<h3 id="24-ui">2.4. Обязательные требования к сдаваемому UI</h3>
+<p>Студент обязан продемонстрировать:</p>
+<ol>
+<li><strong>Каскад и конфликт</strong>: 3 правила на одно свойство + объяснение победителя (специфичность/порядок).</li>
+<li><strong>Архитектурное решение</strong>: компонент + модификатор вместо “войны селекторов”, без <code>!important</code>.</li>
+<li><strong>Box model стабильность</strong>: <code>border-box</code> глобально + карточка 320px не раздувается.</li>
+<li><strong>Flex header</strong>: заголовок слева, кнопки справа + перенос.</li>
+<li><strong>Grid каталог</strong>: <code>auto-fit/minmax</code> + адаптив внутренней карточки на мобильном.</li>
+<li><strong>Состояния через класс</strong>: <code>.is-open</code> для панели фильтров, управление через JS toggle.</li>
+<li><strong>Доступность</strong>: <code>:focus-visible</code> + проверка Tab-навигации.</li>
+</ol>
+<hr>
+<h2 id="3-web-1-2-3">3. Итоговая задача: “Стилизация интерфейса Web-приложения” (ЛР-1 → ЛР-2 → ЛР-3)</h2>
+<p>Цель: превратить интерфейс из ЛР-1/ЛР-2 в визуально организованный, адаптивный и управляемый по состояниям UI.</p>
+<hr>
+<h3 id="31-indexhtml">3.1. Модификация верстки <code>index.html</code></h3>
+<p>Добавить (или оформить) следующие блоки:</p>
+<ol>
+<li><code>header.toolbar</code> (заголовок + кнопки).</li>
+<li><code>aside.filters</code> (панель фильтров).</li>
+<li><code>section.catalog</code> (сетку карточек).</li>
+<li>Демонстрационный блок для каскада (можно скрыть в конце страницы).</li>
+</ol>
+<hr>
+<h3 id="32">3.2. Требования к логике и архитектуре</h3>
+<ul>
+<li>стили должны быть читабельны и компонентны (классы, модификаторы);</li>
+<li>запрещено “лечить” конфликты <code>!important</code>;</li>
+<li>все состояния UI реализуются классами (<code>.is-open</code>, при желании <code>.is-active</code>, <code>.is-loading</code>);</li>
+<li>JS делает только переключение состояния (toggle) — дизайн остаётся в CSS.</li>
+</ul>
+<hr>
+<h3 id="33">3.3. Требования к сдаче</h3>
+<p>В репозитории должны быть:</p>
+<ul>
+<li><code>index.html</code> (структура интерфейса);</li>
+<li><code>styles.css</code> (все блоки A–F реализованы);</li>
+<li><code>script.js</code> (toggle фильтров);</li>
+<li>краткое описание в <code>README.md</code>: что и где демонстрируется (A–F).</li>
+</ul>
+<hr>
+<h3 id="33_1">3.3. Для выполнения требуется</h3>
+<ol>
+<li><strong>Шаблон отчёта</strong>, указанный в описании лабораторной работы.</li>
+<li><strong>Вариант задания</strong>, закреплённый за студентом на семестр и опубликованный в ЛМС.</li>
+<li><strong>Требования к оформлению</strong> — согласно методическим указаниям в ЛМС или соответствующему разделу документации.</li>
+<li>Ссылка на репозиторий (или архив проекта).</li>
+</ol>
+<hr>
+<h3 id="34">3.4. Запрет</h3>
+<p>❗ <strong>Запрещается использование систем искусственного интеллекта для выполнения лабораторной работы.</strong></p>
+<p>Работы, выполненные с использованием ИИ, полностью или частично скопированные, а также не сданные, оцениваются в <strong>0 баллов</strong> без возможности доработки.</p>
+<hr>
+<h2 id="4">4. Контрольные вопросы</h2>
+<ol>
+<li>Что такое <strong>CSS</strong> и какую роль он играет в связке <strong>HTML → DOM → CSSOM → Render Tree → Layout → Paint</strong>?</li>
+<li>Что такое <strong>каскад</strong> в CSS и какие факторы определяют итоговое значение свойства (важность, специфичность, порядок)?</li>
+<li>Что такое <strong>специфичность селекторов</strong> и почему селектор <code>#id</code> обычно “сильнее”, чем <code>.class</code>?</li>
+<li>В каких случаях влияет <strong>порядок правил в файле</strong>, и как это доказать на примере двух одинаковых селекторов?</li>
+<li>Почему использование <code>!important</code> считается плохой практикой в архитектуре стилей, и чем его заменяют (компонент + модификатор)?</li>
+<li>Что такое <strong>Box Model</strong> и из каких частей он состоит (content/padding/border/margin)?</li>
+<li>Зачем подключают глобально <code>box-sizing: border-box</code> и как это влияет на расчёт ширины элемента?</li>
+<li>В чём разница между <strong>Flexbox</strong> и <strong>Grid</strong>: какая модель 1-мерная, какая 2-мерная, и где что применять?</li>
+</ol>
+<hr>
+<h2 id="5-">5. Чек-лист для самопроверки</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Баллы</th>
+<th>Критерии оценки</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>20</strong></td>
+<td>Выполнены <strong>все обязательные блоки A–F</strong> и они <strong>явно демонстрируются</strong> на странице (есть HTML для проверки + комментарии в CSS). Реализовано: <strong>A</strong> — конфликт 3 правил по одному свойству + доказательство победителя (специфичность и порядок) и устранение конфликта <strong>архитектурно</strong> (компонент + модификатор) без <code>!important</code>; <strong>B</strong> — глобальный <code>box-sizing: border-box</code> + карточка шириной <strong>320px</strong> с <code>padding</code> и <code>border</code>, ширина <strong>не растёт</strong> (проверено в DevTools); <strong>C</strong> — header на Flexbox (заголовок слева, кнопки справа) + <code>flex-wrap</code> и корректный перенос на узком экране; <strong>D</strong> — каталог на Grid (<code>repeat(auto-fit, minmax(...))</code>) + breakpoint, где карточка перестраивается “в столбик” на мобильном; <strong>E</strong> — панель фильтров открывается/закрывается через <code>classList.toggle()</code> и CSS-класс <code>.is-open</code> (без inline-стилей), желательно синхронизирован <code>aria-hidden</code>; <strong>F</strong> — добавлен <code>:focus-visible</code> для интерактивных элементов и выполнена проверка Tab-навигации (фокус виден, порядок логичный). Проект оформлен аккуратно: классы компонентные (БЭМ/модификаторы), селекторы не “ломкие”, нет <code>!important</code>. Файлы (<code>index.html</code>, <code>styles.css</code>, <code>script.js</code>) подключены корректно, ошибок в консоли нет, изменения зафиксированы в репозитории.</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>16–19</strong></td>
+<td>Почти всё выполнено: блоки A–F есть, но допущены 1–2 недочёта. Примеры каскада/порядка показаны, но объяснение в отчёте неполное; или архитектурное решение “компонент + модификатор” сделано, но местами остаются конфликтные/слишком специфичные селекторы; или <code>border-box</code> включён, но проверка ширины карточки 320px в DevTools не описана; или адаптив реализован, но breakpoint не доведён (карточка не полностью “в столбик”); или toggle работает, но состояние оформлено частично. В целом интерфейс рабочий и близок к требованиям.</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>12–15</strong></td>
+<td>Выполнено <strong>частично</strong>: присутствуют минимум 3–4 блока из A–F, но не все. Частая ситуация: есть Grid и Flex, но нет доказательства каскада (A) или нет архитектурного устранения конфликта; или есть <code>border-box</code>, но карточка 320px сделана неверно; или toggle реализован, но стили открытого состояния сделаны inline; или нет <code>:focus-visible</code>. Рабочий результат есть, но требования закрыты не полностью.</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>8–11</strong></td>
+<td>Есть базовая стилизация и отдельные элементы layout (например, только Flex или только Grid), но отсутствуют обязательные демонстрации: нет корректного блока A (конфликт + доказательство), нет проверки box model, адаптив поверхностный, toggle/состояния не оформлены через классы, доступность не проверена.</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>1–7</strong></td>
+<td>Формальная работа: подключён CSS, но нет системной реализации заданий A–F. Стили “разрозненные”, каскад/специфичность не продемонстрированы, layout неустойчивый, адаптив отсутствует, JS toggle не работает или отсутствует, фокус не виден.</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>Работа не сдана / неработоспособна (страница не открывается, критические ошибки) / не соответствует требованиям оформления.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="6">6. Шаблон отчёта</h2>
+<p>👉 <a href="assets/files/LR3%20%28Shablon%29.docx">Скачать шаблон отчёта</a></p>
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.code.copy", "content.image.zoom", "navigation.top", "navigation.tracking", "toc.follow"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="assets/js/mermaid-init.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
