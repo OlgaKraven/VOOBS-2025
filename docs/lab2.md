@@ -1518,4 +1518,4 @@ User → UI (HTML) → DOM → JS → API → DB → API → JS → UI update
 
 ## 14. Шаблон отчёта
 
-👉 [Скачать шаблон отчёта](assets/files//LR1%20%28Shablon%29.docx)
+👉 [Скачать шаблон отчёта](assets/files//LR2%20(Shablon).docx)

@@ -1420,7 +1420,7 @@ input:focus-visible {
 
 ## 6. Шаблон отчёта
 
-👉 [Скачать шаблон отчёта](assets/files//LR3%20%28Shablon%29.docx)
+👉 [Скачать шаблон отчёта](assets/files//LR3%20(Shablon).docx)
 
 ---
  

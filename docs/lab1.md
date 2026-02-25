@@ -388,4 +388,4 @@ User → Client → Server → Database
 
 ## 6. Шаблон отчёта
 
-👉 [Скачать шаблон отчёта](assets/files//LR1%20%28Shablon%29.docx)
+👉 [Скачать шаблон отчёта](assets/files//LR1%20(Shablon).docx)

@@ -1030,6 +1030,6 @@ async function loadItems() {
 
 ## 5. Шаблон отчёта
 
-👉 [Скачать шаблон отчёта](assets/files//LR3%20%28Shablon%29.docx)
+👉 [Скачать шаблон отчёта](assets/files//LR4%20(Shablon).docx)
 
 ---
